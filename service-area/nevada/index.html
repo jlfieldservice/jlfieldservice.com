@@ -5,222 +5,213 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
 <meta name="description" content="Mobile heavy equipment repair in Nevada — Reno, Sparks, Elko and the I-80 mining corridor. On-site diagnostics, engine, electrical, hydraulic and welding repair." />
+<link rel="icon" href="data:," />
 <title>Mobile Heavy Equipment Repair in Nevada | JL Field Service</title>
 <link rel="canonical" href="https://jlfieldservice.com/service-area/nevada/" />
-<link rel="icon" href="data:," />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
-:root{
---cream:#f6f1e4;
---cream-2:#efe7d3;
---paper:#fbf8f0;
---green:#1d3b2a;
---green-deep:#142b1e;
---green-mid:#2a5240;
---brass:#b98a2f;
---brass-soft:#d9b25f;
---ink:#22301f;
---ink-soft:#4c5a4c;
---line:#d8cfb4;
---line-dark:#33523f;
---danger:#a03428;
---bg:var(--cream);
---surface:var(--paper);
---surface-2:var(--cream-2);
---text:var(--ink);
---muted:var(--ink-soft);
---header-bg:var(--green-deep);
---header-text:#f3eeda;
---shadow:0 10px 30px rgba(20,43,30,.14);
---radius:10px;
-}
-@media (prefers-color-scheme: dark){
-:root{
---bg:#101d15;
---surface:#182a1f;
---surface-2:#1e3527;
---text:#ece5d0;
---muted:#b3bfa9;
---line:#33523f;
---header-bg:#0b1710;
---shadow:0 10px 30px rgba(0,0,0,.45);
-}
-}
+:root{--cream:#f6f1e4; --cream-2:#efe7d3; --paper:#fbf8f0; --green:#1d3b2a; --green-deep:#142b1e; --green-mid:#2a5240; --brass:#b98a2f; --brass-soft:#d9b25f; --ink:#22301f; --ink-soft:#4c5a4c; --line:#d8cfb4; --line-dark:#33523f; --danger:#a03428; --bg:var(--cream); --surface:var(--paper); --surface-2:var(--cream-2); --text:var(--ink); --muted:var(--ink-soft); --header-bg:var(--green-deep); --header-text:#f3eeda; --shadow:0 10px 30px rgba(20,43,30,.14); --radius:10px;}
+@media (prefers-color-scheme: dark){:root{--bg:#101d15; --surface:#182a1f; --surface-2:#1e3527; --text:#ece5d0; --muted:#b3bfa9; --line:#33523f; --header-bg:#0b1710; --shadow:0 10px 30px rgba(0,0,0,.45);}}
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{
-margin:0;
-background:var(--bg);
-color:var(--text);
-font-family:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
-font-size:17px;
-line-height:1.55;
--webkit-font-smoothing:antialiased;
-padding-bottom:76px;
-}
-@media (min-width:820px){ body{padding-bottom:0;} }
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:76px;}
+@media (min-width:820px){ body{padding-bottom:0;}}
 h1,h2,h3,.bebas{font-family:"Bebas Neue","Barlow",sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.02;margin:0;}
 p{margin:0 0 1em;}
 a{color:var(--green-mid);}
-a:hover{color:var(--green);}
-.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto;}
-section{padding:44px 0 8px;}
-.section-head{margin-bottom:18px;}
-.section-head h2{font-size:44px;margin-bottom:6px;}
-.section-head p{color:var(--muted);max-width:68ch;margin:0;}
-header.site{background:var(--header-bg);color:var(--header-text);position:sticky;top:0;z-index:50;}
-.header-in{width:min(1120px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;gap:12px;padding:11px 0;}
-.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:var(--header-text);}
-.brand .name{font-family:"Bebas Neue","Barlow",sans-serif;font-size:31px;letter-spacing:.04em;color:var(--header-text);}
+@media (prefers-color-scheme: dark){ a{color:var(--brass-soft);}}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px;border-radius:4px;}
+header.site{position:sticky;top:0;z-index:50;background:var(--header-bg);color:var(--header-text);border-bottom:3px solid var(--brass);}
+.header-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 16px;}
+.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:var(--header-text);margin-right:auto;}
+.brand .name{font-family:"Bebas Neue",sans-serif;font-size:30px;letter-spacing:.06em;color:#f6f1e4;}
+.brand .name em{font-style:normal;color:var(--brass-soft);}
 .brand .tag{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#c9d4bc;margin-top:3px;}
 .header-call{display:none;align-items:center;gap:8px;background:var(--brass);color:#1d2415;font-weight:700;font-size:16px;text-decoration:none;padding:10px 18px;border-radius:8px;white-space:nowrap;}
 .header-call:hover{background:var(--brass-soft);}
-.header-call svg{width:18px;height:18px;}
-@media (min-width:760px){ .header-call{display:flex;} }
-.menu-btn{display:flex;align-items:center;justify-content:center;width:42px;height:42px;margin-left:auto;background:none;border:1px solid rgba(243,238,218,.35);border-radius:8px;color:var(--header-text);cursor:pointer;}
-.menu-btn svg{width:24px;height:24px;}
-@media (min-width:820px){ .menu-btn{display:none;} }
-nav.main{background:var(--green);}
-.nav-in{width:min(1120px,calc(100% - 40px));margin:0 auto;display:flex;flex-wrap:wrap;gap:2px;padding:6px 0;}
-nav.main a{color:#d8e2c9;text-decoration:none;font-weight:600;font-size:15.5px;padding:8px 12px;border-radius:8px;}
-nav.main a:hover{color:#fff;background:var(--green-mid);}
-nav.main a[aria-current="page"]{background:var(--brass);color:#1d2415;}
-@media (max-width:819px){ nav.main{display:none;} nav.main.open{display:block;} }
-.strip-note{background:var(--surface-2);border-bottom:1px solid var(--line);font-size:15px;}
-.strip-in{width:min(1120px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;gap:8px;padding:9px 0;color:var(--muted);}
-.strip-in svg{width:18px;height:18px;flex:none;color:var(--brass);}
-.strip-in b{color:var(--text);}
-.hero{background:var(--green-deep);color:#f3eeda;position:relative;}
-.hero::after{content:"";display:block;height:5px;background:var(--brass);}
-.hero-in{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:52px 0 56px;}
-.hero .over{font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-soft);margin-bottom:12px;}
-.hero h1{font-size:clamp(56px,8vw,92px);color:#f3eeda;margin-bottom:14px;}
+@media (min-width:820px){.header-call{display:inline-flex;}}
+.menu-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line-dark);background:transparent;color:var(--header-text);border-radius:8px;cursor:pointer;}
+@media (min-width:820px){.menu-btn{display:none;}}
+nav.main{background:var(--header-bg);}
+.nav-in{max-width:1120px;margin:0 auto;display:none;flex-direction:column;padding:0 16px 14px;}
+nav.main.open .nav-in{display:flex;}
+.nav-in a{color:var(--header-text);text-decoration:none;font-family:"Bebas Neue",sans-serif;font-size:21px;letter-spacing:.08em;padding:11px 6px;border-top:1px solid var(--line-dark);}
+.nav-in a[aria-current="page"]{color:var(--brass-soft);}
+@media (min-width:820px){.nav-in{display:flex;flex-direction:row;gap:6px;padding:0 16px;}.nav-in a{border-top:none;padding:10px 14px;font-size:20px;border-radius:6px 6px 0 0;}.nav-in a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--brass);}}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px;}
+.view{display:none;}
+.view.active{display:block;animation:fadein .25s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){.view.active{animation:none;}html{scroll-behavior:auto;}}
+section{padding:44px 0;}
+.section-head{max-width:720px;margin-bottom:26px;}
+.section-head h2{font-size:clamp(34px,6vw,52px);color:var(--green);}
+@media (prefers-color-scheme: dark){.section-head h2{color:var(--brass-soft);}}
+.section-head p{color:var(--muted);font-size:18px;margin-top:8px;}
+.hero{background:var(--green-deep);color:#f3eeda;border-bottom:3px solid var(--brass);position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(-45deg,transparent 0 46px,rgba(246,241,228,.025) 46px 47px);}
+.hero-in{max-width:1120px;margin:0 auto;padding:52px 16px 58px;position:relative;z-index:1;}
+.hero .over{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-soft);border:1px solid #4a6a52;padding:6px 12px;border-radius:999px;margin-bottom:20px;}
+.hero h1{font-size:clamp(52px,11vw,104px);color:#f6f1e4;max-width:12ch;}
 .hero h1 em{font-style:normal;color:var(--brass-soft);}
-.hero p.lede{font-size:19px;line-height:1.5;color:#d8e2c9;max-width:62ch;margin-bottom:24px;}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px;}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:8px;font-weight:700;font-size:17px;text-decoration:none;}
-.btn svg{width:19px;height:19px;}
+.hero .sub{font-size:clamp(18px,2.6vw,22px);color:#d9dfca;max-width:56ch;margin:20px 0 30px;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:17px;text-decoration:none;padding:14px 24px;border-radius:9px;border:2px solid transparent;cursor:pointer;min-height:52px;}
 .btn-call{background:var(--brass);color:#1d2415;}
-.btn-call:hover{background:var(--brass-soft);color:#1d2415;}
-.btn-ghost{background:transparent;color:#f3eeda;border:2px solid rgba(243,238,218,.5);}
-.btn-ghost:hover{border-color:#f3eeda;color:#fff;}
-.hero-facts{display:grid;gap:18px;}
-@media (min-width:760px){ .hero-facts{grid-template-columns:repeat(3,1fr);} }
+.btn-call:hover{background:var(--brass-soft);}
+.btn-ghost{background:transparent;color:#f3eeda;border-color:#5c7a63;}
+.btn-ghost:hover{border-color:var(--brass-soft);color:var(--brass-soft);}
+.hero-facts{display:grid;grid-template-columns:1fr;gap:0;margin-top:42px;border-top:1px solid #33523f;}
+.hero-facts div{padding:14px 4px;border-bottom:1px solid #33523f;}
 .hero-facts .n{font-family:"Bebas Neue",sans-serif;font-size:26px;color:var(--brass-soft);letter-spacing:.04em;}
-.hero-facts .t{font-size:14.5px;color:#d8e2c9;}
-.grid{display:grid;gap:16px;}
-@media (min-width:760px){ .grid.cols3{grid-template-columns:repeat(3,1fr);} .grid.cols2{grid-template-columns:repeat(2,1fr);} }
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;}
-.card .icon{width:44px;height:44px;border-radius:9px;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+.hero-facts .d{font-size:15px;color:#c9d4bc;}
+@media (min-width:700px){.hero-facts{grid-template-columns:repeat(3,1fr);}.hero-facts div{border-bottom:none;padding:16px 18px 4px;border-left:1px solid #33523f;}.hero-facts div:first-child{border-left:none;padding-left:4px;}}
+.grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media (min-width:640px){.grid.cols2{grid-template-columns:1fr 1fr;}}
+@media (min-width:980px){.grid.cols3{grid-template-columns:repeat(3,1fr);}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--text);}
+a.card{transition:border-color .15s ease, transform .15s ease;}
+a.card:hover{border-color:var(--brass);transform:translateY(-2px);}
+.card .icon{width:46px;height:46px;border-radius:9px;flex:none;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;}
 .card .icon svg{width:24px;height:24px;}
-.card h3{font-size:26px;margin-bottom:6px;color:var(--green);}
-.card p{color:var(--muted);font-size:15.5px;margin:0;}
-.card.emergency{border-color:var(--danger);}
-.svc-detail{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:18px;scroll-margin-top:110px;}
-.svc-detail.emergency{border-color:var(--danger);}
-.svc-detail h3{font-size:32px;color:var(--green);margin-bottom:4px;}
-.svc-detail .lede{font-size:17.5px;color:var(--muted);margin-bottom:14px;}
-.svc-detail ul{margin:0;padding-left:0;list-style:none;display:grid;gap:8px;}
-@media (min-width:760px){ .svc-detail ul{grid-template-columns:1fr 1fr;} }
-.svc-detail li{display:flex;gap:8px;font-size:15.5px;}
-.svc-detail li svg{width:18px;height:18px;flex:none;color:var(--green-mid);margin-top:2px;}
-.machine-list{display:grid;gap:12px;}
-@media (min-width:760px){ .machine-list{grid-template-columns:repeat(3,1fr);} }
-.machine{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;}
-.machine b{display:block;font-size:16.5px;color:var(--green);}
+.card h3{font-size:27px;color:var(--green);letter-spacing:.03em;}
+@media (prefers-color-scheme: dark){.card h3{color:#ece5d0;}}
+.card p{color:var(--muted);margin:0;font-size:16px;}
+.card .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--green-mid);font-size:15.5px;}
+@media (prefers-color-scheme: dark){.card .go{color:var(--brass-soft);}}
+.card.emergency{border-color:var(--danger);border-width:2px;}
+.card.emergency .icon{background:var(--danger);}
+.card.emergency h3{color:var(--danger);}
+@media (prefers-color-scheme: dark){.card.emergency h3{color:#e88a7c;}}
+.svc-detail{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:18px;scroll-margin-top:130px;}
+.svc-detail .top{display:flex;gap:16px;align-items:flex-start;}
+.svc-detail .icon{width:52px;height:52px;border-radius:10px;flex:none;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;}
+.svc-detail .icon svg{width:27px;height:27px;}
+.svc-detail h3{font-size:32px;color:var(--green);}
+@media (prefers-color-scheme: dark){.svc-detail h3{color:#ece5d0;}}
+.svc-detail .lede{color:var(--muted);font-size:17px;margin-top:4px;}
+.svc-detail ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;}
+@media (min-width:700px){.svc-detail ul{grid-template-columns:1fr 1fr;}}
+.svc-detail li{display:flex;gap:9px;font-size:16px;align-items:flex-start;}
+.svc-detail li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--brass);}
+.svc-detail.emergency{border:2px solid var(--danger);}
+.svc-detail.emergency .icon{background:var(--danger);}
+.svc-detail.emergency h3{color:var(--danger);}
+@media (prefers-color-scheme: dark){.svc-detail.emergency h3{color:#e88a7c;}}
+.machine-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media (min-width:760px){.machine-list{grid-template-columns:repeat(3,1fr);}}
+.machine{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;}
+.machine .bebas{font-size:24px;color:var(--green);display:block;}
+@media (prefers-color-scheme: dark){.machine .bebas{color:#ece5d0;}}
 .machine span{font-size:14.5px;color:var(--muted);}
 .states{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-@media (min-width:760px){ .states{grid-template-columns:repeat(4,1fr);} }
-.state{display:flex;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;text-decoration:none;color:var(--text);}
-.state .abbr{font-family:"Bebas Neue",sans-serif;font-size:24px;color:var(--green);letter-spacing:.04em;}
-.state .nm{font-size:15.5px;font-weight:600;}
-.state.home{border-color:var(--brass);}
-.state.home .abbr{color:var(--brass);}
-a.state:hover{border-color:var(--brass);}
-@media (prefers-color-scheme: dark){ .state.home .abbr{color:var(--brass-soft);} .state.home{border-color:var(--brass-soft);} }
-.band{display:flex;flex-direction:column;gap:14px;background:var(--green);color:#f3eeda;padding:22px;border-radius:var(--radius);margin-bottom:28px;}
-.band h2{font-size:32px;color:#f3eeda;margin-bottom:4px;}
-.band p{color:#d8e2c9;margin:0;}
-@media (min-width:760px){ .band{flex-direction:row;align-items:center;justify-content:space-between;} }
-.contact-grid{display:grid;gap:18px;}
-@media (min-width:760px){ .contact-grid{grid-template-columns:1fr 1.1fr;} }
+@media (min-width:640px){.states{grid-template-columns:repeat(3,1fr);}}
+@media (min-width:980px){.states{grid-template-columns:repeat(4,1fr);}}
+.state{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:13px 15px;display:flex;align-items:baseline;gap:10px;}
+.state .abbr{font-family:"Bebas Neue",sans-serif;font-size:22px;color:var(--brass);min-width:34px;}
+.state .nm{font-weight:600;font-size:16px;}
+.state.home{border:2px solid var(--green);background:var(--surface-2);}
+.state.home .abbr{color:var(--green);}
+@media (prefers-color-scheme: dark){.state.home .abbr{color:var(--brass-soft);}.state.home{border-color:var(--brass);}}
+.band{background:var(--green);color:#f3eeda;border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;gap:16px;}
+@media (min-width:760px){.band{flex-direction:row;align-items:center;justify-content:space-between;}}
+.band h2{font-size:36px;color:#f6f1e4;}
+.band p{color:#d9dfca;margin:0 4px 0;max-width:52ch;}
+.band .btn{flex:none;}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+@media (min-width:860px){.contact-grid{grid-template-columns:5fr 7fr;align-items:start;}}
 .contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
-.contact-card h3{font-size:28px;color:var(--green);margin-bottom:10px;}
-.big-link{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--text);}
-.big-link:last-child{border-bottom:0;}
+.contact-card h3{font-size:28px;color:var(--green);margin-bottom:14px;}
+@media (prefers-color-scheme: dark){.contact-card h3{color:#ece5d0;}}
+.big-link{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--text);padding:14px 0;border-bottom:1px solid var(--line);}
+.big-link:last-of-type{border-bottom:none;}
 .big-link .icon{width:44px;height:44px;border-radius:9px;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;flex:none;}
 .big-link .icon svg{width:22px;height:22px;}
 .big-link .lbl{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;}
-.big-link .val{font-size:19px;font-weight:700;color:var(--green);word-break:break-word;}
-.big-link .val small{font-size:15px;font-weight:500;color:var(--muted);}
-form label{display:block;font-weight:700;font-size:15px;margin-bottom:4px;}
-form input,form select,form textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);font:inherit;font-size:16px;margin-bottom:14px;}
+.big-link .val{font-size:20px;font-weight:700;line-height:1.25;word-break:break-word;}
+form .field{margin-bottom:15px;}
+form label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;}
+form input,form select,form textarea{width:100%;padding:13px 14px;font:inherit;font-size:16.5px;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:8px;}
 form textarea{min-height:110px;resize:vertical;}
-form button{width:100%;padding:13px;border:0;border-radius:8px;background:var(--green);color:#f3eeda;font:inherit;font-weight:700;font-size:17px;cursor:pointer;}
-form button:hover{background:var(--green-mid);}
-.form-note{font-size:14px;color:var(--muted);margin-top:10px;}
-.state-hero{padding-top:34px;}
-.state-hero h2{font-size:clamp(44px,6vw,68px);margin-bottom:10px;}
-.state-hero .sub{font-size:19px;color:var(--muted);max-width:68ch;}
-.region-grid{display:grid;gap:16px;}
-@media (min-width:760px){ .region-grid{grid-template-columns:repeat(2,1fr);} }
+form .row{display:grid;grid-template-columns:1fr;gap:0;}
+@media (min-width:560px){form .row{grid-template-columns:1fr 1fr;gap:14px;}}
+.form-note{font-size:14.5px;color:var(--muted);margin-top:12px;}
+.btn-submit{background:var(--green);color:#f3eeda;border:none;width:100%;justify-content:center;}
+.btn-submit:hover{background:var(--green-mid);}
+@media (min-width:560px){.btn-submit{width:auto;}}
+footer.site{background:var(--header-bg);color:#c9d4bc;margin-top:56px;border-top:3px solid var(--brass);}
+.footer-in{max-width:1120px;margin:0 auto;padding:30px 16px 34px;}
+.footer-cols{display:grid;grid-template-columns:1fr;gap:22px;}
+@media (min-width:760px){.footer-cols{grid-template-columns:2fr 1fr 1fr 1fr;}}
+footer .bebas{color:#f6f1e4;font-size:24px;display:block;margin-bottom:8px;}
+footer a{color:#e8dfc4;text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15.5px;}
+footer p{font-size:15px;margin:0;max-width:44ch;}
+.wip{margin-top:26px;padding:12px 14px;border:1px dashed #5c7a63;border-radius:8px;font-size:14.5px;color:#c9d4bc;display:flex;gap:10px;align-items:flex-start;}
+.wip svg{flex:none;width:18px;height:18px;margin-top:2px;color:var(--brass-soft);}
+.wip strong{color:#f3eeda;}
+.fineprint{margin-top:18px;font-size:13.5px;color:#93a58b;}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--header-bg);border-top:3px solid var(--brass);}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:9px;text-decoration:none;font-weight:700;font-size:16.5px;}
+.callbar .call{background:var(--brass);color:#1d2415;}
+.callbar .emg{background:var(--danger);color:#fff;}
+.callbar svg{width:19px;height:19px;}
+@media (min-width:820px){.callbar{display:none;}}
+.strip-note{background:var(--surface-2);border-bottom:1px solid var(--line);font-size:14px;color:var(--muted);}
+.strip-note .wrap{padding-top:8px;padding-bottom:8px;display:flex;gap:8px;align-items:center;}
+.strip-note svg{width:15px;height:15px;flex:none;color:var(--brass);}
+.crumb{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
+.crumb a{color:var(--green-mid);text-decoration:none;}
+.crumb a:hover{text-decoration:underline;}
+@media (prefers-color-scheme: dark){.crumb a{color:var(--brass-soft);}}
+.state-hero{background:var(--green-deep);color:#f3eeda;border-bottom:3px solid var(--brass);position:relative;overflow:hidden;}
+.state-hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(-45deg,transparent 0 46px,rgba(246,241,228,.025) 46px 47px);}
+.state-hero-in{max-width:1120px;margin:0 auto;padding:42px 16px 46px;position:relative;z-index:1;}
+.state-hero .over{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-soft);border:1px solid #4a6a52;padding:6px 12px;border-radius:999px;margin-bottom:16px;}
+.state-hero h1,.state-hero h2{font-size:clamp(42px,8vw,72px);color:#f6f1e4;max-width:16ch;}
+.state-hero h1 em,.state-hero h2 em{font-style:normal;color:var(--brass-soft);}
+.state-hero .sub{font-size:clamp(17px,2.4vw,21px);color:#d9dfca;max-width:62ch;margin:16px 0 0;}
+.region-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media (min-width:700px){.region-grid{grid-template-columns:1fr 1fr;}}
 .region-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
 .region-card h3{font-size:28px;color:var(--green);margin-bottom:6px;}
-.region-card p{color:var(--muted);font-size:15.5px;margin:0 0 12px;}
-.city-tags{display:flex;flex-wrap:wrap;gap:8px;}
-.city-tags span{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:14.5px;}
-.steps{display:grid;gap:16px;}
-@media (min-width:760px){ .steps{grid-template-columns:repeat(3,1fr);} }
+@media (prefers-color-scheme: dark){.region-card h3{color:#ece5d0;}}
+.region-card p{color:var(--muted);font-size:16px;margin-bottom:12px;}
+.city-tags{display:flex;flex-wrap:wrap;gap:7px;}
+.city-tags span{font-size:14.5px;font-weight:600;background:var(--surface-2);border:1px solid var(--line);padding:5px 10px;border-radius:999px;color:var(--text);white-space:nowrap;}
+.steps{display:grid;grid-template-columns:1fr;gap:16px;}
+@media (min-width:760px){.steps{grid-template-columns:repeat(3,1fr);}}
 .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
-.step .num{font-family:"Bebas Neue",sans-serif;font-size:24px;color:var(--brass);letter-spacing:.08em;}
-.step h3{font-size:24px;color:var(--green);margin-bottom:6px;}
-.step p{color:var(--muted);font-size:15.5px;margin:0;}
-.state-link-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:var(--text);}
+.step .num{font-family:"Bebas Neue",sans-serif;font-size:34px;color:var(--brass);line-height:1;}
+.step h3{font-size:25px;color:var(--green);margin:8px 0 6px;}
+@media (prefers-color-scheme: dark){.step h3{color:#ece5d0;}}
+.step p{color:var(--muted);font-size:16px;margin:0;}
+.state-link-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:8px;transition:border-color .15s ease, transform .15s ease;}
 .state-link-card:hover{border-color:var(--brass);transform:translateY(-2px);}
 .state-link-card .abbr{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--brass);letter-spacing:.08em;}
 .state-link-card h3{font-size:30px;color:var(--green);}
-@media (prefers-color-scheme: dark){ .state-link-card h3{color:#ece5d0;} }
+@media (prefers-color-scheme: dark){.state-link-card h3{color:#ece5d0;}}
 .state-link-card p{color:var(--muted);margin:0;font-size:16px;}
 .state-link-card .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--green-mid);font-size:15.5px;}
-@media (prefers-color-scheme: dark){ .state-link-card .go{color:var(--brass-soft);} }
-footer.site{background:var(--green-deep);color:#c9d4bc;margin-top:44px;}
-.footer-in{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:36px 0 24px;}
-.footer-cols{display:grid;gap:24px;}
-@media (min-width:760px){ .footer-cols{grid-template-columns:1.4fr 1fr 1fr 1fr;} }
-footer.site h3{font-size:22px;color:#f3eeda;margin-bottom:10px;}
-footer.site p{font-size:15px;margin:0 0 10px;}
-footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;}
-footer.site ul a{color:#c9d4bc;text-decoration:none;font-size:15px;}
-footer.site ul a:hover{color:#fff;}
-.wip{display:flex;gap:10px;background:rgba(243,238,218,.08);border:1px solid var(--line-dark);border-radius:var(--radius);padding:14px 16px;font-size:14.5px;margin:26px 0 14px;}
-.wip svg{width:20px;height:20px;flex:none;color:var(--brass-soft);margin-top:2px;}
-.fineprint{border-top:1px solid var(--line-dark);padding-top:14px;font-size:14px;color:#9fb09a;}
-.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;background:var(--green-deep);border-top:1px solid var(--line-dark);}
-.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 10px;color:#f3eeda;text-decoration:none;font-weight:700;font-size:16px;}
-.callbar a svg{width:19px;height:19px;}
-.callbar a.emg{background:var(--danger);color:#fff;}
-@media (min-width:820px){ .callbar{display:none;} }
+@media (prefers-color-scheme: dark){.state-link-card .go{color:var(--brass-soft);}}
+a.state{text-decoration:none;color:var(--text);transition:border-color .15s ease;}
+a.state:hover{border-color:var(--brass);}
 </style>
 </head>
 <body>
 <header class="site">
 <div class="header-in">
 <a class="brand" href="/">
-<span class="name">JL Field Service</span>
+<span class="name">JL <em>FIELD SERVICE</em></span>
 <span class="tag">Mobile Heavy Equipment Repair</span>
 </a>
-<a class="header-call" href="tel:+18016998822">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-Call 801-699-8822
-</a>
-<button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="24" height="24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-</button>
+<a class="header-call" href="tel:+18016998822"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 801-699-8822</a>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
 </div>
-</header>
-<nav class="main" id="mainNav">
+<nav class="main" id="mainNav" aria-label="Main">
 <div class="nav-in">
 <a href="/">Home</a>
 <a href="/services/">Services</a>
@@ -231,91 +222,129 @@ Call 801-699-8822
 <a href="/contact/">Contact</a>
 </div>
 </nav>
-<div class="strip-note">
-<div class="strip-in">
+</header>
+<div class="strip-note" role="note">
+<div class="wrap">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-<span><b>Site under construction:</b> we're still building this website out. The services and contact info here are current — call anytime.</span>
+<span><strong>Site under construction:</strong> we're still building this website out. The services and contact info here are current — call anytime.</span>
 </div>
 </div>
 <main>
-<section class="state-hero">
-<div class="wrap">
-<div class="crumb">Nevada · Mobile Field Service</div>
+<div class="state-hero">
+<div class="state-hero-in">
+<span class="over">Nevada · Mobile Field Service</span>
 <h2>Mobile heavy equipment repair in <em>Nevada</em></h2>
 <p class="sub">From Reno warehouses to gold country around Elko and the remote sites in between — Nevada runs on heavy equipment, and most of it works a long way from a shop. JL Field Service travels to your machine in Nevada and repairs it on site.</p>
+<div class="hero-ctas" style="margin-top:26px;">
+<a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
+<a class="btn btn-ghost" href="/contact/">Request Service</a>
 </div>
-</section>
+</div>
+</div>
 <section>
 <div class="wrap">
+<p class="crumb"><a href="/service-area/">&larr; Service Area</a> &nbsp;·&nbsp; Nevada</p>
 <div class="section-head">
 <h2>Where We Work in Nevada</h2>
 <p>Northern and western Nevada — the Reno area, the northern mining corridor, and central and eastern Nevada, plus the towns and sites in between.</p>
 </div>
 <div class="region-grid">
-<div class="region-card">
+<article class="region-card">
 <h3>Reno, Sparks &amp; Western Nevada</h3>
 <p>Warehousing, distribution, and manufacturing support in the Truckee Meadows, plus construction and ag work down the Carson Valley.</p>
-<div class="city-tags"><span>Reno</span><span>Sparks</span><span>Carson City</span><span>Fernley</span><span>Fallon</span><span>Dayton</span><span>Gardnerville</span><span>Yerington</span></div>
+<div class="city-tags">
+<span>Reno</span>
+<span>Sparks</span>
+<span>Carson City</span>
+<span>Fernley</span>
+<span>Fallon</span>
+<span>Dayton</span>
+<span>Gardnerville</span>
+<span>Yerington</span>
 </div>
-<div class="region-card">
+</article>
+<article class="region-card">
 <h3>Northern Nevada — Mining Country</h3>
 <p>The I-80 gold corridor. Support equipment at mines, plants, and contractor yards where downtime is measured in real money.</p>
-<div class="city-tags"><span>Elko</span><span>Spring Creek</span><span>Carlin</span><span>Winnemucca</span><span>Battle Mountain</span><span>Eureka</span><span>Wells</span><span>West Wendover</span></div>
+<div class="city-tags">
+<span>Elko</span>
+<span>Spring Creek</span>
+<span>Carlin</span>
+<span>Winnemucca</span>
+<span>Battle Mountain</span>
+<span>Eureka</span>
+<span>Wells</span>
+<span>West Wendover</span>
 </div>
-<div class="region-card">
+</article>
+<article class="region-card">
 <h3>Central &amp; Eastern Nevada</h3>
 <p>Ranch, county, and remote site work along US-50 and US-93. Scheduled repairs and fleet PM — call ahead and we'll build the run around your machines.</p>
-<div class="city-tags"><span>Ely</span><span>Tonopah</span><span>Caliente</span><span>Lovelock</span><span>Austin</span></div>
+<div class="city-tags">
+<span>Ely</span>
+<span>Tonopah</span>
+<span>Caliente</span>
+<span>Lovelock</span>
+<span>Austin</span>
 </div>
+</article>
 </div>
-<p style="color:var(--muted);margin-top:14px;">Counties: Washoe, Elko, Humboldt, Lyon, Carson City, Lander, Eureka, White Pine, Churchill, and Nye.</p>
+<p style="color:var(--muted);margin-top:18px;max-width:68ch;">Counties covered include Washoe, Elko, Humboldt, Lyon, Carson City, Lander, Eureka, White Pine, Churchill, and Nye.</p>
 </div>
 </section>
-<section>
+<section style="padding-top:0;">
 <div class="wrap">
 <div class="section-head">
 <h2>Services in Nevada</h2>
 <p>All seven field services, delivered on site anywhere in Nevada. Tap a service for the full breakdown.</p>
 </div>
 <div class="grid cols3">
-<a class="card" href="/services/#svc-diagnostics" style="text-decoration:none;">
+<a class="card" href="/services/#svc-diagnostics">
 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
 <h3>Diagnostics</h3>
 <p>Warning lights, fault codes, and no-starts chased down with proper scan tools and systematic troubleshooting — not parts swapping.</p>
+<span class="go">Full details &rarr;</span>
 </a>
-<a class="card" href="/services/#svc-engine" style="text-decoration:none;">
-<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9h-1.5A1.5 1.5 0 0 1 16 7.5v-1.5A1.5 1.5 0 0 0 14.5 4.5h-2A1.5 1.5 0 0 0 11 6v3.5H4a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 4 20.5h1a1.5 1.5 0 0 0 3 0h6a1.5 1.5 0 0 0 3 0h2a1.5 1.5 0 0 0 1.5-1.5z"/><path d="M7 8h4"/><path d="M11 5V3"/><path d="m2 14 2 1.5"/></svg></span>
+<a class="card" href="/services/#svc-engine">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4"/><path d="M5 9h11a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3H9l-2 2v-2H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2Z"/><path d="M19 12h2"/></svg></span>
 <h3>Engine</h3>
 <p>Diesel engine repair and overhaul support — hard starts, power loss, overheating, leaks, and in-frame work in the field.</p>
+<span class="go">Full details &rarr;</span>
 </a>
-<a class="card" href="/services/#svc-electrical" style="text-decoration:none;">
-<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+<a class="card" href="/services/#svc-electrical">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1.86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1.78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>
 <h3>Electrical</h3>
 <p>Wiring, charging, starting, and control systems. The faults that strand good machines get traced to the wire that's actually broken.</p>
+<span class="go">Full details &rarr;</span>
 </a>
-<a class="card" href="/services/#svc-hydraulic" style="text-decoration:none;">
+<a class="card" href="/services/#svc-hydraulic">
 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
 <h3>Hydraulic</h3>
 <p>Pumps, cylinders, valves, and hoses. Weak functions, drift, and leaks diagnosed by pressure and flow — not by feel.</p>
+<span class="go">Full details &rarr;</span>
 </a>
-<a class="card" href="/services/#svc-welding" style="text-decoration:none;">
-<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+<a class="card" href="/services/#svc-welding">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6.5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
 <h3>Welding &amp; Fabrication</h3>
 <p>Field welding and fab: cracked buckets, broken mounts, worn edges, and the custom bracket that doesn't exist in a catalog.</p>
+<span class="go">Full details &rarr;</span>
 </a>
-<a class="card" href="/services/#svc-pm" style="text-decoration:none;">
-<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
+<a class="card" href="/services/#svc-pm">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
 <h3>PM Service</h3>
 <p>Planned maintenance done on your schedule at your site — fluids, filters, inspections, and the small catches that prevent big bills.</p>
+<span class="go">Full details &rarr;</span>
 </a>
-<a class="card emergency" href="/services/#svc-emergency" style="text-decoration:none;">
-<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21h14"/><path d="M5 18h14"/><path d="M19 18h2a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-2"/><path d="M3 18H1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h2"/><path d="M10 10v.01"/><path d="M14 10v.01"/></svg></span>
+<a class="card emergency" href="/services/#svc-emergency">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1-1v-2H4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2h-2v2a1 1 0 0 0 1 1Z" transform="translate(0,-1)"/><path d="M12 2v1"/><path d="m4.9 4.9.7.7"/><path d="m19.1 4.9-.7.7"/></svg></span>
 <h3>Emergency Repair</h3>
 <p>Machine down mid-job? Unscheduled breakdowns jump the line. Call and we'll get rolling toward you.</p>
+<span class="go">Full details &rarr;</span>
 </a>
 </div>
+</div>
 </section>
-<section>
+<section style="padding-top:0;">
 <div class="wrap">
 <div class="section-head">
 <h2>The Work We See in Nevada</h2>
@@ -338,17 +367,18 @@ Call 801-699-8822
 <p>Forklifts and material-handling fleets in Reno–Sparks distribution centers. PM programs at your yard, plus breakdown response when a dock goes down.</p>
 </div>
 </div>
-<div class="band" style="margin-top:26px;">
+</div>
+</section>
+<section style="padding-top:0;">
+<div class="wrap">
+<div class="band">
 <div>
 <h2>Down in Nevada?</h2>
 <p>Nevada is a big state — we plan for it. Call with the machine, the symptoms, and where it's sitting, and you'll get an honest plan and ETA.</p>
 </div>
-<a class="btn btn-call" href="tel:+18016998822">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-Call 801-699-8822
-</a>
+<a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
 </div>
-<p style="color:var(--muted);">Also traveling to: <a href="/service-area/idaho/">Idaho</a> · <a href="/service-area/wyoming/">Wyoming</a> · <a href="/service-area/">Full service area</a></p>
+<p style="margin-top:18px;color:var(--muted);">Also traveling to: <a href="/service-area/idaho/">Idaho</a> · <a href="/service-area/wyoming/">Wyoming</a> · <a href="/service-area/">Full service area</a></p>
 </div>
 </section>
 </main>
@@ -356,11 +386,11 @@ Call 801-699-8822
 <div class="footer-in">
 <div class="footer-cols">
 <div>
-<h3>JL Field Service</h3>
+<span class="bebas">JL Field Service</span>
 <p>Mobile heavy equipment repair based in Utah. Owner/operator Jon Lawrey. On-site service across the western United States — and further when the job calls for it.</p>
 </div>
 <div>
-<h3>Services</h3>
+<span class="bebas">Services</span>
 <ul>
 <li><a href="/services/#svc-diagnostics">Diagnostics</a></li>
 <li><a href="/services/#svc-engine">Engine</a></li>
@@ -372,7 +402,7 @@ Call 801-699-8822
 </ul>
 </div>
 <div>
-<h3>Coverage</h3>
+<span class="bebas">Coverage</span>
 <ul>
 <li><a href="/service-area/idaho/">Idaho</a></li>
 <li><a href="/service-area/wyoming/">Wyoming</a></li>
@@ -381,7 +411,7 @@ Call 801-699-8822
 </ul>
 </div>
 <div>
-<h3>Reach Us</h3>
+<span class="bebas">Reach Us</span>
 <ul>
 <li><a href="tel:+18016998822">801-699-8822</a></li>
 <li><a href="mailto:jon@jlfieldservice.com">jon@jlfieldservice.com</a></li>
@@ -389,36 +419,25 @@ Call 801-699-8822
 </ul>
 </div>
 </div>
-<p class="wip">
+<div class="wip" role="note">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-<span><b>Work in progress:</b> this website is still under construction — more service pages and coverage details are being added. Everything listed here is accurate, and the phone is answered now.</span>
-</p>
+<span><strong>Work in progress:</strong> this website is still under construction — more service pages and coverage details are being added. Everything listed here is accurate, and the phone is answered now.</span>
+</div>
 <p class="fineprint">© 2026 JL Field Service LLC · Utah</p>
 </div>
 </footer>
-<div class="callbar">
-<a class="call" href="tel:+18016998822">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-Call
-</a>
-<a class="emg" href="tel:+18016998822">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-Emergency
-</a>
+<div class="callbar" aria-label="Quick contact">
+<a class="call" href="tel:+18016998822"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Now</a>
+<a class="emg" href="/contact/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> Machine Down?</a>
 </div>
 <script>
-var btn=document.getElementById("menuBtn"), nav=document.getElementById("mainNav");
-if(btn&&nav){btn.addEventListener("click",function(){nav.classList.toggle("open");});}
-var f=document.getElementById("serviceForm");
-if(f){f.addEventListener("submit",function(e){e.preventDefault();
-var name=document.getElementById("fName").value.trim(),
-phone=document.getElementById("fPhone").value.trim(),
-machine=document.getElementById("fMachine").value.trim(),
-loc=document.getElementById("fLocation").value.trim(),
-svc=document.getElementById("fService").value,
-notes=document.getElementById("fNotes").value.trim();
-var subject="Service request — "+svc+" ("+machine+")";
-var lines=["Name: "+name,"Phone: "+phone,"Machine: "+machine,"Location: "+loc,"Service needed: "+svc,"","What's it doing: "+notes];
+var menuBtn=document.getElementById("menuBtn"), nav=document.getElementById("mainNav");
+if(menuBtn&&nav){menuBtn.addEventListener("click",function(){var open=nav.classList.toggle("open");menuBtn.setAttribute("aria-expanded",open?"true":"false");menuBtn.setAttribute("aria-label",open?"Close menu":"Open menu");});}
+var form=document.getElementById("serviceForm");
+if(form){form.addEventListener("submit",function(e){e.preventDefault();
+var f=e.target;
+var lines=["Name: "+f.name.value,"Phone: "+f.phone.value,"Machine: "+(f.machine.value||"—"),"Location: "+(f.where.value||"—"),"Service needed: "+f.service.value,"","What's it doing:",f.notes.value||"—"];
+var subject="Service request — "+f.service.value+(f.machine.value?" ("+f.machine.value+")":"");
 window.location.href="mailto:jon@jlfieldservice.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lines.join("\n"));
 });}
 </script>
