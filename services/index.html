@@ -5,526 +5,627 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
 <meta name="description" content="Mobile heavy equipment repair services — diagnostics, engine, electrical, hydraulic, welding and fabrication, PM service and emergency repair, done where the machine sits." />
-<title>Services — Mobile Heavy Equipment Repair | JL Field Service</title>
-<link rel="canonical" href="https://jlfieldservice.com/services/" />
 <link rel="icon" href="data:," />
+<title>Services — Mobile Heavy Equipment Repair | JL Field Service</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="canonical" href="https://jlfieldservice.com/services/" />
 <style>
-:root{--ink:#202328;--muted:#5b6067;--line:#dcdde2;--paper:#fbfbf9;--card:#fff;--blue:#1e6fd9;--blue-2:#1559b3;--navy:#101b32;--red:#c8102e;--warn:#fff4d6;--muted-btn:#eef0f2;--slate:#f2f3f5;--topbar:#0a1120;--radius:14px;--serif:"Trebuchet MS","Arial",sans-serif}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-text-size-adjust:100%}
-img{max-width:100%;height:auto;display:block}
-a{color:#1452a5;text-decoration:none}
-a:hover{color:#0b3d7f}
-h1,h2,h3,.display{margin:0 0 .55em;font-family:"Bebas Neue","Arial Narrow",Arial,sans-serif;font-weight:400;letter-spacing:.04em;line-height:1;word-break:break-word;text-transform:uppercase;color:var(--navy)}
-h1{font-size:clamp(2.6rem,7vw,5rem)}
-h2{font-size:clamp(2rem,4.2vw,3.05rem)}
-h3{font-size:1.55rem}
-p{margin:0 0 .9rem}
-strong{font-weight:700}
-.eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:.35rem}
-.lede{font-size:1.14rem;line-height:1.55;color:#39404a;max-width:62ch}
-.section-note{margin:-1rem 0 1.25rem;color:var(--muted);font-size:.98rem}
-.wrap{width:min(1100px,calc(100% - 2.25rem));margin:0 auto;padding:2.15rem 0}
-.section-head{margin-bottom:1.35rem}
-section.slate,div.slate{background:var(--slate);border-block:1px solid var(--line)}
-.skip{position:absolute;left:-9999px}
-.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem .75rem;border:1px solid var(--navy);z-index:99}
-.view{display:none}
-.view.active{display:block}
-header.site{position:sticky;top:0;z-index:50;background:var(--topbar);color:#fff}
-.header-in{width:min(1100px,calc(100% - 2rem));margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.62rem 0}
-.brand{color:#fff;line-height:1.05}
-.brand:hover{color:#fff}
-.brand .name{font-family:"Bebas Neue","Arial Narrow",Arial,sans-serif;font-size:1.8rem;letter-spacing:.04em;line-height:1;display:block;text-transform:uppercase}
-.brand .name em{font-style:normal;color:#ffb9c2}
-.brand .tag{display:block;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.82}
-.header-call{margin-left:auto;display:flex;align-items:center;gap:.5rem;color:#fff;font-weight:700;font-size:1.12rem;text-decoration:none;background:var(--red);border-radius:999px;padding:.5rem .95rem}
-.header-call:hover{color:#fff;background:#a30d25}
-.header-call svg{width:1.15rem;height:1.15rem}
-.header-call .header-call-num{white-space:nowrap}
-.header-call .header-call-sub{display:none}
-.menu-btn{display:none;margin-left:auto;border:1px solid rgba(255,255,255,.28);background:none;color:#fff;border-radius:10px;padding:.5rem .7rem;font:inherit;font-weight:700;cursor:pointer;align-items:center;gap:.45rem}
-.menu-btn svg{width:1.25rem;height:1.25rem}
-nav.main{background:#101b32}
-.nav-in{width:min(1100px,calc(100% - 2rem));margin:0 auto;display:flex;flex-wrap:wrap;gap:.25rem;padding:.35rem 0}
-nav.main a{color:#e8ecff;padding:.42rem .7rem;border-radius:10px;font-weight:600;font-size:.95rem}
-nav.main a:hover{color:#fff;background:#1c315c}
-nav.main a[aria-current="page"]{background:#c8102e;color:#fff}
-.strip-note{background:#fff8db;border-bottom:1px solid #eadf8b;font-size:.9rem;color:#5b4c05}
-.strip-in{width:min(1100px,calc(100% - 2rem));margin:0 auto;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:space-between;padding:.45rem 0}
-.strip-main{font-weight:700}
-.strip-note-text{opacity:.92}
-.hero{background:linear-gradient(180deg,#101b32 0%,#182b52 72%,#1d3564 100%);color:#fff;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:var(--red)}
-.hero .wrap{padding-block:3.1rem 3.5rem}
-.hero h1{color:#fff;margin-bottom:.5rem}
-.hero .kicker{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;color:#ffb9c2;margin-bottom:.55rem}
-.hero p{max-width:62ch;color:#dce4f7}
-.hero p.hero-sub{font-size:1.2rem;line-height:1.5;color:#f2f5fd}
-.hero .assurance{font-size:1rem;color:#c6d4f2}
-.hero-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin:1.25rem 0 1rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--muted-btn);color:#111;border:1px solid var(--line);border-radius:999px;padding:.68rem 1.05rem;font:inherit;font-weight:700;line-height:1.2;cursor:pointer;text-decoration:none}
-.btn:hover{color:#111;border-color:#b6b9c1}
-.btn.primary{background:var(--red);border-color:#a30d25;color:#fff}
-.btn.primary:hover{background:#a30d25;color:#fff}
-.btn.lg{padding:.9rem 1.3rem;font-size:1.08rem}
-.btn.block{width:100%}
-.btn:active{transform:translateY(1px)}
-.hero-list{list-style:none;margin:1rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.45rem}
-.hero-list li{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:.4rem .8rem;font-weight:600;font-size:.92rem}
-.value-strip{border-bottom:1px solid var(--line);background:#fff}
-.values{width:min(1100px,calc(100% - 2.25rem));margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;padding:1.35rem 0}
-.value{display:flex;gap:.8rem;align-items:flex-start}
-.value .v-ic{width:2.6rem;height:2.6rem;min-width:2.6rem;border-radius:50%;background:#eaf2ff;display:grid;place-items:center;color:var(--blue-2)}
-.value .v-ic svg{width:1.35rem;height:1.35rem}
-.value h3{font-size:1.2rem;margin:0 0 .25rem}
-.value p{margin:0;color:var(--muted);font-size:.96rem;line-height:1.5}
-main p{color:#39404a}
-.svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
-.svc-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.05rem 1rem;text-decoration:none;color:var(--ink)}
-.svc-card:hover{border-color:var(--blue);box-shadow:0 7px 20px rgba(16,27,50,.12)}
-.svc-card svg.svc-ic{width:1.9rem;height:1.9rem;color:var(--blue-2);margin-bottom:.55rem}
-.svc-card h3{font-size:1.25rem;margin:0 0 .3rem}
-.svc-card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
-.svc-grid .svc-cta-card{background:var(--navy);border-color:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:.75rem}
-.svc-grid .svc-cta-card h3{color:#fff}
-.svc-grid .svc-cta-card p{color:#d6deee}
-.svc-grid .svc-cta-card .btn{align-self:flex-start}
-.center{text-align:center}
-.center-note{color:var(--muted);font-size:.98rem;max-width:58ch;margin:1.25rem auto 0}
-.svc-detail-list{display:grid;gap:1rem}
-.svc-detail{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem 1.25rem 1.1rem;scroll-margin-top:130px}
-.svc-detail-top{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:.55rem}
-.svc-detail-ic{width:3rem;height:3rem;min-width:3rem;border-radius:12px;background:#eaf2ff;color:var(--blue-2);display:grid;place-items:center}
-.svc-detail-ic svg.svc-ic{width:1.65rem;height:1.65rem}
-.svc-detail h3{font-size:1.45rem;margin:0 0 .2rem;text-transform:none;letter-spacing:.01em}
-.svc-detail-lede{margin:0;color:#39404a}
-.svc-detail ul{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.4rem}
-.svc-detail li{display:flex;gap:.5rem;align-items:flex-start;color:#2a2f37}
-.svc-detail svg.check{width:1.1rem;height:1.1rem;min-width:1.1rem;margin-top:.2rem;color:var(--blue-2)}
-.mach-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
-.machine{display:flex;gap:.8rem;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1rem}
-.machine .m-ic{width:2.5rem;height:2.5rem;min-width:2.5rem;border-radius:10px;background:#eaf2ff;color:var(--blue-2);display:grid;place-items:center}
-.machine .m-ic svg{width:1.3rem;height:1.3rem}
-.machine h3{font-size:1.28rem;margin:0 0 .2rem}
-.machine p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.5}
-.band{background:var(--navy);color:#fff;border-radius:18px;padding:1.75rem 1.6rem;overflow:hidden}
-.band h2{color:#fff}
-.band p{color:#d6deee;max-width:62ch}
-.band p:last-child{margin-bottom:0}
-.band .btn{margin-top:.35rem}
-.band-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}
-.band.warn{background:var(--warn);color:#2b2406}
-.band.warn h2{color:#2b2406}
-.band.warn p{color:#5b4c05}
-.band.warn .btn.primary{background:var(--red);border-color:#a30d25}
-.states-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
-.state-card{display:flex;flex-direction:column;gap:.45rem;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.1rem;min-height:7.5rem}
-.state-card:hover{border-color:var(--blue);box-shadow:0 7px 20px rgba(16,27,50,.12)}
-.state-card h3{font-size:1.3rem;margin:0}
-.state-card p{margin:0;color:var(--muted);font-size:.95rem}
-.state-card .cta{margin-top:auto;font-weight:700;color:var(--blue-2)}
-.state-muted{background:var(--slate)}
-.state-tag{display:inline-flex;align-items:center;gap:.35rem;background:#eaf2ff;color:var(--blue-2);border-radius:999px;padding:.2rem .7rem;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.state-card.home{border-color:var(--navy);background:var(--navy);color:#fff}
-.state-card.home h3{color:#fff}
-.state-card.home p{color:#d6deee}
-.state-card.home .cta{color:#fff}
-.state-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
-.state-links a{display:inline-flex;align-items:center;gap:.45rem;border:1px solid var(--line);border-radius:999px;padding:.55rem .95rem;font-weight:600;color:var(--ink);background:var(--paper)}
-.state-links a:hover{border-color:var(--blue-2);color:var(--blue-2)}
-.state-links svg{width:1rem;height:1rem;color:var(--blue-2)}
-.state-hero{background:var(--navy);color:#fff;border-radius:18px;padding:1.75rem 1.6rem}
-.state-hero h2{color:#fff;max-width:24ch}
-.state-hero .lede{color:#d6deee}
-.crumb{font-size:.9rem;margin-bottom:.75rem}
-.crumb a{color:#bcd0f2}
-.crumb a:hover{color:#fff}
-.state-hero-pin{display:inline-grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(255,255,255,.12);color:#ffb9c2;margin-bottom:.75rem}
-.state-hero-pin svg{width:1.25rem;height:1.25rem}
-.reg-list{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
-.reg{display:flex;gap:.7rem;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.85rem 1rem}
-.reg .ic{width:1.25rem;height:1.25rem;min-width:1.25rem;margin-top:.2rem;color:var(--blue-2)}
-.reg strong{display:block;font-size:1.05rem}
-.reg span{color:var(--muted);font-size:.96rem}
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:.75rem;counter-reset:step}
-.steps li{display:flex;gap:.85rem;align-items:flex-start}
-.steps li>span{width:2.1rem;height:2.1rem;min-width:2.1rem;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700}
-.steps li strong{display:block}
-.steps li div{color:#39404a}
-.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:1.5rem;align-items:start}
-.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.3rem}
-.contact-card h3{font-size:1.35rem}
-.contact-list{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
-.contact-list li{display:flex;gap:.7rem;align-items:flex-start}
-.contact-list svg{width:1.25rem;height:1.25rem;min-width:1.25rem;color:var(--blue-2);margin-top:.15rem}
-.contact-list a{font-weight:700}
-.contact-list .muted{color:var(--muted)}
-.form-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem}
-.field{margin-bottom:1rem}
-.field label{display:block;font-weight:700;margin-bottom:.35rem}
-.field .req{color:var(--red)}
-.field input,.field select,.field textarea{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid #c6c9d1;border-radius:10px;padding:.65rem .75rem}
-.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid #bcd3ff;border-color:var(--blue)}
-.field textarea{min-height:120px;resize:vertical}
-.field-help{font-size:.88rem;color:var(--muted);margin-top:.35rem}
-.form-note{font-size:.9rem;color:var(--muted);margin:.85rem 0 0}
-footer.site{background:var(--topbar);color:#d6deee;margin-top:1rem}
-.foot-in{width:min(1100px,calc(100% - 2.25rem));margin:0 auto;display:grid;grid-template-columns:1.35fr 1fr 1fr 1.15fr;gap:1.5rem;padding:2.25rem 0 1.5rem}
-.foot-brand{font-family:"Bebas Neue","Arial Narrow",Arial,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff}
-.foot-brand em{font-style:normal;color:#ffb9c2}
-.foot-tag{font-size:.95rem;color:#c6d4f2}
-footer.site h3{color:#fff;font-size:1rem;font-family:inherit;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .6rem}
-footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
-footer.site a{color:#d6deee}
-footer.site a:hover{color:#fff}
-footer .ft-ic{width:1rem;height:1rem;vertical-align:-.15em;margin-right:.45rem}
-footer .wip{font-size:.9rem;color:#c6d4f2}
-.fineprint{border-top:1px solid rgba(255,255,255,.14);text-align:center;padding:1rem .75rem;font-size:.85rem;color:#9fb0d6}
-.disclaimer{font-size:.85rem;color:var(--muted)}
-.callbar{position:sticky;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
-.callbar a{display:flex;align-items:center;justify-content:center;gap:.45rem;padding:.85rem .5rem;font-weight:800;text-align:center}
-.callbar .call-now{background:var(--red);color:#fff}
-.callbar .call-now:hover{background:#a30d25}
-.callbar .go-contact{background:#fff;color:var(--navy)}
-.callbar .go-contact:hover{background:#f0f2f5}
-@media (max-width:900px){
-.values{grid-template-columns:1fr}
-.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.mach-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.states-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.contact-grid{grid-template-columns:1fr}
-.foot-in{grid-template-columns:1fr 1fr}
-.svc-detail ul{grid-template-columns:1fr}
-}
-@media (max-width:640px){
-.header-call .header-call-num{display:none}
-.header-call .header-call-sub{display:inline;font-size:.85rem;font-weight:700}
-.menu-btn{display:inline-flex}
-nav.main{display:none;border-top:1px solid rgba(255,255,255,.14)}
-nav.main.open{display:block}
-.nav-in{flex-direction:column;padding:.55rem 0 .75rem}
-nav.main a{padding:.6rem .75rem}
-.wrap{padding:1.75rem 0}
-.hero .wrap{padding-block:2.4rem 2.7rem}
-.svc-detail-top{flex-direction:column;gap:.6rem}
-.foot-in{grid-template-columns:1fr}
-.callbar a{font-size:.95rem}
-}
-@media print{
-header.site .menu-btn{display:none}
-.callbar{display:none}
-.callbar a{padding:.35rem}
-body{background:#fff}
-}
+  :root{
+    --cream:#f6f1e4;
+    --cream-2:#efe7d3;
+    --paper:#fbf8f0;
+    --green:#1d3b2a;
+    --green-deep:#142b1e;
+    --green-mid:#2a5240;
+    --brass:#b98a2f;
+    --brass-soft:#d9b25f;
+    --ink:#22301f;
+    --ink-soft:#4c5a4c;
+    --line:#d8cfb4;
+    --line-dark:#33523f;
+    --danger:#a03428;
+    --bg:var(--cream);
+    --surface:var(--paper);
+    --surface-2:var(--cream-2);
+    --text:var(--ink);
+    --muted:var(--ink-soft);
+    --header-bg:var(--green-deep);
+    --header-text:#f3eeda;
+    --shadow:0 10px 30px rgba(20,43,30,.14);
+    --radius:10px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#101d15;
+      --surface:#182a1f;
+      --surface-2:#1e3527;
+      --text:#ece5d0;
+      --muted:#b3bfa9;
+      --line:#33523f;
+      --header-bg:#0b1710;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+    }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:76px; /* room for the mobile call bar */
+  }
+  @media (min-width:820px){ body{padding-bottom:0;} }
+  h1,h2,h3,.bebas{font-family:"Bebas Neue","Barlow",sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.02;margin:0;}
+  p{margin:0 0 1em;}
+  a{color:var(--green-mid);}
+  @media (prefers-color-scheme: dark){ a{color:var(--brass-soft);} }
+  :focus-visible{outline:3px solid var(--brass);outline-offset:2px;border-radius:4px;}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:var(--header-bg);
+    color:var(--header-text);
+    border-bottom:3px solid var(--brass);
+  }
+  .header-in{
+    max-width:1120px;margin:0 auto;
+    display:flex;align-items:center;gap:14px;
+    padding:10px 16px;
+  }
+  .brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:var(--header-text);margin-right:auto;}
+  .brand .name{font-family:"Bebas Neue",sans-serif;font-size:30px;letter-spacing:.06em;color:#f6f1e4;}
+  .brand .name em{font-style:normal;color:var(--brass-soft);}
+  .brand .tag{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#c9d4bc;margin-top:3px;}
+  .header-call{
+    display:none;
+    align-items:center;gap:8px;
+    background:var(--brass);color:#1d2415;
+    font-weight:700;font-size:16px;text-decoration:none;
+    padding:10px 18px;border-radius:8px;white-space:nowrap;
+  }
+  .header-call:hover{background:var(--brass-soft);}
+  @media (min-width:820px){ .header-call{display:inline-flex;} }
+  .menu-btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;border:1px solid var(--line-dark);
+    background:transparent;color:var(--header-text);border-radius:8px;cursor:pointer;
+  }
+  @media (min-width:820px){ .menu-btn{display:none;} }
+
+  nav.main{
+    background:var(--header-bg);
+  }
+  .nav-in{
+    max-width:1120px;margin:0 auto;
+    display:none;flex-direction:column;
+    padding:0 16px 14px;
+  }
+  nav.main.open .nav-in{display:flex;}
+  .nav-in a{
+    color:var(--header-text);text-decoration:none;
+    font-family:"Bebas Neue",sans-serif;font-size:21px;letter-spacing:.08em;
+    padding:11px 6px;border-top:1px solid var(--line-dark);
+  }
+  .nav-in a[aria-current="page"]{color:var(--brass-soft);}
+  @media (min-width:820px){
+    .nav-in{display:flex;flex-direction:row;gap:6px;padding:0 16px;}
+    .nav-in a{border-top:none;padding:10px 14px;font-size:20px;border-radius:6px 6px 0 0;}
+    .nav-in a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--brass);}
+  }
+
+  /* ---------- Layout ---------- */
+  .wrap{max-width:1120px;margin:0 auto;padding:0 16px;}
+  .view{display:none;}
+  .view.active{display:block;animation:fadein .25s ease;}
+  @keyframes fadein{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+  @media (prefers-reduced-motion: reduce){
+    .view.active{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+  section{padding:44px 0;}
+  .section-head{max-width:720px;margin-bottom:26px;}
+  .section-head h2{font-size:clamp(34px,6vw,52px);color:var(--green);}
+  @media (prefers-color-scheme: dark){ .section-head h2{color:var(--brass-soft);} }
+  .section-head p{color:var(--muted);font-size:18px;margin-top:8px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--green-deep);
+    color:#f3eeda;
+    border-bottom:3px solid var(--brass);
+    position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(-45deg,transparent 0 46px,rgba(246,241,228,.025) 46px 47px);
+  }
+  .hero-in{max-width:1120px;margin:0 auto;padding:52px 16px 58px;position:relative;z-index:1;}
+  .hero .over{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--brass-soft);
+    border:1px solid #4a6a52;padding:6px 12px;border-radius:999px;margin-bottom:20px;
+  }
+  .hero h1{font-size:clamp(52px,11vw,104px);color:#f6f1e4;max-width:12ch;}
+  .hero h1 em{font-style:normal;color:var(--brass-soft);}
+  .hero .sub{font-size:clamp(18px,2.6vw,22px);color:#d9dfca;max-width:56ch;margin:20px 0 30px;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-weight:700;font-size:17px;text-decoration:none;
+    padding:14px 24px;border-radius:9px;border:2px solid transparent;cursor:pointer;
+    min-height:52px;
+  }
+  .btn-call{background:var(--brass);color:#1d2415;}
+  .btn-call:hover{background:var(--brass-soft);}
+  .btn-ghost{background:transparent;color:#f3eeda;border-color:#5c7a63;}
+  .btn-ghost:hover{border-color:var(--brass-soft);color:var(--brass-soft);}
+  .hero-facts{
+    display:grid;grid-template-columns:1fr;gap:0;
+    margin-top:42px;border-top:1px solid #33523f;
+  }
+  .hero-facts div{padding:14px 4px;border-bottom:1px solid #33523f;}
+  .hero-facts .n{font-family:"Bebas Neue",sans-serif;font-size:26px;color:var(--brass-soft);letter-spacing:.04em;}
+  .hero-facts .d{font-size:15px;color:#c9d4bc;}
+  @media (min-width:700px){
+    .hero-facts{grid-template-columns:repeat(3,1fr);}
+    .hero-facts div{border-bottom:none;padding:16px 18px 4px;border-left:1px solid #33523f;}
+    .hero-facts div:first-child{border-left:none;padding-left:4px;}
+  }
+
+  /* ---------- Service cards ---------- */
+  .grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr;} }
+  @media (min-width:980px){ .grid.cols3{grid-template-columns:repeat(3,1fr);} }
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;display:flex;flex-direction:column;gap:8px;
+    text-decoration:none;color:var(--text);
+  }
+  a.card{transition:border-color .15s ease, transform .15s ease;}
+  a.card:hover{border-color:var(--brass);transform:translateY(-2px);}
+  .card .icon{
+    width:46px;height:46px;border-radius:9px;flex:none;
+    background:var(--green);color:#f3eeda;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .card .icon svg{width:24px;height:24px;}
+  .card h3{font-size:27px;color:var(--green);letter-spacing:.03em;}
+  @media (prefers-color-scheme: dark){ .card h3{color:#ece5d0;} }
+  .card p{color:var(--muted);margin:0;font-size:16px;}
+  .card .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--green-mid);font-size:15.5px;}
+  @media (prefers-color-scheme: dark){ .card .go{color:var(--brass-soft);} }
+  .card.emergency{border-color:var(--danger);border-width:2px;}
+  .card.emergency .icon{background:var(--danger);}
+  .card.emergency h3{color:var(--danger);}
+  @media (prefers-color-scheme: dark){ .card.emergency h3{color:#e88a7c;} }
+
+  /* ---------- Detail blocks (services page) ---------- */
+  .svc-detail{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;margin-bottom:18px;scroll-margin-top:130px;
+  }
+  .svc-detail .top{display:flex;gap:16px;align-items:flex-start;}
+  .svc-detail .icon{
+    width:52px;height:52px;border-radius:10px;flex:none;
+    background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;
+  }
+  .svc-detail .icon svg{width:27px;height:27px;}
+  .svc-detail h3{font-size:32px;color:var(--green);}
+  @media (prefers-color-scheme: dark){ .svc-detail h3{color:#ece5d0;} }
+  .svc-detail .lede{color:var(--muted);font-size:17px;margin-top:4px;}
+  .svc-detail ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;}
+  @media (min-width:700px){ .svc-detail ul{grid-template-columns:1fr 1fr;} }
+  .svc-detail li{display:flex;gap:9px;font-size:16px;align-items:flex-start;}
+  .svc-detail li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--brass);}
+  .svc-detail.emergency{border:2px solid var(--danger);}
+  .svc-detail.emergency .icon{background:var(--danger);}
+  .svc-detail.emergency h3{color:var(--danger);}
+  @media (prefers-color-scheme: dark){ .svc-detail.emergency h3{color:#e88a7c;} }
+
+  /* ---------- Machines ---------- */
+  .machine-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media (min-width:760px){ .machine-list{grid-template-columns:repeat(3,1fr);} }
+  .machine{
+    background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 16px;
+  }
+  .machine .bebas{font-size:24px;color:var(--green);display:block;}
+  @media (prefers-color-scheme: dark){ .machine .bebas{color:#ece5d0;} }
+  .machine span{font-size:14.5px;color:var(--muted);}
+
+  /* ---------- Area ---------- */
+  .states{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  @media (min-width:640px){ .states{grid-template-columns:repeat(3,1fr);} }
+  @media (min-width:980px){ .states{grid-template-columns:repeat(4,1fr);} }
+  .state{
+    background:var(--surface);border:1px solid var(--line);border-radius:8px;
+    padding:13px 15px;display:flex;align-items:baseline;gap:10px;
+  }
+  .state .abbr{font-family:"Bebas Neue",sans-serif;font-size:22px;color:var(--brass);min-width:34px;}
+  .state .nm{font-weight:600;font-size:16px;}
+  .state.home{border:2px solid var(--green);background:var(--surface-2);}
+  .state.home .abbr{color:var(--green);}
+  @media (prefers-color-scheme: dark){ .state.home .abbr{color:var(--brass-soft);} .state.home{border-color:var(--brass);} }
+  /* ---------- Band / CTA ---------- */
+  .band{
+    background:var(--green);color:#f3eeda;border-radius:var(--radius);
+    padding:30px 26px;display:flex;flex-direction:column;gap:16px;
+  }
+  @media (min-width:760px){ .band{flex-direction:row;align-items:center;justify-content:space-between;} }
+  .band h2{font-size:36px;color:#f6f1e4;}
+  .band p{color:#d9dfca;margin:4px 0 0;max-width:52ch;}
+  .band .btn{flex:none;}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+  @media (min-width:860px){ .contact-grid{grid-template-columns:5fr 7fr;align-items:start;} }
+  .contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+  .contact-card h3{font-size:28px;color:var(--green);margin-bottom:14px;}
+  @media (prefers-color-scheme: dark){ .contact-card h3{color:#ece5d0;} }
+  .big-link{
+    display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--text);
+    padding:14px 0;border-bottom:1px solid var(--line);
+  }
+  .big-link:last-of-type{border-bottom:none;}
+  .big-link .icon{width:44px;height:44px;border-radius:9px;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;flex:none;}
+  .big-link .icon svg{width:22px;height:22px;}
+  .big-link .lbl{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .big-link .val{font-size:20px;font-weight:700;line-height:1.25;word-break:break-word;}
+  form .field{margin-bottom:15px;}
+  form label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;}
+  form input,form select,form textarea{
+    width:100%;padding:13px 14px;font:inherit;font-size:16.5px;color:var(--text);
+    background:var(--bg);border:1px solid var(--line);border-radius:8px;
+  }
+  form textarea{min-height:110px;resize:vertical;}
+  form .row{display:grid;grid-template-columns:1fr;gap:0;}
+  @media (min-width:560px){ form .row{grid-template-columns:1fr 1fr;gap:14px;} }
+  .form-note{font-size:14.5px;color:var(--muted);margin-top:12px;}
+  .btn-submit{background:var(--green);color:#f3eeda;border:none;width:100%;justify-content:center;}
+  .btn-submit:hover{background:var(--green-mid);}
+  @media (min-width:560px){ .btn-submit{width:auto;} }
+
+  /* ---------- Footer ---------- */
+  footer.site{
+    background:var(--header-bg);color:#c9d4bc;margin-top:56px;
+    border-top:3px solid var(--brass);
+  }
+  .footer-in{max-width:1120px;margin:0 auto;padding:30px 16px 34px;}
+  .footer-cols{display:grid;grid-template-columns:1fr;gap:22px;}
+  @media (min-width:760px){ .footer-cols{grid-template-columns:2fr 1fr 1fr 1fr;} }
+  footer .bebas{color:#f6f1e4;font-size:24px;display:block;margin-bottom:8px;}
+  footer a{color:#e8dfc4;text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15.5px;}
+  footer p{font-size:15.5px;margin:0;max-width:44ch;}
+  .wip{
+    margin-top:26px;padding:12px 14px;border:1px dashed #5c7a63;border-radius:8px;
+    font-size:14.5px;color:#c9d4bc;display:flex;gap:10px;align-items:flex-start;
+  }
+  .wip svg{flex:none;width:18px;height:18px;margin-top:2px;color:var(--brass-soft);}
+  .wip strong{color:#f3eeda;}
+  .fineprint{margin-top:18px;font-size:13.5px;color:#93a58b;}
+
+  /* ---------- Mobile call bar ---------- */
+  .callbar{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;
+    padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+    background:var(--header-bg);border-top:3px solid var(--brass);
+  }
+  .callbar a{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    min-height:50px;border-radius:9px;text-decoration:none;font-weight:700;font-size:16.5px;
+  }
+  .callbar .call{background:var(--brass);color:#1d2415;}
+  .callbar .emg{background:var(--danger);color:#fff;}
+  .callbar svg{width:19px;height:19px;}
+  @media (min-width:820px){ .callbar{display:none;} }
+
+  .strip-note{
+    background:var(--surface-2);border-bottom:1px solid var(--line);
+    font-size:14px;color:var(--muted);
+  }
+  .strip-note .wrap{padding-top:8px;padding-bottom:8px;display:flex;gap:8px;align-items:center;}
+  .strip-note svg{width:15px;height:15px;flex:none;color:var(--brass);}
+
+  /* ---------- State pages ---------- */
+  .crumb{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
+  .crumb a{color:var(--green-mid);text-decoration:none;}
+  .crumb a:hover{text-decoration:underline;}
+  @media (prefers-color-scheme: dark){ .crumb a{color:var(--brass-soft);} }
+  .state-hero{
+    background:var(--green-deep);color:#f3eeda;border-bottom:3px solid var(--brass);
+    position:relative;overflow:hidden;
+  }
+  .state-hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(-45deg,transparent 0 46px,rgba(246,241,228,.025) 46px 47px);
+  }
+  .state-hero-in{max-width:1120px;margin:0 auto;padding:42px 16px 46px;position:relative;z-index:1;}
+  .state-hero .over{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--brass-soft);
+    border:1px solid #4a6a52;padding:6px 12px;border-radius:999px;margin-bottom:16px;
+  }
+  .state-hero h1,.state-hero h2{font-size:clamp(42px,8vw,72px);color:#f6f1e4;max-width:16ch;}
+  .state-hero h1 em,.state-hero h2 em{font-style:normal;color:var(--brass-soft);}
+  .state-hero .sub{font-size:clamp(17px,2.4vw,21px);color:#d9dfca;max-width:62ch;margin:16px 0 0;}
+  .region-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media (min-width:700px){ .region-grid{grid-template-columns:1fr 1fr;} }
+  .region-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
+  .region-card h3{font-size:28px;color:var(--green);margin-bottom:6px;}
+  @media (prefers-color-scheme: dark){ .region-card h3{color:#ece5d0;} }
+  .region-card p{color:var(--muted);font-size:16px;margin-bottom:12px;}
+  .city-tags{display:flex;flex-wrap:wrap;gap:7px;}
+  .city-tags span{
+    font-size:14.5px;font-weight:600;background:var(--surface-2);border:1px solid var(--line);
+    padding:5px 10px;border-radius:999px;color:var(--text);white-space:nowrap;
+  }
+  .steps{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media (min-width:760px){ .steps{grid-template-columns:repeat(3,1fr);} }
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
+  .step .num{font-family:"Bebas Neue",sans-serif;font-size:34px;color:var(--brass);line-height:1;}
+  .step h3{font-size:25px;color:var(--green);margin:8px 0 6px;}
+  @media (prefers-color-scheme: dark){ .step h3{color:#ece5d0;} }
+  .step p{color:var(--muted);font-size:16px;margin:0;}
+  .state-link-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:8px;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .state-link-card:hover{border-color:var(--brass);transform:translateY(-2px);}
+  .state-link-card .abbr{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--brass);letter-spacing:.08em;}
+  .state-link-card h3{font-size:30px;color:var(--green);}
+  @media (prefers-color-scheme: dark){ .state-link-card h3{color:#ece5d0;} }
+  .state-link-card p{color:var(--muted);margin:0;font-size:16px;}
+  .state-link-card .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--green-mid);font-size:15.5px;}
+  @media (prefers-color-scheme: dark){ .state-link-card .go{color:var(--brass-soft);} }
+  a.state{text-decoration:none;color:var(--text);transition:border-color .15s ease;}
+  a.state:hover{border-color:var(--brass);}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to main content</a>
+
 <header class="site">
-<div class="header-in">
-<a class="brand" href="/">
-<span class="name">JL <em>FIELD SERVICE</em></span>
-<span class="tag">Mobile Heavy Equipment Repair</span>
-</a>
-<a class="header-call" href="tel:+18016998822">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9Z"/></svg>
-<span class="header-call-num">801-699-8822</span>
-<span class="header-call-sub">24/7 calls welcome</span>
-</a>
-<button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
-<span>Menu</span>
-</button>
-</div>
-<nav class="main" id="mainNav" aria-label="Main">
-<div class="nav-in">
-<a href="/">Home</a>
-<a href="/services/" aria-current="page">Services</a>
-<a href="/service-area/">Service Area</a>
-<a href="/service-area/idaho/">Idaho</a>
-<a href="/service-area/wyoming/">Wyoming</a>
-<a href="/service-area/nevada/">Nevada</a>
-<a href="/contact/">Contact</a>
-</div>
-</nav>
+  <div class="header-in">
+    <a class="brand" href="/">
+      <span class="name">JL <em>FIELD SERVICE</em></span>
+      <span class="tag">Mobile Heavy Equipment Repair</span>
+    </a>
+    <a class="header-call" href="tel:+18016998822">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      801-699-8822
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="24" height="24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+  <nav class="main" id="mainNav" aria-label="Main">
+    <div class="nav-in">
+      <a href="/">Home</a>
+      <a href="/services/" aria-current="page">Services</a>
+      <a href="/service-area/">Service Area</a>
+      <a href="/service-area/idaho/">Idaho</a>
+      <a href="/service-area/wyoming/">Wyoming</a>
+      <a href="/service-area/nevada/">Nevada</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </nav>
 </header>
-<div class="strip-note">
-<div class="strip-in"><span class="strip-main">Mobile Mechanic · Northern Utah · Travels the West</span><span class="strip-note-text">Site under construction — pages still being added. Call if you can't find what you need.</span></div>
+
+<div class="strip-note" role="note">
+  <div class="wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+    <span><strong>Site under construction:</strong> we're still building this website out. The services and contact info here are current — call anytime.</span>
+  </div>
 </div>
-<main id="main">
-<section class="wrap">
-<p class="eyebrow">JL Field Service</p>
-<h1>What we do in the field</h1>
-<p class="lede">No tow bills. No waiting on a shop bay. We diagnose and repair heavy equipment where it sits — so your crew, your schedule and your machine keep moving.</p>
-</section>
-<section class="wrap">
-<div class="section-head">
-<p class="eyebrow">What We Fix</p>
-<h2>Seven ways we get your machine running</h2>
-<p class="section-note">Tap any service for the full breakdown.</p>
-</div>
-<div class="svc-grid">
-<a class="svc-card" href="#svc-diagnostics">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-diagnostic"/></svg>
-<h3>Diagnostics</h3>
-<p>We find the cause before we touch a bolt.</p>
-</a>
-<a class="svc-card" href="#svc-engine">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-engine"/></svg>
-<h3>Engine</h3>
-<p>Overhauls, top-ends, injectors, aftertreatment and the bits that break when you least expect it.</p>
-</a>
-<a class="svc-card" href="#svc-electrical">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-electric"/></svg>
-<h3>Electrical</h3>
-<p>Wiring, charging, starting, sensors, CAN and harness repairs.</p>
-</a>
-<a class="svc-card" href="#svc-hydraulic">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-hydraulic"/></svg>
-<h3>Hydraulic</h3>
-<p>Pumps, valves, motors, cylinders and the test gauges to prove them.</p>
-</a>
-<a class="svc-card" href="#svc-welding">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-weld"/></svg>
-<h3>Welding &amp; Fabrication</h3>
-<p>Cracks, buckets, booms, thumb installs and structural fixes.</p>
-</a>
-<a class="svc-card" href="#svc-pm">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pm"/></svg>
-<h3>PM Service</h3>
-<p>Oil, filters, fuel and air service, tracks and undercarriage checks — done on schedule.</p>
-</a>
-<a class="svc-card" href="#svc-emergency">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-emergency"/></svg>
-<h3>Emergency Repair</h3>
-<p>If the job stops, call. We'll get to you as fast as the road and the work allow.</p>
-</a>
-<div class="svc-card svc-cta-card">
-<div>
-<h3>No shop. No tow.</h3>
-<p>One field mechanic, one truck, the full job done on site.</p>
-</div>
-<a class="btn primary" href="/contact/">Request Service</a>
-</div>
-</div>
-</section>
-<div class="slate">
-<section class="wrap">
-<div class="section-head">
-<p class="eyebrow">Services</p>
-<h2>Services — in detail</h2>
-<p class="section-note">Every service starts with the same field-discipline: diagnose before we replace, test before we hand it back, and tell you plainly what we did and why.</p>
-</div>
-<div class="svc-detail-list">
-<article class="svc-detail" id="svc-diagnostics">
-<div class="svc-detail-top">
-<span class="svc-detail-ic"><svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-diagnostic"/></svg></span>
-<div>
-<h3>Diagnostics — find the cause, not the symptom</h3>
-<p class="svc-detail-lede">A warning light, a slow crank, a cylinder that drifts — we track the failure to its source before we quote the fix.</p>
-</div>
-</div>
-<ul>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Engine, electrical and hydraulic troubleshooting</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Scan tools, wiring checks and live data</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Pressure, flow and leak testing in the field</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Fault codes read in plain language</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>A straight answer on fix now vs. fix later</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Documented findings so you can decide</span></li>
-</ul>
-</article>
-<article class="svc-detail" id="svc-engine">
-<div class="svc-detail-top">
-<span class="svc-detail-ic"><svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-engine"/></svg></span>
-<div>
-<h3>Engine — from tune-up to overhaul</h3>
-<p class="svc-detail-lede">From a rough idle to a full in-frame — we service and repair the engines that keep your iron earning.</p>
-</div>
-</div>
-<ul>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Overhauls and top-end work</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Fuel system, injectors and turbos</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Cooling systems and belts</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>DPF / aftertreatment diagnostics</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Seals, gaskets and oil leaks</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Start/no-start and hard-start repair</span></li>
-</ul>
-</article>
-<article class="svc-detail" id="svc-electrical">
-<div class="svc-detail-top">
-<span class="svc-detail-ic"><svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-electric"/></svg></span>
-<div>
-<h3>Electrical — wiring, controls and power</h3>
-<p class="svc-detail-lede">Intermittent faults, dead batteries, dead gauges — electrical problems get traced, not guessed at.</p>
-</div>
-</div>
-<ul>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Wiring and harness repair</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Batteries, alternators and starters</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Sensors, switches and safety circuits</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>CAN bus and fault-code troubleshooting</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Lighting and beacon installs</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Machine control and joystick faults</span></li>
-</ul>
-</article>
-<article class="svc-detail" id="svc-hydraulic">
-<div class="svc-detail-top">
-<span class="svc-detail-ic"><svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-hydraulic"/></svg></span>
-<div>
-<h3>Hydraulic — power where it counts</h3>
-<p class="svc-detail-lede">Slow functions, drift, heat and leaks — hydraulics are tested with gauges, not guesswork.</p>
-</div>
-</div>
-<ul>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Pumps, motors and valves</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Cylinder reseal and replacement</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Hose and fitting fabrication on site</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Pressure and flow testing</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Leak diagnosis and repair</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Filtration and fluid contamination checks</span></li>
-</ul>
-</article>
-<article class="svc-detail" id="svc-welding">
-<div class="svc-detail-top">
-<span class="svc-detail-ic"><svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-weld"/></svg></span>
-<div>
-<h3>Welding &amp; Fabrication — steel, fixed right</h3>
-<p class="svc-detail-lede">Cracked steel doesn't heal. We weld it, brace it, and put the machine back to work.</p>
-</div>
-</div>
-<ul>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Crack repair and structural welding</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Bucket and boom repair</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Thumb and attachment installation</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Cutting edges, pins and bushings</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Custom brackets and guards</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Field welding with on-board power</span></li>
-</ul>
-</article>
-<article class="svc-detail" id="svc-pm">
-<div class="svc-detail-top">
-<span class="svc-detail-ic"><svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pm"/></svg></span>
-<div>
-<h3>PM Service — keep it running, not just fixed</h3>
-<p class="svc-detail-lede">Regular service done on your schedule — not when the machine forces it.</p>
-</div>
-</div>
-<ul>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Engine oil and filters</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Fuel and air service</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Hydraulic oil and filtration</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Track and undercarriage inspection</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Grease, fluid and level checks</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Seasonal checks before the busy season</span></li>
-</ul>
-</article>
-<article class="svc-detail" id="svc-emergency">
-<div class="svc-detail-top">
-<span class="svc-detail-ic"><svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-emergency"/></svg></span>
-<div>
-<h3>Emergency Repair — when the job stops</h3>
-<p class="svc-detail-lede">A down machine costs money every hour. Call early and we'll get rolling.</p>
-</div>
-</div>
-<ul>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Same-day call-outs where the road allows</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Phone triage before we drive</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Field diagnosis and repair on site</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Parts sourced and fitted where possible</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Temporary fixes to get you moving</span></li>
-<li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>Straight talk on timeline and options</span></li>
-</ul>
-</article>
-</div>
-</section>
-</div>
-<section class="wrap">
-<div class="band svc-cta">
-<h2>Not sure what's wrong?</h2>
-<p>Call and tell us what the machine is doing — or not doing. We'll tell you what we think it is, what it will take to fix, and how soon we can be there.</p>
-<div class="band-actions">
-<a class="btn primary lg" href="tel:+18016998822">Call 801-699-8822</a>
-<a class="btn" href="/contact/">Request Service</a>
-</div>
-</div>
-</section>
+
+<main>
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p>Time-and-materials field service, priced straight and explained up front. Call for current rates — every job starts with a conversation about what the machine is doing.</p>
+      </div>
+      <h3 class="bebas" style="font-size:29px;margin-bottom:6px;">What We Fix</h3>
+      <p style="color:var(--muted);max-width:65ch;">Seven core services covering the failures that actually stop a machine. Tap any service for the full breakdown.</p>
+      <div class="grid cols3" style="margin-top:14px;">
+        <a class="card" href="#svc-diagnostics">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
+          <h3>Diagnostics</h3>
+          <p>Warning lights, fault codes, and no-starts chased down with proper scan tools and systematic troubleshooting — not parts swapping.</p>
+          <span class="go">Full details &rarr;</span>
+        </a>
+        <a class="card" href="#svc-engine">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4"/><path d="M5 9h11a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3H9l-2 2v-2H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2Z"/><path d="M19 12h2"/></svg></span>
+          <h3>Engine</h3>
+          <p>Diesel engine repair and overhaul support — hard starts, power loss, overheating, leaks, and in-frame work in the field.</p>
+          <span class="go">Full details &rarr;</span>
+        </a>
+        <a class="card" href="#svc-electrical">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>
+          <h3>Electrical</h3>
+          <p>Wiring, charging, starting, and control systems. The faults that strand good machines get traced to the wire that's actually broken.</p>
+          <span class="go">Full details &rarr;</span>
+        </a>
+        <a class="card" href="#svc-hydraulic">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
+          <h3>Hydraulic</h3>
+          <p>Pumps, cylinders, valves, and hoses. Weak functions, drift, and leaks diagnosed by pressure and flow — not by feel.</p>
+          <span class="go">Full details &rarr;</span>
+        </a>
+        <a class="card" href="#svc-welding">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+          <h3>Welding &amp; Fabrication</h3>
+          <p>Field welding and fab: cracked buckets, broken mounts, worn edges, and the custom bracket that doesn't exist in a catalog.</p>
+          <span class="go">Full details &rarr;</span>
+        </a>
+        <a class="card" href="#svc-pm">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
+          <h3>PM Service</h3>
+          <p>Planned maintenance done on your schedule at your site — fluids, filters, inspections, and the small catches that prevent big bills.</p>
+          <span class="go">Full details &rarr;</span>
+        </a>
+        <a class="card emergency" href="#svc-emergency">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1-1v-2H4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2h-2v2a1 1 0 0 0 1 1Z" transform="translate(0,-1)"/><path d="M12 2v1"/><path d="m4.9 4.9.7.7"/><path d="m19.1 4.9-.7.7"/></svg></span>
+          <h3>Emergency Repair</h3>
+          <p>Machine down mid-job? Unscheduled breakdowns jump the line. Call and we'll get rolling toward you.</p>
+          <span class="go">Full details &rarr;</span>
+        </a>
+      </div>
+      <h3 class="bebas" style="font-size:29px;margin:34px 0 6px;">Services — in detail</h3>
+      <article class="svc-detail" id="svc-diagnostics">
+        <div class="top"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span><div><h3>Diagnostics</h3><p class="lede">Most repair bills start with a wrong guess. We start with the code, the data, and the test that proves what's actually failed before a single part gets ordered.</p></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Fault code reading &amp; interpretation</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>No-start / crank-no-start diagnosis</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Intermittent electrical &amp; sensor faults</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Performance &amp; derate complaints</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Pre-purchase machine inspections</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Second opinions on dealer quotes</span></li>
+        </ul>
+      </article>
+      <article class="svc-detail" id="svc-engine">
+        <div class="top"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4"/><path d="M5 9h11a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3H9l-2 2v-2H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2Z"/><path d="M19 12h2"/></svg></span><div><h3>Engine</h3><p class="lede">From a hard-starting skid steer to a tired dozer engine, we handle diesel troubleshooting and repair on-site, and give you a straight answer on whether it's a field fix or shop work.</p></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Hard start &amp; power loss</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Overheating &amp; cooling system</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Fuel system &amp; injector issues</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Oil leaks &amp; consumption</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Turbo &amp; aftertreatment faults</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>In-frame repair support</span></li>
+        </ul>
+      </article>
+      <article class="svc-detail" id="svc-electrical">
+        <div class="top"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span><div><h3>Electrical</h3><p class="lede">Modern equipment lives and dies by its wiring. We trace harnesses, test circuits under load, and repair the chafed wire or corroded ground causing the ghost problem — instead of replacing modules until it goes away.</p></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Starting &amp; charging systems</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Wiring harness repair</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>ECU &amp; sensor circuits</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Lights, switches &amp; controls</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Battery drain tracing</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>CAN bus fault isolation</span></li>
+        </ul>
+      </article>
+      <article class="svc-detail" id="svc-hydraulic">
+        <div class="top"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span><div><h3>Hydraulic</h3><p class="lede">Hydraulics are the muscle of every machine we service. We pressure-test, isolate the failing component, and reseal, rebuild, or replace it in the field so the machine goes back to digging, lifting, or pushing.</p></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Pump &amp; motor testing</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Cylinder reseal &amp; rebuild</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Valve &amp; joystick faults</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Hose inspection &amp; replacement routing</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Drift, weakness &amp; slow functions</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Leak detection &amp; repair</span></li>
+        </ul>
+      </article>
+      <article class="svc-detail" id="svc-welding">
+        <div class="top"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span><div><h3>Welding &amp; Fabrication</h3><p class="lede">Cracks and breaks don't wait for shop time. We weld and fabricate on-site — structural repairs, bucket and blade work, pin bosses, mounts, and one-off fabrication to keep the job moving.</p></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Bucket &amp; blade repair</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Crack repair &amp; reinforcement</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Mounts, brackets &amp; pin bosses</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Cutting edge &amp; wear parts</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Custom on-site fabrication</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Attachment repair</span></li>
+        </ul>
+      </article>
+      <article class="svc-detail" id="svc-pm">
+        <div class="top"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span><div><h3>PM Service</h3><p class="lede">The cheapest repair is the one that never happens. Scheduled preventive maintenance at your yard or jobsite keeps machines in service and catches wear while it's still a line item, not a breakdown.</p></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Oil, fluid &amp; filter service</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Full machine inspections</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Greasing &amp; wear checks</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Undercarriage monitoring</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Service records per machine</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Fleet maintenance scheduling</span></li>
+        </ul>
+      </article>
+      <article class="svc-detail emergency" id="svc-emergency">
+        <div class="top"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1-1v-2H4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2h-2v2a1 1 0 0 0 1 1Z" transform="translate(0,-1)"/><path d="M12 2v1"/><path d="m4.9 4.9.7.7"/><path d="m19.1 4.9-.7.7"/></svg></span><div><h3>Emergency Repair</h3><p class="lede">A dead machine on a deadline is the most expensive kind. Emergency calls get priority response — troubleshooting starts on the phone so we roll with the right parts and tools the first time.</p></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Priority response for breakdowns</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>On-site triage &amp; safe-out</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Get-it-running repairs</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>After-hours availability</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Multi-state emergency travel</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Honest ETA before we roll</span></li>
+        </ul>
+      </article>
+      <div class="band" style="margin-top:8px;">
+        <div>
+          <h2>Not sure what's wrong?</h2>
+          <p>That's what diagnostics are for. Describe the symptoms and we'll tell you honestly whether it's a field fix or a bigger job.</p>
+        </div>
+        <a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
+      </div>
+    </div>
+  </section>
 </main>
+
 <footer class="site">
-<div class="foot-in">
-<div class="foot-main">
-<div class="foot-brand">JL <em>FIELD SERVICE</em></div>
-<p class="foot-tag">Mobile Heavy Equipment Repair · Northern Utah · Travels the West</p>
-<p class="wip"><strong>Work in progress:</strong> this site is being built out. If something looks half-finished, it probably is — the trucks are finished, the website is catching up.</p>
-</div>
-<nav class="foot-col" aria-label="Services">
-<h3 id="footerServicesHeading">Services</h3>
-<ul aria-labelledby="footerServicesHeading">
-<li><a href="/services/#svc-diagnostics">Diagnostics</a></li>
-<li><a href="/services/#svc-engine">Engine</a></li>
-<li><a href="/services/#svc-electrical">Electrical</a></li>
-<li><a href="/services/#svc-hydraulic">Hydraulic</a></li>
-<li><a href="/services/#svc-welding">Welding &amp; Fabrication</a></li>
-<li><a href="/services/#svc-pm">PM Service</a></li>
-<li><a href="/services/#svc-emergency">Emergency Repair</a></li>
-</ul>
-</nav>
-<nav class="foot-col" aria-label="Service area">
-<h3>Coverage</h3>
-<ul>
-<li><a href="/service-area/idaho/">Idaho</a></li>
-<li><a href="/service-area/wyoming/">Wyoming</a></li>
-<li><a href="/service-area/nevada/">Nevada</a></li>
-<li><a href="/service-area/">All 11 Western States</a></li>
-</ul>
-</nav>
-<div class="foot-col">
-<h3>Reach Us</h3>
-<ul>
-<li><a href="tel:+18016998822"><svg class="ft-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-phone" /></svg>801-699-8822</a></li>
-<li><a href="mailto:jon@jlfieldservice.com"><svg class="ft-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-mail" /></svg>jon@jlfieldservice.com</a></li>
-<li>Utah — Mobile Service</li>
-</ul>
-</div>
-</div>
-<div class="fineprint">© 2026 JL Field Service LLC · Utah</div>
+  <div class="footer-in">
+    <div class="footer-cols">
+      <div>
+        <span class="bebas">JL Field Service</span>
+        <p>Mobile heavy equipment repair based in Utah. Owner/operator Jon Lawrey. On-site service across the western United States — and further when the job calls for it.</p>
+      </div>
+      <div>
+        <span class="bebas">Services</span>
+        <ul>
+          <li><a href="/services/#svc-diagnostics">Diagnostics</a></li>
+          <li><a href="/services/#svc-engine">Engine</a></li>
+          <li><a href="/services/#svc-electrical">Electrical</a></li>
+          <li><a href="/services/#svc-hydraulic">Hydraulic</a></li>
+          <li><a href="/services/#svc-welding">Welding &amp; Fabrication</a></li>
+          <li><a href="/services/#svc-pm">PM Service</a></li>
+          <li><a href="/services/#svc-emergency">Emergency Repair</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="bebas">Coverage</span>
+        <ul>
+          <li><a href="/service-area/idaho/">Idaho</a></li>
+          <li><a href="/service-area/wyoming/">Wyoming</a></li>
+          <li><a href="/service-area/nevada/">Nevada</a></li>
+          <li><a href="/service-area/">All 11 Western States</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="bebas">Reach Us</span>
+        <ul>
+          <li><a href="tel:+18016998822">801-699-8822</a></li>
+          <li><a href="mailto:jon@jlfieldservice.com">jon@jlfieldservice.com</a></li>
+          <li>Utah — Mobile Service</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wip" role="note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      <span><strong>Work in progress:</strong> this website is still under construction — more service pages and coverage details are being added. Everything listed here is accurate, and the phone is answered now.</span>
+    </div>
+    <p class="fineprint">© 2026 JL Field Service LLC · Utah</p>
+  </div>
 </footer>
-<div class="callbar">
-<a class="call-now" href="tel:+18016998822">Call Now · 801-699-8822</a>
-<a class="go-contact" href="/contact/">Machine Down?</a>
+
+<div class="callbar" aria-label="Quick contact">
+  <a class="call" href="tel:+18016998822">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call Now
+  </a>
+  <a class="emg" href="/contact/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+    Machine Down?
+  </a>
 </div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<defs>
-<symbol id="ic-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
-<symbol id="ic-flash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></symbol>
-<symbol id="ic-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12.035 8.6c.196.439.58.82.99 1.09l1.759 1.17c.39.26.82.39 1.232.39h1.5a2 2 0 0 1 1.414.586z"/></symbol>
-<symbol id="ic-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
-<symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9Z"/></symbol>
-<symbol id="ic-siren" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21h14"/><path d="M5 18h14"/><path d="m21 21-2-2"/><path d="m3 21 2-2"/><path d="M12 3v5"/><path d="M12 8c-1.1 0-2-.9-2-2"/></symbol>
-<symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></symbol>
-<symbol id="ic-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18h-5"/><path d="M14 9h4l4 4v4a1 1 0 0 1-1 1h-2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
-<symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
-<symbol id="ic-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.1 5.6 9 3 3.5 5.2a.6.6 0 0 0-.4.6v13a.6.6 0 0 0 .8.6L9 17l6 2.6a.6.6 0 0 0 .4-.6V5.9a.6.6 0 0 0-.3-.3Z"/><path d="m9 3 5.1 2.6M15 5.9l5.4-2.3a.6.6 0 0 1 .6.6v13a.6.6 0 0 1-.8.6L15 15"/><path d="M9 3v14M15 5.9V20"/></symbol>
-<symbol id="ic-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
-<symbol id="ic-call" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9Z"/></symbol>
-<symbol id="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
-<symbol id="ic-diagnostic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
-<symbol id="ic-engine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18a2 2 0 0 1-2-2V8l3.5-3.5A2 2 0 0 1 8.5 4h7a2 2 0 0 1 1.4.6l3 3.2A2 2 0 0 1 20 9.2V12"/><path d="M3 12h12"/><path d="M14 4v4"/><path d="M5 16v4h4"/><path d="M15 18h4"/></symbol>
-<symbol id="ic-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></symbol>
-<symbol id="ic-hydraulic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14"/><path d="M5 8V5a3 3 0 0 1 6 0v3"/><path d="M8 8v6a3 3 0 0 1-3 3H5"/><path d="M13 8v12"/><path d="M19 8v4a3 3 0 0 1-3 3h-3"/></symbol>
-<symbol id="ic-weld" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12.035 8.6c.196.439.58.82.99 1.09l1.759 1.17c.39.26.82.39 1.232.39h1.5a2 2 0 0 1 1.414.586z"/></symbol>
-<symbol id="ic-pm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
-<symbol id="ic-emergency" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21h14"/><path d="M5 18h14"/><path d="m21 21-2-2"/><path d="m3 21 2-2"/><path d="M12 3v5"/><path d="M12 8c-1.1 0-2-.9-2-2"/></symbol>
-<symbol id="ic-case" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
-<symbol id="ic-check2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></symbol>
-<symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
-<symbol id="ic-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
-</defs>
-</svg>
+
 <script>
 (function(){
 "use strict";
