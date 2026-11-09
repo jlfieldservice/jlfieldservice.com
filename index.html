@@ -7,1166 +7,439 @@
 <meta name="description" content="JL Field Service — mobile heavy equipment repair based in Northern Utah, traveling across the West including Idaho, Wyoming, and Nevada. Diagnostics, engine, electrical, hydraulic, welding & fabrication, PM service, and emergency repair for excavators, dozers, skid steers, telehandlers, man lifts, and forklifts. We come to your jobsite." />
 <link rel="icon" href="data:," />
 <title>JL Field Service — Mobile Heavy Equipment Repair | Northern Utah</title>
+<link rel="canonical" href="https://jlfieldservice.com/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
-  :root{
-    --cream:#f6f1e4;
-    --cream-2:#efe7d3;
-    --paper:#fbf8f0;
-    --green:#1d3b2a;
-    --green-deep:#142b1e;
-    --green-mid:#2a5240;
-    --brass:#b98a2f;
-    --brass-soft:#d9b25f;
-    --ink:#22301f;
-    --ink-soft:#4c5a4c;
-    --line:#d8cfb4;
-    --line-dark:#33523f;
-    --danger:#a03428;
-    --bg:var(--cream);
-    --surface:var(--paper);
-    --surface-2:var(--cream-2);
-    --text:var(--ink);
-    --muted:var(--ink-soft);
-    --header-bg:var(--green-deep);
-    --header-text:#f3eeda;
-    --shadow:0 10px 30px rgba(20,43,30,.14);
-    --radius:10px;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#101d15;
-      --surface:#182a1f;
-      --surface-2:#1e3527;
-      --text:#ece5d0;
-      --muted:#b3bfa9;
-      --line:#33523f;
-      --header-bg:#0b1710;
-      --shadow:0 10px 30px rgba(0,0,0,.45);
-    }
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
-    font-size:17px;
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-    padding-bottom:76px; /* room for the mobile call bar */
-  }
-  @media (min-width:820px){ body{padding-bottom:0;} }
-  h1,h2,h3,.bebas{font-family:"Bebas Neue","Barlow",sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.02;margin:0;}
-  p{margin:0 0 1em;}
-  a{color:var(--green-mid);}
-  @media (prefers-color-scheme: dark){ a{color:var(--brass-soft);} }
-  :focus-visible{outline:3px solid var(--brass);outline-offset:2px;border-radius:4px;}
-
-  /* ---------- Header ---------- */
-  header.site{
-    position:sticky;top:0;z-index:50;
-    background:var(--header-bg);
-    color:var(--header-text);
-    border-bottom:3px solid var(--brass);
-  }
-  .header-in{
-    max-width:1120px;margin:0 auto;
-    display:flex;align-items:center;gap:14px;
-    padding:10px 16px;
-  }
-  .brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:var(--header-text);margin-right:auto;}
-  .brand .name{font-family:"Bebas Neue",sans-serif;font-size:30px;letter-spacing:.06em;color:#f6f1e4;}
-  .brand .name em{font-style:normal;color:var(--brass-soft);}
-  .brand .tag{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#c9d4bc;margin-top:3px;}
-  .header-call{
-    display:none;
-    align-items:center;gap:8px;
-    background:var(--brass);color:#1d2415;
-    font-weight:700;font-size:16px;text-decoration:none;
-    padding:10px 18px;border-radius:8px;white-space:nowrap;
-  }
-  .header-call:hover{background:var(--brass-soft);}
-  @media (min-width:820px){ .header-call{display:inline-flex;} }
-  .menu-btn{
-    display:inline-flex;align-items:center;justify-content:center;
-    width:44px;height:44px;border:1px solid var(--line-dark);
-    background:transparent;color:var(--header-text);border-radius:8px;cursor:pointer;
-  }
-  @media (min-width:820px){ .menu-btn{display:none;} }
-
-  nav.main{
-    background:var(--header-bg);
-  }
-  .nav-in{
-    max-width:1120px;margin:0 auto;
-    display:none;flex-direction:column;
-    padding:0 16px 14px;
-  }
-  nav.main.open .nav-in{display:flex;}
-  .nav-in a{
-    color:var(--header-text);text-decoration:none;
-    font-family:"Bebas Neue",sans-serif;font-size:21px;letter-spacing:.08em;
-    padding:11px 6px;border-top:1px solid var(--line-dark);
-  }
-  .nav-in a[aria-current="page"]{color:var(--brass-soft);}
-  @media (min-width:820px){
-    .nav-in{display:flex;flex-direction:row;gap:6px;padding:0 16px;}
-    .nav-in a{border-top:none;padding:10px 14px;font-size:20px;border-radius:6px 6px 0 0;}
-    .nav-in a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--brass);}
-  }
-
-  /* ---------- Layout ---------- */
-  .wrap{max-width:1120px;margin:0 auto;padding:0 16px;}
-  .view{display:none;}
-  .view.active{display:block;animation:fadein .25s ease;}
-  @keyframes fadein{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
-  @media (prefers-reduced-motion: reduce){
-    .view.active{animation:none;}
-    html{scroll-behavior:auto;}
-  }
-  section{padding:44px 0;}
-  .section-head{max-width:720px;margin-bottom:26px;}
-  .section-head h2{font-size:clamp(34px,6vw,52px);color:var(--green);}
-  @media (prefers-color-scheme: dark){ .section-head h2{color:var(--brass-soft);} }
-  .section-head p{color:var(--muted);font-size:18px;margin-top:8px;}
-
-  /* ---------- Hero ---------- */
-  .hero{
-    background:var(--green-deep);
-    color:#f3eeda;
-    border-bottom:3px solid var(--brass);
-    position:relative;overflow:hidden;
-  }
-  .hero::after{
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background:repeating-linear-gradient(-45deg,transparent 0 46px,rgba(246,241,228,.025) 46px 47px);
-  }
-  .hero-in{max-width:1120px;margin:0 auto;padding:52px 16px 58px;position:relative;z-index:1;}
-  .hero .over{
-    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.22em;
-    text-transform:uppercase;color:var(--brass-soft);
-    border:1px solid #4a6a52;padding:6px 12px;border-radius:999px;margin-bottom:20px;
-  }
-  .hero h1{font-size:clamp(52px,11vw,104px);color:#f6f1e4;max-width:12ch;}
-  .hero h1 em{font-style:normal;color:var(--brass-soft);}
-  .hero .sub{font-size:clamp(18px,2.6vw,22px);color:#d9dfca;max-width:56ch;margin:20px 0 30px;}
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;}
-  .btn{
-    display:inline-flex;align-items:center;gap:9px;
-    font-weight:700;font-size:17px;text-decoration:none;
-    padding:14px 24px;border-radius:9px;border:2px solid transparent;cursor:pointer;
-    min-height:52px;
-  }
-  .btn-call{background:var(--brass);color:#1d2415;}
-  .btn-call:hover{background:var(--brass-soft);}
-  .btn-ghost{background:transparent;color:#f3eeda;border-color:#5c7a63;}
-  .btn-ghost:hover{border-color:var(--brass-soft);color:var(--brass-soft);}
-  .hero-facts{
-    display:grid;grid-template-columns:1fr;gap:0;
-    margin-top:42px;border-top:1px solid #33523f;
-  }
-  .hero-facts div{padding:14px 4px;border-bottom:1px solid #33523f;}
-  .hero-facts .n{font-family:"Bebas Neue",sans-serif;font-size:26px;color:var(--brass-soft);letter-spacing:.04em;}
-  .hero-facts .d{font-size:15px;color:#c9d4bc;}
-  @media (min-width:700px){
-    .hero-facts{grid-template-columns:repeat(3,1fr);}
-    .hero-facts div{border-bottom:none;padding:16px 18px 4px;border-left:1px solid #33523f;}
-    .hero-facts div:first-child{border-left:none;padding-left:4px;}
-  }
-
-  /* ---------- Service cards ---------- */
-  .grid{display:grid;grid-template-columns:1fr;gap:16px;}
-  @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr;} }
-  @media (min-width:980px){ .grid.cols3{grid-template-columns:repeat(3,1fr);} }
-  .card{
-    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-    padding:22px;display:flex;flex-direction:column;gap:8px;
-    text-decoration:none;color:var(--text);
-  }
-  a.card{transition:border-color .15s ease, transform .15s ease;}
-  a.card:hover{border-color:var(--brass);transform:translateY(-2px);}
-  .card .icon{
-    width:46px;height:46px;border-radius:9px;flex:none;
-    background:var(--green);color:#f3eeda;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .card .icon svg{width:24px;height:24px;}
-  .card h3{font-size:27px;color:var(--green);letter-spacing:.03em;}
-  @media (prefers-color-scheme: dark){ .card h3{color:#ece5d0;} }
-  .card p{color:var(--muted);margin:0;font-size:16px;}
-  .card .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--green-mid);font-size:15.5px;}
-  @media (prefers-color-scheme: dark){ .card .go{color:var(--brass-soft);} }
-  .card.emergency{border-color:var(--danger);border-width:2px;}
-  .card.emergency .icon{background:var(--danger);}
-  .card.emergency h3{color:var(--danger);}
-  @media (prefers-color-scheme: dark){ .card.emergency h3{color:#e88a7c;} }
-
-  /* ---------- Detail blocks (services page) ---------- */
-  .svc-detail{
-    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-    padding:26px;margin-bottom:18px;scroll-margin-top:130px;
-  }
-  .svc-detail .top{display:flex;gap:16px;align-items:flex-start;}
-  .svc-detail .icon{
-    width:52px;height:52px;border-radius:10px;flex:none;
-    background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;
-  }
-  .svc-detail .icon svg{width:27px;height:27px;}
-  .svc-detail h3{font-size:32px;color:var(--green);}
-  @media (prefers-color-scheme: dark){ .svc-detail h3{color:#ece5d0;} }
-  .svc-detail .lede{color:var(--muted);font-size:17px;margin-top:4px;}
-  .svc-detail ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;}
-  @media (min-width:700px){ .svc-detail ul{grid-template-columns:1fr 1fr;} }
-  .svc-detail li{display:flex;gap:9px;font-size:16px;align-items:flex-start;}
-  .svc-detail li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--brass);}
-  .svc-detail.emergency{border:2px solid var(--danger);}
-  .svc-detail.emergency .icon{background:var(--danger);}
-  .svc-detail.emergency h3{color:var(--danger);}
-  @media (prefers-color-scheme: dark){ .svc-detail.emergency h3{color:#e88a7c;} }
-
-  /* ---------- Machines ---------- */
-  .machine-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  @media (min-width:760px){ .machine-list{grid-template-columns:repeat(3,1fr);} }
-  .machine{
-    background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius);
-    padding:18px 16px;
-  }
-  .machine .bebas{font-size:24px;color:var(--green);display:block;}
-  @media (prefers-color-scheme: dark){ .machine .bebas{color:#ece5d0;} }
-  .machine span{font-size:14.5px;color:var(--muted);}
-
-  /* ---------- Area ---------- */
-  .states{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-  @media (min-width:640px){ .states{grid-template-columns:repeat(3,1fr);} }
-  @media (min-width:980px){ .states{grid-template-columns:repeat(4,1fr);} }
-  .state{
-    background:var(--surface);border:1px solid var(--line);border-radius:8px;
-    padding:13px 15px;display:flex;align-items:baseline;gap:10px;
-  }
-  .state .abbr{font-family:"Bebas Neue",sans-serif;font-size:22px;color:var(--brass);min-width:34px;}
-  .state .nm{font-weight:600;font-size:16px;}
-  .state.home{border:2px solid var(--green);background:var(--surface-2);}
-  .state.home .abbr{color:var(--green);}
-  @media (prefers-color-scheme: dark){ .state.home .abbr{color:var(--brass-soft);} .state.home{border-color:var(--brass);} }
-  /* ---------- Band / CTA ---------- */
-  .band{
-    background:var(--green);color:#f3eeda;border-radius:var(--radius);
-    padding:30px 26px;display:flex;flex-direction:column;gap:16px;
-  }
-  @media (min-width:760px){ .band{flex-direction:row;align-items:center;justify-content:space-between;} }
-  .band h2{font-size:36px;color:#f6f1e4;}
-  .band p{color:#d9dfca;margin:4px 0 0;max-width:52ch;}
-  .band .btn{flex:none;}
-
-  /* ---------- Contact ---------- */
-  .contact-grid{display:grid;grid-template-columns:1fr;gap:18px;}
-  @media (min-width:860px){ .contact-grid{grid-template-columns:5fr 7fr;align-items:start;} }
-  .contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
-  .contact-card h3{font-size:28px;color:var(--green);margin-bottom:14px;}
-  @media (prefers-color-scheme: dark){ .contact-card h3{color:#ece5d0;} }
-  .big-link{
-    display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--text);
-    padding:14px 0;border-bottom:1px solid var(--line);
-  }
-  .big-link:last-of-type{border-bottom:none;}
-  .big-link .icon{width:44px;height:44px;border-radius:9px;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;flex:none;}
-  .big-link .icon svg{width:22px;height:22px;}
-  .big-link .lbl{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;}
-  .big-link .val{font-size:20px;font-weight:700;line-height:1.25;word-break:break-word;}
-  form .field{margin-bottom:15px;}
-  form label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;}
-  form input,form select,form textarea{
-    width:100%;padding:13px 14px;font:inherit;font-size:16.5px;color:var(--text);
-    background:var(--bg);border:1px solid var(--line);border-radius:8px;
-  }
-  form textarea{min-height:110px;resize:vertical;}
-  form .row{display:grid;grid-template-columns:1fr;gap:0;}
-  @media (min-width:560px){ form .row{grid-template-columns:1fr 1fr;gap:14px;} }
-  .form-note{font-size:14.5px;color:var(--muted);margin-top:12px;}
-  .btn-submit{background:var(--green);color:#f3eeda;border:none;width:100%;justify-content:center;}
-  .btn-submit:hover{background:var(--green-mid);}
-  @media (min-width:560px){ .btn-submit{width:auto;} }
-
-  /* ---------- Footer ---------- */
-  footer.site{
-    background:var(--header-bg);color:#c9d4bc;margin-top:56px;
-    border-top:3px solid var(--brass);
-  }
-  .footer-in{max-width:1120px;margin:0 auto;padding:30px 16px 34px;}
-  .footer-cols{display:grid;grid-template-columns:1fr;gap:22px;}
-  @media (min-width:760px){ .footer-cols{grid-template-columns:2fr 1fr 1fr 1fr;} }
-  footer .bebas{color:#f6f1e4;font-size:24px;display:block;margin-bottom:8px;}
-  footer a{color:#e8dfc4;text-decoration:none;}
-  footer a:hover{text-decoration:underline;}
-  footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15.5px;}
-  footer p{font-size:15.5px;margin:0;max-width:44ch;}
-  .wip{
-    margin-top:26px;padding:12px 14px;border:1px dashed #5c7a63;border-radius:8px;
-    font-size:14.5px;color:#c9d4bc;display:flex;gap:10px;align-items:flex-start;
-  }
-  .wip svg{flex:none;width:18px;height:18px;margin-top:2px;color:var(--brass-soft);}
-  .wip strong{color:#f3eeda;}
-  .fineprint{margin-top:18px;font-size:13.5px;color:#93a58b;}
-
-  /* ---------- Mobile call bar ---------- */
-  .callbar{
-    position:fixed;left:0;right:0;bottom:0;z-index:60;
-    display:grid;grid-template-columns:1fr 1fr;gap:10px;
-    padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-    background:var(--header-bg);border-top:3px solid var(--brass);
-  }
-  .callbar a{
-    display:flex;align-items:center;justify-content:center;gap:8px;
-    min-height:50px;border-radius:9px;text-decoration:none;font-weight:700;font-size:16.5px;
-  }
-  .callbar .call{background:var(--brass);color:#1d2415;}
-  .callbar .emg{background:var(--danger);color:#fff;}
-  .callbar svg{width:19px;height:19px;}
-  @media (min-width:820px){ .callbar{display:none;} }
-
-  .strip-note{
-    background:var(--surface-2);border-bottom:1px solid var(--line);
-    font-size:14px;color:var(--muted);
-  }
-  .strip-note .wrap{padding-top:8px;padding-bottom:8px;display:flex;gap:8px;align-items:center;}
-  .strip-note svg{width:15px;height:15px;flex:none;color:var(--brass);}
-
-  /* ---------- State pages ---------- */
-  .crumb{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
-  .crumb a{color:var(--green-mid);text-decoration:none;}
-  .crumb a:hover{text-decoration:underline;}
-  @media (prefers-color-scheme: dark){ .crumb a{color:var(--brass-soft);} }
-  .state-hero{
-    background:var(--green-deep);color:#f3eeda;border-bottom:3px solid var(--brass);
-    position:relative;overflow:hidden;
-  }
-  .state-hero::after{
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background:repeating-linear-gradient(-45deg,transparent 0 46px,rgba(246,241,228,.025) 46px 47px);
-  }
-  .state-hero-in{max-width:1120px;margin:0 auto;padding:42px 16px 46px;position:relative;z-index:1;}
-  .state-hero .over{
-    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.22em;
-    text-transform:uppercase;color:var(--brass-soft);
-    border:1px solid #4a6a52;padding:6px 12px;border-radius:999px;margin-bottom:16px;
-  }
-  .state-hero h1,.state-hero h2{font-size:clamp(42px,8vw,72px);color:#f6f1e4;max-width:16ch;}
-  .state-hero h1 em,.state-hero h2 em{font-style:normal;color:var(--brass-soft);}
-  .state-hero .sub{font-size:clamp(17px,2.4vw,21px);color:#d9dfca;max-width:62ch;margin:16px 0 0;}
-  .region-grid{display:grid;grid-template-columns:1fr;gap:16px;}
-  @media (min-width:700px){ .region-grid{grid-template-columns:1fr 1fr;} }
-  .region-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
-  .region-card h3{font-size:28px;color:var(--green);margin-bottom:6px;}
-  @media (prefers-color-scheme: dark){ .region-card h3{color:#ece5d0;} }
-  .region-card p{color:var(--muted);font-size:16px;margin-bottom:12px;}
-  .city-tags{display:flex;flex-wrap:wrap;gap:7px;}
-  .city-tags span{
-    font-size:14.5px;font-weight:600;background:var(--surface-2);border:1px solid var(--line);
-    padding:5px 10px;border-radius:999px;color:var(--text);white-space:nowrap;
-  }
-  .steps{display:grid;grid-template-columns:1fr;gap:16px;}
-  @media (min-width:760px){ .steps{grid-template-columns:repeat(3,1fr);} }
-  .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
-  .step .num{font-family:"Bebas Neue",sans-serif;font-size:34px;color:var(--brass);line-height:1;}
-  .step h3{font-size:25px;color:var(--green);margin:8px 0 6px;}
-  @media (prefers-color-scheme: dark){ .step h3{color:#ece5d0;} }
-  .step p{color:var(--muted);font-size:16px;margin:0;}
-  .state-link-card{
-    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-    padding:22px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:8px;
-    transition:border-color .15s ease, transform .15s ease;
-  }
-  .state-link-card:hover{border-color:var(--brass);transform:translateY(-2px);}
-  .state-link-card .abbr{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--brass);letter-spacing:.08em;}
-  .state-link-card h3{font-size:30px;color:var(--green);}
-  @media (prefers-color-scheme: dark){ .state-link-card h3{color:#ece5d0;} }
-  .state-link-card p{color:var(--muted);margin:0;font-size:16px;}
-  .state-link-card .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--green-mid);font-size:15.5px;}
-  @media (prefers-color-scheme: dark){ .state-link-card .go{color:var(--brass-soft);} }
-  a.state{text-decoration:none;color:var(--text);transition:border-color .15s ease;}
-  a.state:hover{border-color:var(--brass);}
+:root{--cream:#f6f1e4; --cream-2:#efe7d3; --paper:#fbf8f0; --green:#1d3b2a; --green-deep:#142b1e; --green-mid:#2a5240; --brass:#b98a2f; --brass-soft:#d9b25f; --ink:#22301f; --ink-soft:#4c5a4c; --line:#d8cfb4; --line-dark:#33523f; --danger:#a03428; --bg:var(--cream); --surface:var(--paper); --surface-2:var(--cream-2); --text:var(--ink); --muted:var(--ink-soft); --header-bg:var(--green-deep); --header-text:#f3eeda; --shadow:0 10px 30px rgba(20,43,30,.14); --radius:10px;}
+@media (prefers-color-scheme: dark){:root{--bg:#101d15; --surface:#182a1f; --surface-2:#1e3527; --text:#ece5d0; --muted:#b3bfa9; --line:#33523f; --header-bg:#0b1710; --shadow:0 10px 30px rgba(0,0,0,.45);}}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:76px;}
+@media (min-width:820px){ body{padding-bottom:0;}}
+h1,h2,h3,.bebas{font-family:"Bebas Neue","Barlow",sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.02;margin:0;}
+p{margin:0 0 1em;}
+a{color:var(--green-mid);}
+@media (prefers-color-scheme: dark){ a{color:var(--brass-soft);}}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px;border-radius:4px;}
+header.site{position:sticky;top:0;z-index:50;background:var(--header-bg);color:var(--header-text);border-bottom:3px solid var(--brass);}
+.header-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 16px;}
+.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:var(--header-text);margin-right:auto;}
+.brand .name{font-family:"Bebas Neue",sans-serif;font-size:30px;letter-spacing:.06em;color:#f6f1e4;}
+.brand .name em{font-style:normal;color:var(--brass-soft);}
+.brand .tag{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#c9d4bc;margin-top:3px;}
+.header-call{display:none;align-items:center;gap:8px;background:var(--brass);color:#1d2415;font-weight:700;font-size:16px;text-decoration:none;padding:10px 18px;border-radius:8px;white-space:nowrap;}
+.header-call:hover{background:var(--brass-soft);}
+@media (min-width:820px){.header-call{display:inline-flex;}}
+.menu-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line-dark);background:transparent;color:var(--header-text);border-radius:8px;cursor:pointer;}
+@media (min-width:820px){.menu-btn{display:none;}}
+nav.main{background:var(--header-bg);}
+.nav-in{max-width:1120px;margin:0 auto;display:none;flex-direction:column;padding:0 16px 14px;}
+nav.main.open .nav-in{display:flex;}
+.nav-in a{color:var(--header-text);text-decoration:none;font-family:"Bebas Neue",sans-serif;font-size:21px;letter-spacing:.08em;padding:11px 6px;border-top:1px solid var(--line-dark);}
+.nav-in a[aria-current="page"]{color:var(--brass-soft);}
+@media (min-width:820px){.nav-in{display:flex;flex-direction:row;gap:6px;padding:0 16px;}.nav-in a{border-top:none;padding:10px 14px;font-size:20px;border-radius:6px 6px 0 0;}.nav-in a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--brass);}}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px;}
+.view{display:none;}
+.view.active{display:block;animation:fadein .25s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){.view.active{animation:none;}html{scroll-behavior:auto;}}
+section{padding:44px 0;}
+.section-head{max-width:720px;margin-bottom:26px;}
+.section-head h2{font-size:clamp(34px,6vw,52px);color:var(--green);}
+@media (prefers-color-scheme: dark){.section-head h2{color:var(--brass-soft);}}
+.section-head p{color:var(--muted);font-size:18px;margin-top:8px;}
+.hero{background:var(--green-deep);color:#f3eeda;border-bottom:3px solid var(--brass);position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(-45deg,transparent 0 46px,rgba(246,241,228,.025) 46px 47px);}
+.hero-in{max-width:1120px;margin:0 auto;padding:52px 16px 58px;position:relative;z-index:1;}
+.hero .over{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-soft);border:1px solid #4a6a52;padding:6px 12px;border-radius:999px;margin-bottom:20px;}
+.hero h1{font-size:clamp(52px,11vw,104px);color:#f6f1e4;max-width:12ch;}
+.hero h1 em{font-style:normal;color:var(--brass-soft);}
+.hero .sub{font-size:clamp(18px,2.6vw,22px);color:#d9dfca;max-width:56ch;margin:20px 0 30px;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:17px;text-decoration:none;padding:14px 24px;border-radius:9px;border:2px solid transparent;cursor:pointer;min-height:52px;}
+.btn-call{background:var(--brass);color:#1d2415;}
+.btn-call:hover{background:var(--brass-soft);}
+.btn-ghost{background:transparent;color:#f3eeda;border-color:#5c7a63;}
+.btn-ghost:hover{border-color:var(--brass-soft);color:var(--brass-soft);}
+.hero-facts{display:grid;grid-template-columns:1fr;gap:0;margin-top:42px;border-top:1px solid #33523f;}
+.hero-facts div{padding:14px 4px;border-bottom:1px solid #33523f;}
+.hero-facts .n{font-family:"Bebas Neue",sans-serif;font-size:26px;color:var(--brass-soft);letter-spacing:.04em;}
+.hero-facts .d{font-size:15px;color:#c9d4bc;}
+@media (min-width:700px){.hero-facts{grid-template-columns:repeat(3,1fr);}.hero-facts div{border-bottom:none;padding:16px 18px 4px;border-left:1px solid #33523f;}.hero-facts div:first-child{border-left:none;padding-left:4px;}}
+.grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media (min-width:640px){.grid.cols2{grid-template-columns:1fr 1fr;}}
+@media (min-width:980px){.grid.cols3{grid-template-columns:repeat(3,1fr);}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--text);}
+a.card{transition:border-color .15s ease, transform .15s ease;}
+a.card:hover{border-color:var(--brass);transform:translateY(-2px);}
+.card .icon{width:46px;height:46px;border-radius:9px;flex:none;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;}
+.card .icon svg{width:24px;height:24px;}
+.card h3{font-size:27px;color:var(--green);letter-spacing:.03em;}
+@media (prefers-color-scheme: dark){.card h3{color:#ece5d0;}}
+.card p{color:var(--muted);margin:0;font-size:16px;}
+.card .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--green-mid);font-size:15.5px;}
+@media (prefers-color-scheme: dark){.card .go{color:var(--brass-soft);}}
+.card.emergency{border-color:var(--danger);border-width:2px;}
+.card.emergency .icon{background:var(--danger);}
+.card.emergency h3{color:var(--danger);}
+@media (prefers-color-scheme: dark){.card.emergency h3{color:#e88a7c;}}
+.svc-detail{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:18px;scroll-margin-top:130px;}
+.svc-detail .top{display:flex;gap:16px;align-items:flex-start;}
+.svc-detail .icon{width:52px;height:52px;border-radius:10px;flex:none;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;}
+.svc-detail .icon svg{width:27px;height:27px;}
+.svc-detail h3{font-size:32px;color:var(--green);}
+@media (prefers-color-scheme: dark){.svc-detail h3{color:#ece5d0;}}
+.svc-detail .lede{color:var(--muted);font-size:17px;margin-top:4px;}
+.svc-detail ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;}
+@media (min-width:700px){.svc-detail ul{grid-template-columns:1fr 1fr;}}
+.svc-detail li{display:flex;gap:9px;font-size:16px;align-items:flex-start;}
+.svc-detail li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--brass);}
+.svc-detail.emergency{border:2px solid var(--danger);}
+.svc-detail.emergency .icon{background:var(--danger);}
+.svc-detail.emergency h3{color:var(--danger);}
+@media (prefers-color-scheme: dark){.svc-detail.emergency h3{color:#e88a7c;}}
+.machine-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media (min-width:760px){.machine-list{grid-template-columns:repeat(3,1fr);}}
+.machine{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;}
+.machine .bebas{font-size:24px;color:var(--green);display:block;}
+@media (prefers-color-scheme: dark){.machine .bebas{color:#ece5d0;}}
+.machine span{font-size:14.5px;color:var(--muted);}
+.states{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+@media (min-width:640px){.states{grid-template-columns:repeat(3,1fr);}}
+@media (min-width:980px){.states{grid-template-columns:repeat(4,1fr);}}
+.state{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:13px 15px;display:flex;align-items:baseline;gap:10px;}
+.state .abbr{font-family:"Bebas Neue",sans-serif;font-size:22px;color:var(--brass);min-width:34px;}
+.state .nm{font-weight:600;font-size:16px;}
+.state.home{border:2px solid var(--green);background:var(--surface-2);}
+.state.home .abbr{color:var(--green);}
+@media (prefers-color-scheme: dark){.state.home .abbr{color:var(--brass-soft);}.state.home{border-color:var(--brass);}}
+.band{background:var(--green);color:#f3eeda;border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;gap:16px;}
+@media (min-width:760px){.band{flex-direction:row;align-items:center;justify-content:space-between;}}
+.band h2{font-size:36px;color:#f6f1e4;}
+.band p{color:#d9dfca;margin:0 4px 0;max-width:52ch;}
+.band .btn{flex:none;}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+@media (min-width:860px){.contact-grid{grid-template-columns:5fr 7fr;align-items:start;}}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+.contact-card h3{font-size:28px;color:var(--green);margin-bottom:14px;}
+@media (prefers-color-scheme: dark){.contact-card h3{color:#ece5d0;}}
+.big-link{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--text);padding:14px 0;border-bottom:1px solid var(--line);}
+.big-link:last-of-type{border-bottom:none;}
+.big-link .icon{width:44px;height:44px;border-radius:9px;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;flex:none;}
+.big-link .icon svg{width:22px;height:22px;}
+.big-link .lbl{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+.big-link .val{font-size:20px;font-weight:700;line-height:1.25;word-break:break-word;}
+form .field{margin-bottom:15px;}
+form label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;}
+form input,form select,form textarea{width:100%;padding:13px 14px;font:inherit;font-size:16.5px;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:8px;}
+form textarea{min-height:110px;resize:vertical;}
+form .row{display:grid;grid-template-columns:1fr;gap:0;}
+@media (min-width:560px){form .row{grid-template-columns:1fr 1fr;gap:14px;}}
+.form-note{font-size:14.5px;color:var(--muted);margin-top:12px;}
+.btn-submit{background:var(--green);color:#f3eeda;border:none;width:100%;justify-content:center;}
+.btn-submit:hover{background:var(--green-mid);}
+@media (min-width:560px){.btn-submit{width:auto;}}
+footer.site{background:var(--header-bg);color:#c9d4bc;margin-top:56px;border-top:3px solid var(--brass);}
+.footer-in{max-width:1120px;margin:0 auto;padding:30px 16px 34px;}
+.footer-cols{display:grid;grid-template-columns:1fr;gap:22px;}
+@media (min-width:760px){.footer-cols{grid-template-columns:2fr 1fr 1fr 1fr;}}
+footer .bebas{color:#f6f1e4;font-size:24px;display:block;margin-bottom:8px;}
+footer a{color:#e8dfc4;text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15.5px;}
+footer p{font-size:15px;margin:0;max-width:44ch;}
+.wip{margin-top:26px;padding:12px 14px;border:1px dashed #5c7a63;border-radius:8px;font-size:14.5px;color:#c9d4bc;display:flex;gap:10px;align-items:flex-start;}
+.wip svg{flex:none;width:18px;height:18px;margin-top:2px;color:var(--brass-soft);}
+.wip strong{color:#f3eeda;}
+.fineprint{margin-top:18px;font-size:13.5px;color:#93a58b;}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--header-bg);border-top:3px solid var(--brass);}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:9px;text-decoration:none;font-weight:700;font-size:16.5px;}
+.callbar .call{background:var(--brass);color:#1d2415;}
+.callbar .emg{background:var(--danger);color:#fff;}
+.callbar svg{width:19px;height:19px;}
+@media (min-width:820px){.callbar{display:none;}}
+.strip-note{background:var(--surface-2);border-bottom:1px solid var(--line);font-size:14px;color:var(--muted);}
+.strip-note .wrap{padding-top:8px;padding-bottom:8px;display:flex;gap:8px;align-items:center;}
+.strip-note svg{width:15px;height:15px;flex:none;color:var(--brass);}
+.crumb{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
+.crumb a{color:var(--green-mid);text-decoration:none;}
+.crumb a:hover{text-decoration:underline;}
+@media (prefers-color-scheme: dark){.crumb a{color:var(--brass-soft);}}
+.state-hero{background:var(--green-deep);color:#f3eeda;border-bottom:3px solid var(--brass);position:relative;overflow:hidden;}
+.state-hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(-45deg,transparent 0 46px,rgba(246,241,228,.025) 46px 47px);}
+.state-hero-in{max-width:1120px;margin:0 auto;padding:42px 16px 46px;position:relative;z-index:1;}
+.state-hero .over{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-soft);border:1px solid #4a6a52;padding:6px 12px;border-radius:999px;margin-bottom:16px;}
+.state-hero h1,.state-hero h2{font-size:clamp(42px,8vw,72px);color:#f6f1e4;max-width:16ch;}
+.state-hero h1 em,.state-hero h2 em{font-style:normal;color:var(--brass-soft);}
+.state-hero .sub{font-size:clamp(17px,2.4vw,21px);color:#d9dfca;max-width:62ch;margin:16px 0 0;}
+.region-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media (min-width:700px){.region-grid{grid-template-columns:1fr 1fr;}}
+.region-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
+.region-card h3{font-size:28px;color:var(--green);margin-bottom:6px;}
+@media (prefers-color-scheme: dark){.region-card h3{color:#ece5d0;}}
+.region-card p{color:var(--muted);font-size:16px;margin-bottom:12px;}
+.city-tags{display:flex;flex-wrap:wrap;gap:7px;}
+.city-tags span{font-size:14.5px;font-weight:600;background:var(--surface-2);border:1px solid var(--line);padding:5px 10px;border-radius:999px;color:var(--text);white-space:nowrap;}
+.steps{display:grid;grid-template-columns:1fr;gap:16px;}
+@media (min-width:760px){.steps{grid-template-columns:repeat(3,1fr);}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
+.step .num{font-family:"Bebas Neue",sans-serif;font-size:34px;color:var(--brass);line-height:1;}
+.step h3{font-size:25px;color:var(--green);margin:8px 0 6px;}
+@media (prefers-color-scheme: dark){.step h3{color:#ece5d0;}}
+.step p{color:var(--muted);font-size:16px;margin:0;}
+.state-link-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:8px;transition:border-color .15s ease, transform .15s ease;}
+.state-link-card:hover{border-color:var(--brass);transform:translateY(-2px);}
+.state-link-card .abbr{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--brass);letter-spacing:.08em;}
+.state-link-card h3{font-size:30px;color:var(--green);}
+@media (prefers-color-scheme: dark){.state-link-card h3{color:#ece5d0;}}
+.state-link-card p{color:var(--muted);margin:0;font-size:16px;}
+.state-link-card .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--green-mid);font-size:15.5px;}
+@media (prefers-color-scheme: dark){.state-link-card .go{color:var(--brass-soft);}}
+a.state{text-decoration:none;color:var(--text);transition:border-color .15s ease;}
+a.state:hover{border-color:var(--brass);}
 </style>
 </head>
 <body>
-
 <header class="site">
-  <div class="header-in">
-    <a class="brand" href="#home" data-nav="home">
-      <span class="name">JL <em>FIELD SERVICE</em></span>
-      <span class="tag">Mobile Heavy Equipment Repair</span>
-    </a>
-    <a class="header-call" href="tel:+18016998822">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      801-699-8822
-    </a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="24" height="24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-    </button>
-  </div>
-  <nav class="main" id="mainNav" aria-label="Main">
-    <div class="nav-in">
-      <a href="#home" data-nav="home">Home</a>
-      <a href="#services" data-nav="services">Services</a>
-      <a href="#area" data-nav="area">Service Area</a>
-      <a href="#idaho" data-nav="idaho">Idaho</a>
-      <a href="#wyoming" data-nav="wyoming">Wyoming</a>
-      <a href="#nevada" data-nav="nevada">Nevada</a>
-      <a href="#contact" data-nav="contact">Contact</a>
-    </div>
-  </nav>
+<div class="header-in">
+<a class="brand" href="/">
+<span class="name">JL <em>FIELD SERVICE</em></span>
+<span class="tag">Mobile Heavy Equipment Repair</span>
+</a>
+<a class="header-call" href="tel:+18016998822"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 801-699-8822</a>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+</div>
+<nav class="main" id="mainNav" aria-label="Main">
+<div class="nav-in">
+<a href="/" aria-current="page">Home</a>
+<a href="/services/">Services</a>
+<a href="/service-area/">Service Area</a>
+<a href="/service-area/idaho/">Idaho</a>
+<a href="/service-area/wyoming/">Wyoming</a>
+<a href="/service-area/nevada/">Nevada</a>
+<a href="/contact/">Contact</a>
+</div>
+</nav>
 </header>
-
 <div class="strip-note" role="note">
-  <div class="wrap">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-    <span><strong>Site under construction:</strong> we're still building this website out. The services and contact info here are current — call anytime.</span>
-  </div>
+<div class="wrap">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+<span><strong>Site under construction:</strong> we're still building this website out. The services and contact info here are current — call anytime.</span>
 </div>
-
+</div>
 <main>
-
-<!-- ================= HOME ================= -->
-<div class="view" id="view-home">
-  <div class="hero">
-    <div class="hero-in">
-      <span class="over">Mobile Mechanic · Northern Utah · Travels the West</span>
-      <h1>We fix it <em>where it sits.</em></h1>
-      <p class="sub">JL Field Service is a mobile heavy equipment repair service run by an experienced traveling mechanic. Diagnostics, engine, electrical, hydraulic, welding, and scheduled service — done on your jobsite, not hauled to a shop.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-call" href="tel:+18016998822">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="19" height="19" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call 801-699-8822
-        </a>
-        <a class="btn btn-ghost" href="#services" data-nav="services">See Services</a>
-      </div>
-      <div class="hero-facts">
-        <div>
-          <span class="n">On-Site Repair</span>
-          <div class="d">Fully equipped service truck — the shop comes to your machine, wherever it's sitting.</div>
-        </div>
-        <div>
-          <span class="n">Emergency Calls</span>
-          <div class="d">A down machine costs you money every hour. Unscheduled breakdowns get priority.</div>
-        </div>
-        <div>
-          <span class="n">Built to Travel</span>
-          <div class="d">Based in Northern Utah and willing to travel extensive distances to get the job done.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <h2>What We Fix</h2>
-        <p>Seven core services covering the failures that actually stop a machine. Tap any service for the full breakdown.</p>
-      </div>
-      <div class="grid cols3" id="homeServiceGrid"></div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Machines We Work On</h2>
-        <p>Earthmoving, material handling, and access equipment across all major makes.</p>
-      </div>
-      <div class="machine-list" id="homeMachineList"></div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="band">
-        <div>
-          <h2>Down in Boise, Elko — or somewhere further out?</h2>
-          <p>The truck is set up to travel. We run to jobs across the western states — and further when the work calls for it. Nobody gets turned away for being out of state.</p>
-        </div>
-        <a class="btn btn-call" href="#area" data-nav="area">See Service Area</a>
-      </div>
-    </div>
-  </section>
+<div class="hero">
+<div class="hero-in">
+<span class="over">Mobile Mechanic · Northern Utah · Travels the West</span>
+<h1>We fix it <em>where it sits.</em></h1>
+<p class="sub">JL Field Service is a mobile heavy equipment repair service run by an experienced traveling mechanic. Diagnostics, engine, electrical, hydraulic, welding, and scheduled service — done on your jobsite, not hauled to a shop.</p>
+<div class="hero-ctas">
+<a class="btn btn-call" href="tel:+18016998822"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="19" height="19" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call 801-699-8822</a>
+<a class="btn btn-ghost" href="/services/">See Services</a>
 </div>
-
-<!-- ================= SERVICES ================= -->
-<div class="view" id="view-services">
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Services</h2>
-        <p>Time-and-materials field service, priced straight and explained up front. Call for current rates — every job starts with a conversation about what the machine is doing.</p>
-      </div>
-      <div id="serviceDetails"></div>
-      <div class="band" style="margin-top:8px;">
-        <div>
-          <h2>Not sure what's wrong?</h2>
-          <p>That's what diagnostics are for. Describe the symptoms and we'll tell you honestly whether it's a field fix or a bigger job.</p>
-        </div>
-        <a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
-      </div>
-    </div>
-  </section>
+<div class="hero-facts">
+<div>
+<span class="n">On-Site Repair</span>
+<div class="d">Fully equipped service truck — the shop comes to your machine, wherever it's sitting.</div>
 </div>
-
-<!-- ================= AREA ================= -->
-<div class="view" id="view-area">
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Service Area</h2>
-        <p>Based in Utah and built to travel — scheduled work and breakdowns across the West, and beyond for the right job.</p>
-      </div>
-
-      <h3 class="bebas" style="font-size:29px;margin-bottom:6px;">Coverage — The Western 11</h3>
-      <p style="color:var(--muted);max-width:65ch;">Utah is home base. These are the states we cover and travel to for scheduled work and breakdowns:</p>
-      <div class="states" id="stateList" style="margin-top:14px;"></div>
-
-      <h3 class="bebas" style="font-size:29px;margin:34px 0 6px;">State Pages — Where We Travel Most</h3>
-      <p style="color:var(--muted);max-width:65ch;">Detailed coverage for the three states we get called to most outside Utah — cities, regions, and the kind of work we run there.</p>
-      <div class="grid cols3" style="margin-top:14px;">
-        <a class="state-link-card" href="#idaho" data-nav="idaho">
-          <span class="abbr">ID — IDAHO</span>
-          <h3>Idaho</h3>
-          <p>Boise &amp; the Treasure Valley, Twin Falls &amp; the Magic Valley, Idaho Falls, Pocatello, and North Idaho. Construction, agriculture, and dairy country.</p>
-          <span class="go">Idaho coverage &rarr;</span>
-        </a>
-        <a class="state-link-card" href="#wyoming" data-nav="wyoming">
-          <span class="abbr">WY — WYOMING</span>
-          <h3>Wyoming</h3>
-          <p>Cheyenne, Casper, Gillette &amp; the Powder River Basin, Rock Springs, and Sheridan. Mining, energy, ranch, and construction work statewide.</p>
-          <span class="go">Wyoming coverage &rarr;</span>
-        </a>
-        <a class="state-link-card" href="#nevada" data-nav="nevada">
-          <span class="abbr">NV — NEVADA</span>
-          <h3>Nevada</h3>
-          <p>Reno–Sparks, Elko &amp; the I-80 mining corridor through Winnemucca and Carlin, plus central and eastern Nevada. Mining, construction, and logistics.</p>
-          <span class="go">Nevada coverage &rarr;</span>
-        </a>
-      </div>
-
-      <div class="band" style="margin-top:30px;">
-        <div>
-          <h2>Outside the West?</h2>
-          <p>The western 11 are the focus, not a fence. JL Field Service travels extensive lengths to get the job done — if you've got a machine down somewhere else, call and ask.</p>
-        </div>
-        <a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
-      </div>
-    </div>
-  </section>
+<div>
+<span class="n">Emergency Calls</span>
+<div class="d">A down machine costs you money every hour. Unscheduled breakdowns get priority.</div>
 </div>
-
-<!-- ================= CONTACT ================= -->
-<div class="view" id="view-contact">
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Get a Machine Back to Work</h2>
-        <p>Fastest way to reach us is a phone call — especially for a breakdown. For scheduled work, call or send the form below and it lands in our email.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Contact</h3>
-          <a class="big-link" href="tel:+18016998822">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-            <span><span class="lbl">Phone</span><br /><span class="val">801-699-8822</span></span>
-          </a>
-          <a class="big-link" href="mailto:jon@jlfieldservice.com">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-            <span><span class="lbl">Email</span><br /><span class="val">jon@jlfieldservice.com</span></span>
-          </a>
-          <div class="big-link" style="cursor:default;">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <span><span class="lbl">Based In</span><br /><span class="val">Utah — Mobile, We Come to You</span></span>
-          </div>
-          <p style="margin-top:16px;color:var(--muted);font-size:15.5px;">Jon Lawrey, owner/operator. When you call, you're talking to the mechanic who shows up — no dispatchers, no runaround.</p>
-          <p style="color:var(--muted);font-size:15.5px;">Machine down right now? Skip the form and call — emergency repairs are the priority queue.</p>
-        </div>
-
-        <div class="contact-card">
-          <h3>Request Service</h3>
-          <form id="serviceForm">
-            <div class="row">
-              <div class="field">
-                <label for="f-name">Your name</label>
-                <input id="f-name" name="name" type="text" autocomplete="name" required />
-              </div>
-              <div class="field">
-                <label for="f-phone">Your phone</label>
-                <input id="f-phone" name="phone" type="tel" autocomplete="tel" required />
-              </div>
-            </div>
-            <div class="row">
-              <div class="field">
-                <label for="f-machine">Machine</label>
-                <input id="f-machine" name="machine" type="text" placeholder="e.g. CAT 320 excavator" />
-              </div>
-              <div class="field">
-                <label for="f-where">Machine location</label>
-                <input id="f-where" name="where" type="text" placeholder="City / jobsite" />
-              </div>
-            </div>
-            <div class="field">
-              <label for="f-service">Service needed</label>
-              <select id="f-service" name="service">
-                <option>Emergency / machine down</option>
-                <option>Diagnostics</option>
-                <option>Engine</option>
-                <option>Electrical</option>
-                <option>Hydraulic</option>
-                <option>Welding &amp; fabrication</option>
-                <option>PM service</option>
-                <option>Not sure — need it looked at</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="f-notes">What's it doing?</label>
-              <textarea id="f-notes" name="notes" placeholder="Symptoms, error codes, when it started…"></textarea>
-            </div>
-            <button class="btn btn-submit" type="submit">Send Request by Email</button>
-            <p class="form-note">This opens your email app with the request filled in — just hit send. Nothing is stored on this website.</p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+<div>
+<span class="n">Built to Travel</span>
+<div class="d">Based in Northern Utah and willing to travel extensive distances to get the job done.</div>
 </div>
-
-<!-- ================= IDAHO ================= -->
-<div class="view" id="view-idaho">
-  <div class="state-hero">
-    <div class="state-hero-in">
-      <span class="over">Idaho · Mobile Field Service</span>
-      <h2>Mobile heavy equipment repair in <em>Idaho</em></h2>
-      <p class="sub">Machine down in Boise, Twin Falls, Idaho Falls, or out on a farm or mine site in between? JL Field Service travels to your jobsite in Idaho — diagnostics, engine, electrical, hydraulic, welding, and emergency repair done where the machine sits, not hauled to a shop.</p>
-      <div class="hero-ctas" style="margin-top:26px;">
-        <a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
-        <a class="btn btn-ghost" href="#contact" data-nav="contact">Request Service</a>
-      </div>
-    </div>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <p class="crumb"><a href="#area" data-nav="area">&larr; Service Area</a> &nbsp;/&nbsp; Idaho</p>
-      <div class="section-head">
-        <h2>Where We Work in Idaho</h2>
-        <p>Regular travel up the I-84 and I-15 corridors. Scheduled work and breakdowns — if your machine is outside these areas, call and ask. We travel further than most field services will.</p>
-      </div>
-      <div class="region-grid">
-        <article class="region-card">
-          <h3>Treasure Valley</h3>
-          <p>The fastest-growing construction market in the state — subdivisions, commercial builds, warehouses, and road work from Boise out to Canyon County.</p>
-          <div class="city-tags"><span>Boise</span><span>Meridian</span><span>Nampa</span><span>Caldwell</span><span>Eagle</span><span>Star</span><span>Kuna</span><span>Middleton</span><span>Emmett</span><span>Mountain Home</span></div>
-        </article>
-        <article class="region-card">
-          <h3>Magic Valley</h3>
-          <p>Dairy, potato, and food-processing country along the Snake River. Agriculture and plant-support equipment that can't wait for shop time.</p>
-          <div class="city-tags"><span>Twin Falls</span><span>Jerome</span><span>Burley</span><span>Rupert</span><span>Buhl</span><span>Filer</span><span>Gooding</span><span>Heyburn</span></div>
-        </article>
-        <article class="region-card">
-          <h3>Eastern Idaho</h3>
-          <p>Construction, farming, and aggregate work up the I-15 corridor — from Pocatello through Idaho Falls and into the Rexburg area.</p>
-          <div class="city-tags"><span>Idaho Falls</span><span>Pocatello</span><span>Chubbuck</span><span>Blackfoot</span><span>Rexburg</span><span>Rigby</span><span>Ammon</span><span>Shelley</span></div>
-        </article>
-        <article class="region-card">
-          <h3>North Idaho</h3>
-          <p>Logging, construction, and site work around Coeur d'Alene and Sandpoint. Longer run — best for scheduled work and planned repairs.</p>
-          <div class="city-tags"><span>Coeur d'Alene</span><span>Post Falls</span><span>Hayden</span><span>Rathdrum</span><span>Sandpoint</span><span>Spirit Lake</span></div>
-        </article>
-      </div>
-      <p style="color:var(--muted);margin-top:18px;max-width:68ch;">Counties covered include Ada, Canyon, Bonneville, Bannock, Twin Falls, Jerome, Bingham, Jefferson, Madison, and Kootenai — plus jobsites, farms, quarries, and plants in between.</p>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Services in Idaho</h2>
-        <p>All seven field services, on your site in Idaho. Tap a service for the full breakdown.</p>
-      </div>
-      <div class="grid cols3 js-service-grid"></div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>The Work We See in Idaho</h2>
-        <p>Excavators, dozers, skid steers and track loaders, telehandlers, man lifts, forklifts, wheel loaders, backhoes, compactors, and graders — across all major makes.</p>
-      </div>
-      <div class="steps">
-        <div class="step"><span class="num">01</span><h3>Construction &amp; Site Work</h3><p>Treasure Valley growth means machines running long hours on tight schedules. A hydraulic failure or no-start on a subdivision or road job gets priority — we come to the site so the crew isn't standing around.</p></div>
-        <div class="step"><span class="num">02</span><h3>Agriculture &amp; Dairy</h3><p>Loaders, telehandlers, skid steers, and support equipment on dairies and farms in the Magic Valley and Eastern Idaho. During planting and harvest, downtime isn't an option — neither is hauling a machine to town.</p></div>
-        <div class="step"><span class="num">03</span><h3>Plants, Quarries &amp; Fleets</h3><p>Forklifts, loaders, and material-handling equipment at processing plants, aggregate pits, and rental yards. Scheduled PM service at your yard keeps the fleet earning instead of sitting.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="band">
-        <div>
-          <h2>Down in Idaho?</h2>
-          <p>Call with the machine, the symptoms, and where it's sitting. Troubleshooting starts on the phone so we roll with the right tools and parts the first time.</p>
-        </div>
-        <a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
-      </div>
-      <p style="margin-top:18px;color:var(--muted);">Also traveling to: <a href="#wyoming" data-nav="wyoming">Wyoming</a> · <a href="#nevada" data-nav="nevada">Nevada</a> · <a href="#area" data-nav="area">Full service area</a></p>
-    </div>
-  </section>
 </div>
-
-<!-- ================= WYOMING ================= -->
-<div class="view" id="view-wyoming">
-  <div class="state-hero">
-    <div class="state-hero-in">
-      <span class="over">Wyoming · Mobile Field Service</span>
-      <h2>Mobile heavy equipment repair in <em>Wyoming</em></h2>
-      <p class="sub">Wyoming machines work far from the nearest shop — mines, energy sites, ranches, and road jobs spread across a big state. JL Field Service is built for exactly that: we travel to your machine in Wyoming and fix it where it sits.</p>
-      <div class="hero-ctas" style="margin-top:26px;">
-        <a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
-        <a class="btn btn-ghost" href="#contact" data-nav="contact">Request Service</a>
-      </div>
-    </div>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <p class="crumb"><a href="#area" data-nav="area">&larr; Service Area</a> &nbsp;/&nbsp; Wyoming</p>
-      <div class="section-head">
-        <h2>Where We Work in Wyoming</h2>
-        <p>Statewide travel for scheduled work and breakdowns. Distances are part of the job in Wyoming — tell us where the machine sits and we'll give you an honest ETA before we roll.</p>
-      </div>
-      <div class="region-grid">
-        <article class="region-card">
-          <h3>Southeast Wyoming</h3>
-          <p>Construction, railroad and logistics support, and fleet work around the I-25 / I-80 crossroads — our most frequent Wyoming runs.</p>
-          <div class="city-tags"><span>Cheyenne</span><span>Laramie</span><span>Torrington</span><span>Wheatland</span><span>Douglas</span><span>Rawlins</span></div>
-        </article>
-        <article class="region-card">
-          <h3>Central Wyoming</h3>
-          <p>Energy, construction, and municipal fleets in the middle of the state, plus ranch and irrigation equipment outside town.</p>
-          <div class="city-tags"><span>Casper</span><span>Riverton</span><span>Lander</span><span>Mills</span><span>Evansville</span><span>Shoshoni</span></div>
-        </article>
-        <article class="region-card">
-          <h3>Powder River Basin &amp; Northeast</h3>
-          <p>Coal country and energy support around Gillette, plus construction and ag work up toward Sheridan and the Montana line.</p>
-          <div class="city-tags"><span>Gillette</span><span>Sheridan</span><span>Buffalo</span><span>Wright</span><span>Newcastle</span><span>Sundance</span></div>
-        </article>
-        <article class="region-card">
-          <h3>Southwest Wyoming</h3>
-          <p>Trona, oil &amp; gas, and plant support along I-80, plus ranch country work. Remote sites are normal here — that's what a field truck is for.</p>
-          <div class="city-tags"><span>Rock Springs</span><span>Green River</span><span>Evanston</span><span>Kemmerer</span><span>Pinedale</span><span>Wamsutter</span></div>
-        </article>
-      </div>
-      <p style="color:var(--muted);margin-top:18px;max-width:68ch;">Also covering Cody, Powell, Jackson, and Thermopolis for scheduled work. Counties include Laramie, Natrona, Campbell, Sweetwater, Albany, Sheridan, Fremont, Converse, and Uinta.</p>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Services in Wyoming</h2>
-        <p>Diagnostics, engine, electrical, hydraulic, welding &amp; fabrication, PM service, and emergency repair — on site, statewide. Tap a service for details.</p>
-      </div>
-      <div class="grid cols3 js-service-grid"></div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>The Work We See in Wyoming</h2>
-        <p>Excavators, dozers, wheel loaders, motor graders, skid steers, telehandlers, man lifts, forklifts, compactors, and dump truck support — across all major makes.</p>
-      </div>
-      <div class="steps">
-        <div class="step"><span class="num">01</span><h3>Mining &amp; Energy</h3><p>Support equipment at mines, plants, and energy sites where a dead loader or lift stops more than one crew. Electrical and hydraulic faults traced on site, in the conditions the machine actually works in.</p></div>
-        <div class="step"><span class="num">02</span><h3>Ranch &amp; Agriculture</h3><p>Loaders, skid steers, and telehandlers that feed and move material every day. When the nearest dealer is hours away, field repair is the difference between a delay and a disaster.</p></div>
-        <div class="step"><span class="num">03</span><h3>Construction &amp; Road Work</h3><p>Graders, dozers, excavators, and compaction equipment on highway and site jobs across the state. Welding and fabrication on site for cracks, buckets, blades, and broken mounts.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="band">
-        <div>
-          <h2>Down in Wyoming?</h2>
-          <p>Distance is expected — it's priced straight, time and materials, explained up front. Call with the machine and location and we'll talk through the plan.</p>
-        </div>
-        <a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
-      </div>
-      <p style="margin-top:18px;color:var(--muted);">Also traveling to: <a href="#idaho" data-nav="idaho">Idaho</a> · <a href="#nevada" data-nav="nevada">Nevada</a> · <a href="#area" data-nav="area">Full service area</a></p>
-    </div>
-  </section>
 </div>
-
-<!-- ================= NEVADA ================= -->
-<div class="view" id="view-nevada">
-  <div class="state-hero">
-    <div class="state-hero-in">
-      <span class="over">Nevada · Mobile Field Service</span>
-      <h2>Mobile heavy equipment repair in <em>Nevada</em></h2>
-      <p class="sub">From Reno warehouses to gold country around Elko and the remote sites in between — Nevada runs on heavy equipment, and most of it works a long way from a shop. JL Field Service travels to your machine in Nevada and repairs it on site.</p>
-      <div class="hero-ctas" style="margin-top:26px;">
-        <a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
-        <a class="btn btn-ghost" href="#contact" data-nav="contact">Request Service</a>
-      </div>
-    </div>
-  </div>
-
-  <section>
-    <div class="wrap">
-      <p class="crumb"><a href="#area" data-nav="area">&larr; Service Area</a> &nbsp;/&nbsp; Nevada</p>
-      <div class="section-head">
-        <h2>Where We Work in Nevada</h2>
-        <p>Northern and western Nevada — the Reno area, the northern mining corridor, and central and eastern Nevada, plus the towns and sites in between.</p>
-      </div>
-      <div class="region-grid">
-        <article class="region-card">
-          <h3>Reno, Sparks &amp; Western Nevada</h3>
-          <p>Warehousing, distribution, and manufacturing support in the Truckee Meadows, plus construction and ag work down the Carson Valley.</p>
-          <div class="city-tags"><span>Reno</span><span>Sparks</span><span>Carson City</span><span>Fernley</span><span>Fallon</span><span>Dayton</span><span>Gardnerville</span><span>Yerington</span></div>
-        </article>
-        <article class="region-card">
-          <h3>Northern Nevada — Mining Country</h3>
-          <p>The I-80 gold corridor. Support equipment at mines, plants, and contractor yards where downtime is measured in real money.</p>
-          <div class="city-tags"><span>Elko</span><span>Spring Creek</span><span>Carlin</span><span>Winnemucca</span><span>Battle Mountain</span><span>Eureka</span><span>Wells</span><span>West Wendover</span></div>
-        </article>
-        <article class="region-card">
-          <h3>Central &amp; Eastern Nevada</h3>
-          <p>Ranch, county, and remote site work along US-50 and US-93. Scheduled repairs and fleet PM — call ahead and we'll build the run around your machines.</p>
-          <div class="city-tags"><span>Ely</span><span>Tonopah</span><span>Caliente</span><span>Lovelock</span><span>Austin</span></div>
-        </article>
-      </div>
-      <p style="color:var(--muted);margin-top:18px;max-width:68ch;">Counties covered include Washoe, Elko, Humboldt, Lyon, Carson City, Lander, Eureka, White Pine, Churchill, and Nye.</p>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Services in Nevada</h2>
-        <p>All seven field services, delivered on site anywhere in Nevada. Tap a service for the full breakdown.</p>
-      </div>
-      <div class="grid cols3 js-service-grid"></div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>The Work We See in Nevada</h2>
-        <p>Excavators, dozers, skid steers and track loaders, telehandlers, man lifts, forklifts, wheel loaders, backhoes, compactors, and graders — across all major makes.</p>
-      </div>
-      <div class="steps">
-        <div class="step"><span class="num">01</span><h3>Mining Support</h3><p>Contractor and support fleets around Elko, Carlin, and Winnemucca — loaders, lifts, light plants' running gear, and the earthmovers that keep a site fed. Desert heat and dust are hard on cooling, electrical, and hydraulics; we diagnose for the conditions.</p></div>
-        <div class="step"><span class="num">02</span><h3>Construction</h3><p>Reno builds year-round. Earthmoving and access equipment on commercial and industrial sites, repaired on site so schedules hold.</p></div>
-        <div class="step"><span class="num">03</span><h3>Logistics &amp; Industrial</h3><p>Forklifts and material-handling fleets in Reno–Sparks distribution centers. PM programs at your yard, plus breakdown response when a dock goes down.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="band">
-        <div>
-          <h2>Down in Nevada?</h2>
-          <p>Nevada is a big state — we plan for it. Call with the machine, the symptoms, and where it's sitting, and you'll get an honest plan and ETA.</p>
-        </div>
-        <a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
-      </div>
-      <p style="margin-top:18px;color:var(--muted);">Also traveling to: <a href="#idaho" data-nav="idaho">Idaho</a> · <a href="#wyoming" data-nav="wyoming">Wyoming</a> · <a href="#area" data-nav="area">Full service area</a></p>
-    </div>
-  </section>
 </div>
-
+<section>
+<div class="wrap">
+<div class="section-head">
+<h2>Services</h2>
+<p>Time-and-materials field service, priced straight and explained up front. Call for current rates — every job starts with a conversation about what the machine is doing.</p>
+</div>
+<h3 class="bebas" style="font-size:29px;margin-bottom:6px;">What We Fix</h3>
+<p style="color:var(--muted);max-width:65ch;">Seven core services covering the failures that actually stop a machine. Tap any service for the full breakdown.</p>
+<div class="grid cols3">
+<a class="card" href="/services/#svc-diagnostics">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
+<h3>Diagnostics</h3>
+<p>Warning lights, fault codes, and no-starts chased down with proper scan tools and systematic troubleshooting — not parts swapping.</p>
+<span class="go">Full details &rarr;</span>
+</a>
+<a class="card" href="/services/#svc-engine">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4"/><path d="M5 9h11a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3H9l-2 2v-2H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2Z"/><path d="M19 12h2"/></svg></span>
+<h3>Engine</h3>
+<p>Diesel engine repair and overhaul support — hard starts, power loss, overheating, leaks, and in-frame work in the field.</p>
+<span class="go">Full details &rarr;</span>
+</a>
+<a class="card" href="/services/#svc-electrical">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1.86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1.78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>
+<h3>Electrical</h3>
+<p>Wiring, charging, starting, and control systems. The faults that strand good machines get traced to the wire that's actually broken.</p>
+<span class="go">Full details &rarr;</span>
+</a>
+<a class="card" href="/services/#svc-hydraulic">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
+<h3>Hydraulic</h3>
+<p>Pumps, cylinders, valves, and hoses. Weak functions, drift, and leaks diagnosed by pressure and flow — not by feel.</p>
+<span class="go">Full details &rarr;</span>
+</a>
+<a class="card" href="/services/#svc-welding">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6.5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+<h3>Welding &amp; Fabrication</h3>
+<p>Field welding and fab: cracked buckets, broken mounts, worn edges, and the custom bracket that doesn't exist in a catalog.</p>
+<span class="go">Full details &rarr;</span>
+</a>
+<a class="card" href="/services/#svc-pm">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
+<h3>PM Service</h3>
+<p>Planned maintenance done on your schedule at your site — fluids, filters, inspections, and the small catches that prevent big bills.</p>
+<span class="go">Full details &rarr;</span>
+</a>
+<a class="card emergency" href="/services/#svc-emergency">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1-1v-2H4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2h-2v2a1 1 0 0 0 1 1Z" transform="translate(0,-1)"/><path d="M12 2v1"/><path d="m4.9 4.9.7.7"/><path d="m19.1 4.9-.7.7"/></svg></span>
+<h3>Emergency Repair</h3>
+<p>Machine down mid-job? Unscheduled breakdowns jump the line. Call and we'll get rolling toward you.</p>
+<span class="go">Full details &rarr;</span>
+</a>
+</div>
+<p style="color:var(--muted);margin-top:18px;max-width:68ch;">Full details for each service — what's included and what we check — are on the <a href="/services/">Services page</a>.</p>
+</div>
+</section>
+<section style="padding-top:0;">
+<div class="wrap">
+<div class="section-head">
+<h2>Machines We Work On</h2>
+<p>Earthmoving, material handling, and access equipment across all major makes.</p>
+</div>
+<div class="machine-list">
+<div class="machine">
+<span class="bebas">Excavators</span>
+<span>Full-size, midi &amp; mini</span>
+</div>
+<div class="machine">
+<span class="bebas">Dozers</span>
+<span>All sizes &amp; undercarriages</span>
+</div>
+<div class="machine">
+<span class="bebas">Skid Steers</span>
+<span>Wheeled &amp; track loaders</span>
+</div>
+<div class="machine">
+<span class="bebas">Telehandlers</span>
+<span>Reach forks &amp; handlers</span>
+</div>
+<div class="machine">
+<span class="bebas">Man Lifts</span>
+<span>Boom &amp; scissor lifts</span>
+</div>
+<div class="machine">
+<span class="bebas">Forklifts</span>
+<span>Warehouse &amp; rough terrain</span>
+</div>
+<div class="machine">
+<span class="bebas">Wheel Loaders</span>
+<span>Front-end &amp; compact</span>
+</div>
+<div class="machine">
+<span class="bebas">Backhoes</span>
+<span>Loader backhoes</span>
+</div>
+<div class="machine">
+<span class="bebas">Compactors</span>
+<span>Rollers &amp; compaction</span>
+</div>
+<div class="machine">
+<span class="bebas">Motor Graders</span>
+<span>Blades &amp; graders</span>
+</div>
+<div class="machine">
+<span class="bebas">Dump Trucks</span>
+<span>On/off-highway support</span>
+</div>
+<div class="machine">
+<span class="bebas">And More</span>
+<span>Don't see it? Call and ask</span>
+</div>
+</div>
+</div>
+</section>
+<section style="padding-top:0;">
+<div class="wrap">
+<div class="band">
+<div>
+<h2>Down in Boise, Elko — or somewhere further out?</h2>
+<p>The truck is set up to travel. We run to jobs across the western states — and further when the work calls for it. Nobody gets turned away for being out of state.</p>
+</div>
+<a class="btn btn-call" href="/service-area/">See Service Area</a>
+</div>
+<p style="margin-top:18px;color:var(--muted);">Based in Utah and built to travel — scheduled work and breakdowns across the West, and beyond for the right job. See the <a href="/service-area/">Service Area</a> — including <a href="/service-area/idaho/">Idaho</a>, <a href="/service-area/wyoming/">Wyoming</a>, and <a href="/service-area/nevada/">Nevada</a>.</p>
+</div>
+</section>
+<section style="padding-top:0;">
+<div class="wrap">
+<div class="band">
+<div>
+<h2>Get a Machine Back to Work</h2>
+<p>Fastest way to reach us is a phone call — especially for a breakdown. For scheduled work, call or send a request and it lands in our email.</p>
+</div>
+<a class="btn btn-call" href="tel:+18016998822">Call 801-699-8822</a>
+</div>
+<p style="margin-top:18px;color:var(--muted);">Send a service request — <a href="/contact/">Contact JL Field Service</a>.</p>
+</div>
+</section>
 </main>
-
 <footer class="site">
-  <div class="footer-in">
-    <div class="footer-cols">
-      <div>
-        <span class="bebas">JL Field Service</span>
-        <p>Mobile heavy equipment repair based in Utah. Owner/operator Jon Lawrey. On-site service across the western United States — and further when the job calls for it.</p>
-      </div>
-      <div>
-        <span class="bebas">Services</span>
-        <ul id="footerServices"></ul>
-      </div>
-      <div>
-        <span class="bebas">Coverage</span>
-        <ul>
-          <li><a href="#idaho" data-nav="idaho">Idaho</a></li>
-          <li><a href="#wyoming" data-nav="wyoming">Wyoming</a></li>
-          <li><a href="#nevada" data-nav="nevada">Nevada</a></li>
-          <li><a href="#area" data-nav="area">All 11 Western States</a></li>
-        </ul>
-      </div>
-      <div>
-        <span class="bebas">Reach Us</span>
-        <ul>
-          <li><a href="tel:+18016998822">801-699-8822</a></li>
-          <li><a href="mailto:jon@jlfieldservice.com">jon@jlfieldservice.com</a></li>
-          <li>Utah — Mobile Service</li>
-        </ul>
-      </div>
-    </div>
-    <div class="wip" role="note">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" opacity="0"/><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-      <span><strong>Work in progress:</strong> this website is still under construction — more service pages and coverage details are being added. Everything listed here is accurate, and the phone is answered now.</span>
-    </div>
-    <p class="fineprint">© 2026 JL Field Service LLC · Utah</p>
-  </div>
-</footer>
-
-<div class="callbar" aria-label="Quick contact">
-  <a class="call" href="tel:+18016998822">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    Call Now
-  </a>
-  <a class="emg" href="#contact" data-nav="contact">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-    Machine Down?
-  </a>
+<div class="footer-in">
+<div class="footer-cols">
+<div>
+<span class="bebas">JL Field Service</span>
+<p>Mobile heavy equipment repair based in Utah. Owner/operator Jon Lawrey. On-site service across the western United States — and further when the job calls for it.</p>
 </div>
-
+<div>
+<span class="bebas">Services</span>
+<ul>
+<li><a href="/services/#svc-diagnostics">Diagnostics</a></li>
+<li><a href="/services/#svc-engine">Engine</a></li>
+<li><a href="/services/#svc-electrical">Electrical</a></li>
+<li><a href="/services/#svc-hydraulic">Hydraulic</a></li>
+<li><a href="/services/#svc-welding">Welding &amp; Fabrication</a></li>
+<li><a href="/services/#svc-pm">PM Service</a></li>
+<li><a href="/services/#svc-emergency">Emergency Repair</a></li>
+</ul>
+</div>
+<div>
+<span class="bebas">Coverage</span>
+<ul>
+<li><a href="/service-area/idaho/">Idaho</a></li>
+<li><a href="/service-area/wyoming/">Wyoming</a></li>
+<li><a href="/service-area/nevada/">Nevada</a></li>
+<li><a href="/service-area/">All 11 Western States</a></li>
+</ul>
+</div>
+<div>
+<span class="bebas">Reach Us</span>
+<ul>
+<li><a href="tel:+18016998822">801-699-8822</a></li>
+<li><a href="mailto:jon@jlfieldservice.com">jon@jlfieldservice.com</a></li>
+<li>Utah — Mobile Service</li>
+</ul>
+</div>
+</div>
+<div class="wip" role="note"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span><strong>Work in progress:</strong> this website is still under construction — more service pages and coverage details are being added. Everything listed here is accurate, and the phone is answered now.</span></div>
+<p class="fineprint">© 2026 JL Field Service LLC · Utah</p>
+</div>
+</footer>
+<div class="callbar" aria-label="Quick contact"><a class="call" href="tel:+18016998822"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Now</a><a class="emg" href="/contact/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> Machine Down?</a></div>
 <script>
-(function(){
-  "use strict";
-
-  var ICONS = {
-    gauge: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>',
-    engine: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4"/><path d="M5 9h11a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3H9l-2 2v-2H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2Z"/><path d="M19 12h2"/></svg>',
-    zap: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>',
-    droplet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>',
-    flame: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
-    clipboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>',
-    siren: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1-1v-2H4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2h-2v2a1 1 0 0 0 1 1Z" transform="translate(0,-1)"/><path d="M12 2v1"/><path d="m4.9 4.9.7.7"/><path d="m19.1 4.9-.7.7"/></svg>',
-    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
-  };
-
-  var SERVICES = [
-    {
-      id:"diagnostics", name:"Diagnostics", icon:"gauge",
-      short:"Warning lights, fault codes, and no-starts chased down with proper scan tools and systematic troubleshooting — not parts swapping.",
-      lede:"Most repair bills start with a wrong guess. We start with the code, the data, and the test that proves what's actually failed before a single part gets ordered.",
-      points:["Fault code reading & interpretation","No-start / crank-no-start diagnosis","Intermittent electrical & sensor faults","Performance & derate complaints","Pre-purchase machine inspections","Second opinions on dealer quotes"]
-    },
-    {
-      id:"engine", name:"Engine", icon:"engine",
-      short:"Diesel engine repair and overhaul support — hard starts, power loss, overheating, leaks, and in-frame work in the field.",
-      lede:"From a hard-starting skid steer to a tired dozer engine, we handle diesel troubleshooting and repair on-site, and give you a straight answer on whether it's a field fix or shop work.",
-      points:["Hard start & power loss","Overheating & cooling system","Fuel system & injector issues","Oil leaks & consumption","Turbo & aftertreatment faults","In-frame repair support"]
-    },
-    {
-      id:"electrical", name:"Electrical", icon:"zap",
-      short:"Wiring, charging, starting, and control systems. The faults that strand good machines get traced to the wire that's actually broken.",
-      lede:"Modern equipment lives and dies by its wiring. We trace harnesses, test circuits under load, and repair the chafed wire or corroded ground causing the ghost problem — instead of replacing modules until it goes away.",
-      points:["Starting & charging systems","Wiring harness repair","ECU & sensor circuits","Lights, switches & controls","Battery drain tracing","CAN bus fault isolation"]
-    },
-    {
-      id:"hydraulic", name:"Hydraulic", icon:"droplet",
-      short:"Pumps, cylinders, valves, and hoses. Weak functions, drift, and leaks diagnosed by pressure and flow — not by feel.",
-      lede:"Hydraulics are the muscle of every machine we service. We pressure-test, isolate the failing component, and reseal, rebuild, or replace it in the field so the machine goes back to digging, lifting, or pushing.",
-      points:["Pump & motor testing","Cylinder reseal & rebuild","Valve & joystick faults","Hose inspection & replacement routing","Drift, weakness & slow functions","Leak detection & repair"]
-    },
-    {
-      id:"welding", name:"Welding & Fabrication", icon:"flame",
-      short:"Field welding and fab: cracked buckets, broken mounts, worn edges, and the custom bracket that doesn't exist in a catalog.",
-      lede:"Cracks and breaks don't wait for shop time. We weld and fabricate on-site — structural repairs, bucket and blade work, pin bosses, mounts, and one-off fabrication to keep the job moving.",
-      points:["Bucket & blade repair","Crack repair & reinforcement","Mounts, brackets & pin bosses","Cutting edge & wear parts","Custom on-site fabrication","Attachment repair"]
-    },
-    {
-      id:"pm", name:"PM Service", icon:"clipboard",
-      short:"Planned maintenance done on your schedule at your site — fluids, filters, inspections, and the small catches that prevent big bills.",
-      lede:"The cheapest repair is the one that never happens. Scheduled preventive maintenance at your yard or jobsite keeps machines in service and catches wear while it's still a line item, not a breakdown.",
-      points:["Oil, fluid & filter service","Full machine inspections","Greasing & wear checks","Undercarriage monitoring","Service records per machine","Fleet maintenance scheduling"]
-    },
-    {
-      id:"emergency", name:"Emergency Repair", icon:"siren", emergency:true,
-      short:"Machine down mid-job? Unscheduled breakdowns jump the line. Call and we'll get rolling toward you.",
-      lede:"A dead machine on a deadline is the most expensive kind. Emergency calls get priority response — troubleshooting starts on the phone so we roll with the right parts and tools the first time.",
-      points:["Priority response for breakdowns","On-site triage & safe-out","Get-it-running repairs","After-hours availability","Multi-state emergency travel","Honest ETA before we roll"]
-    }
-  ];
-
-  var MACHINES = [
-    {name:"Excavators", note:"Full-size, midi & mini"},
-    {name:"Dozers", note:"All sizes & undercarriages"},
-    {name:"Skid Steers", note:"Wheeled & track loaders"},
-    {name:"Telehandlers", note:"Reach forks & handlers"},
-    {name:"Man Lifts", note:"Boom & scissor lifts"},
-    {name:"Forklifts", note:"Warehouse & rough terrain"},
-    {name:"Wheel Loaders", note:"Front-end & compact"},
-    {name:"Backhoes", note:"Loader backhoes"},
-    {name:"Compactors", note:"Rollers & compaction"},
-    {name:"Motor Graders", note:"Blades & graders"},
-    {name:"Dump Trucks", note:"On/off-highway support"},
-    {name:"And More", note:"Don't see it? Call and ask"}
-  ];
-
-  var STATES = [
-    {abbr:"UT", name:"Utah", home:true, note:"Home base"},
-    {abbr:"AZ", name:"Arizona"},
-    {abbr:"CA", name:"California"},
-    {abbr:"CO", name:"Colorado"},
-    {abbr:"ID", name:"Idaho", page:"idaho"},
-    {abbr:"MT", name:"Montana"},
-    {abbr:"NV", name:"Nevada", page:"nevada"},
-    {abbr:"NM", name:"New Mexico"},
-    {abbr:"OR", name:"Oregon"},
-    {abbr:"WA", name:"Washington"},
-    {abbr:"WY", name:"Wyoming", page:"wyoming"}
-  ];
-
-  /* ---- Render: service cards (home + state pages) ---- */
-  function renderServiceCards(container){
-    if (!container) return;
-    SERVICES.forEach(function(s){
-      var a = document.createElement("a");
-      a.className = "card" + (s.emergency ? " emergency" : "");
-      a.href = "#services";
-      a.setAttribute("data-nav","services");
-      a.setAttribute("data-svc", s.id);
-      a.innerHTML = '<span class="icon">'+ICONS[s.icon]+'</span><h3>'+s.name+'</h3><p>'+s.short+'</p><span class="go">Full details &rarr;</span>';
-      container.appendChild(a);
-    });
-  }
-  renderServiceCards(document.getElementById("homeServiceGrid"));
-  document.querySelectorAll(".js-service-grid").forEach(function(el){ renderServiceCards(el); });
-
-  /* ---- Render: service detail blocks ---- */
-  var details = document.getElementById("serviceDetails");
-  SERVICES.forEach(function(s){
-    var d = document.createElement("article");
-    d.className = "svc-detail" + (s.emergency ? " emergency" : "");
-    d.id = "svc-" + s.id;
-    var pts = s.points.map(function(p){ return "<li>"+ICONS.check+"<span>"+p+"</span></li>"; }).join("");
-    d.innerHTML = '<div class="top"><span class="icon">'+ICONS[s.icon]+'</span><div><h3>'+s.name+'</h3><p class="lede">'+s.lede+'</p></div></div><ul>'+pts+'</ul>';
-    details.appendChild(d);
-  });
-
-  /* ---- Render: machines ---- */
-  var ml = document.getElementById("homeMachineList");
-  MACHINES.forEach(function(m){
-    var d = document.createElement("div");
-    d.className = "machine";
-    d.innerHTML = '<span class="bebas">'+m.name+'</span><span>'+m.note+'</span>';
-    ml.appendChild(d);
-  });
-
-  /* ---- Render: states ---- */
-  var sl = document.getElementById("stateList");
-  STATES.forEach(function(st){
-    var d;
-    if (st.page){
-      d = document.createElement("a");
-      d.href = "#" + st.page;
-      d.setAttribute("data-nav", st.page);
-    } else {
-      d = document.createElement("div");
-    }
-    d.className = "state" + (st.home ? " home" : "");
-    d.innerHTML = '<span class="abbr">'+st.abbr+'</span><span class="nm">'+st.name+(st.note ? ' <span style="color:var(--muted);font-weight:500;">· '+st.note+'</span>' : '')+(st.page ? ' <span style="color:var(--muted);font-weight:500;">→</span>' : '')+'</span>';
-    sl.appendChild(d);
-  });
-
-  /* ---- Render: footer services ---- */
-  var fs = document.getElementById("footerServices");
-  SERVICES.forEach(function(s){
-    var li = document.createElement("li");
-    li.innerHTML = '<a href="#services" data-nav="services" data-svc="'+s.id+'">'+s.name+'</a>';
-    fs.appendChild(li);
-  });
-
-  /* ---- Router ---- */
-  var VIEWS = ["home","services","area","idaho","wyoming","nevada","contact"];
-  var nav = document.getElementById("mainNav");
-  var menuBtn = document.getElementById("menuBtn");
-  var pendingSvc = null;
-
-  function show(view, svcId){
-    if (VIEWS.indexOf(view) === -1) view = "home";
-    VIEWS.forEach(function(v){
-      document.getElementById("view-"+v).classList.toggle("active", v === view);
-    });
-    document.querySelectorAll(".nav-in a").forEach(function(a){
-      if (a.getAttribute("data-nav") === view) a.setAttribute("aria-current","page");
-      else a.removeAttribute("aria-current");
-    });
-    nav.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded","false");
-    menuBtn.setAttribute("aria-label","Open menu");
-    if (view === "services" && svcId){
-      var el = document.getElementById("svc-"+svcId);
-      if (el){ setTimeout(function(){ el.scrollIntoView({behavior:"smooth", block:"start"}); }, 60); return; }
-    }
-    window.scrollTo({top:0, behavior:"instant" in window ? "instant" : "auto"});
-  }
-
-  function route(){
-    var hash = "home";
-    try { hash = (location.hash || "#home").replace("#","") || "home"; } catch(err) {}
-    var parts = hash.split("/");
-    show(parts[0], parts[1] || pendingSvc);
-    pendingSvc = null;
-  }
-
-  /* Navigate in-page. The click itself switches the view — navigation does
-     not depend on the browser firing hashchange, which embedded previews
-     can swallow — and the URL hash is updated afterwards only as a nicety,
-     inside try/catch because sandboxed frames may refuse history writes. */
-  function navigate(view, svcId){
-    show(view, svcId || pendingSvc);
-    pendingSvc = null;
-    try {
-      if (location.hash !== "#" + view) history.pushState(null, "", "#" + view);
-    } catch(err) {
-      try { if (location.hash !== "#" + view) location.hash = view; } catch(err2) {}
-    }
-  }
-
-  document.addEventListener("click", function(e){
-    var t = (e.target && e.target.closest) ? e.target.closest("[data-nav]") : null;
-    if (!t) return;
-    e.preventDefault();
-    navigate(t.getAttribute("data-nav"), t.getAttribute("data-svc"));
-  });
-
-  window.addEventListener("hashchange", route);
-
-  menuBtn.addEventListener("click", function(){
-    var open = nav.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  });
-
-  route();
-
-  /* ---- Contact form -> mailto ---- */
-  document.getElementById("serviceForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    var f = e.target;
-    var lines = [
-      "Name: " + f.name.value,
-      "Phone: " + f.phone.value,
-      "Machine: " + (f.machine.value || "—"),
-      "Location: " + (f.where.value || "—"),
-      "Service needed: " + f.service.value,
-      "",
-      "What's it doing:",
-      f.notes.value || "—"
-    ];
-    var subject = "Service request — " + f.service.value + (f.machine.value ? " (" + f.machine.value + ")" : "");
-    window.location.href = "mailto:jon@jlfieldservice.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
-  });
-})();
+var menuBtn=document.getElementById("menuBtn"), nav=document.getElementById("mainNav");
+if(menuBtn&&nav){menuBtn.addEventListener("click",function(){var open=nav.classList.toggle("open");menuBtn.setAttribute("aria-expanded",open?"true":"false");menuBtn.setAttribute("aria-label",open?"Close menu":"Open menu");});}
+var form=document.getElementById("serviceForm");
+if(form){form.addEventListener("submit",function(e){e.preventDefault();var f=e.target;var lines=["Name: "+f.name.value,"Phone: "+f.phone.value,"Machine: "+(f.machine.value||"—"),"Location: "+(f.where.value||"—"),"Service needed: "+f.service.value,"","What's it doing:",f.notes.value||"—"];var subject="Service request — "+f.service.value+(f.machine.value?" ("+f.machine.value+")":"");window.location.href="mailto:jon@jlfieldservice.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lines.join("\n"));});}
 </script>
 </body>
 </html>
