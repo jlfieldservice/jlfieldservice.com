@@ -12,236 +12,215 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
-:root{--ink:#202328;--muted:#5b6067;--line:#dcdde2;--paper:#fbfbf9;--card:#fff;--blue:#1e6fd9;--blue-2:#1559b3;--navy:#101b32;--red:#c8102e;--warn:#fff4d6;--muted-btn:#eef0f2;--slate:#f2f3f5;--topbar:#0a1120;--radius:14px;--serif:"Trebuchet MS","Arial",sans-serif}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-text-size-adjust:100%}
-img{max-width:100%;height:auto;display:block}
-a{color:#1452a5;text-decoration:none}
-a:hover{color:#0b3d7f}
-h1,h2,h3,.display{margin:0 0 .55em;font-family:"Bebas Neue","Arial Narrow",Arial,sans-serif;font-weight:400;letter-spacing:.04em;line-height:1;word-break:break-word;text-transform:uppercase;color:var(--navy)}
-h1{font-size:clamp(2.6rem,7vw,5rem)}
-h2{font-size:clamp(2rem,4.2vw,3.05rem)}
-h3{font-size:1.55rem}
-p{margin:0 0 .9rem}
-strong{font-weight:700}
-.eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:.35rem}
-.lede{font-size:1.14rem;line-height:1.55;color:#39404a;max-width:62ch}
-.section-note{margin:-1rem 0 1.25rem;color:var(--muted);font-size:.98rem}
-.wrap{width:min(1100px,calc(100% - 2.25rem));margin:0 auto;padding:2.15rem 0}
-.section-head{margin-bottom:1.35rem}
-section.slate,div.slate{background:var(--slate);border-block:1px solid var(--line)}
-.skip{position:absolute;left:-9999px}
-.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem .75rem;border:1px solid var(--navy);z-index:99}
-.view{display:none}
-.view.active{display:block}
-header.site{position:sticky;top:0;z-index:50;background:var(--topbar);color:#fff}
-.header-in{width:min(1100px,calc(100% - 2rem));margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.62rem 0}
-.brand{color:#fff;line-height:1.05}
-.brand:hover{color:#fff}
-.brand .name{font-family:"Bebas Neue","Arial Narrow",Arial,sans-serif;font-size:1.8rem;letter-spacing:.04em;line-height:1;display:block;text-transform:uppercase}
-.brand .name em{font-style:normal;color:#ffb9c2}
-.brand .tag{display:block;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.82}
-.header-call{margin-left:auto;display:flex;align-items:center;gap:.5rem;color:#fff;font-weight:700;font-size:1.12rem;text-decoration:none;background:var(--red);border-radius:999px;padding:.5rem .95rem}
-.header-call:hover{color:#fff;background:#a30d25}
-.header-call svg{width:1.15rem;height:1.15rem}
-.header-call .header-call-num{white-space:nowrap}
-.header-call .header-call-sub{display:none}
-.menu-btn{display:none;margin-left:auto;border:1px solid rgba(255,255,255,.28);background:none;color:#fff;border-radius:10px;padding:.5rem .7rem;font:inherit;font-weight:700;cursor:pointer;align-items:center;gap:.45rem}
-.menu-btn svg{width:1.25rem;height:1.25rem}
-nav.main{background:#101b32}
-.nav-in{width:min(1100px,calc(100% - 2rem));margin:0 auto;display:flex;flex-wrap:wrap;gap:.25rem;padding:.35rem 0}
-nav.main a{color:#e8ecff;padding:.42rem .7rem;border-radius:10px;font-weight:600;font-size:.95rem}
-nav.main a:hover{color:#fff;background:#1c315c}
-nav.main a[aria-current="page"]{background:#c8102e;color:#fff}
-.strip-note{background:#fff8db;border-bottom:1px solid #eadf8b;font-size:.9rem;color:#5b4c05}
-.strip-in{width:min(1100px,calc(100% - 2rem));margin:0 auto;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:space-between;padding:.45rem 0}
-.strip-main{font-weight:700}
-.strip-note-text{opacity:.92}
-.hero{background:linear-gradient(180deg,#101b32 0%,#182b52 72%,#1d3564 100%);color:#fff;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:var(--red)}
-.hero .wrap{padding-block:3.1rem 3.5rem}
-.hero h1{color:#fff;margin-bottom:.5rem}
-.hero .kicker{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;color:#ffb9c2;margin-bottom:.55rem}
-.hero p{max-width:62ch;color:#dce4f7}
-.hero p.hero-sub{font-size:1.2rem;line-height:1.5;color:#f2f5fd}
-.hero .assurance{font-size:1rem;color:#c6d4f2}
-.hero-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin:1.25rem 0 1rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--muted-btn);color:#111;border:1px solid var(--line);border-radius:999px;padding:.68rem 1.05rem;font:inherit;font-weight:700;line-height:1.2;cursor:pointer;text-decoration:none}
-.btn:hover{color:#111;border-color:#b6b9c1}
-.btn.primary{background:var(--red);border-color:#a30d25;color:#fff}
-.btn.primary:hover{background:#a30d25;color:#fff}
-.btn.lg{padding:.9rem 1.3rem;font-size:1.08rem}
-.btn.block{width:100%}
-.btn:active{transform:translateY(1px)}
-.hero-list{list-style:none;margin:1rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.45rem}
-.hero-list li{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:.4rem .8rem;font-weight:600;font-size:.92rem}
-.value-strip{border-bottom:1px solid var(--line);background:#fff}
-.values{width:min(1100px,calc(100% - 2.25rem));margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;padding:1.35rem 0}
-.value{display:flex;gap:.8rem;align-items:flex-start}
-.value .v-ic{width:2.6rem;height:2.6rem;min-width:2.6rem;border-radius:50%;background:#eaf2ff;display:grid;place-items:center;color:var(--blue-2)}
-.value .v-ic svg{width:1.35rem;height:1.35rem}
-.value h3{font-size:1.2rem;margin:0 0 .25rem}
-.value p{margin:0;color:var(--muted);font-size:.96rem;line-height:1.5}
-main p{color:#39404a}
-.svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
-.svc-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.05rem 1rem;text-decoration:none;color:var(--ink)}
-.svc-card:hover{border-color:var(--blue);box-shadow:0 7px 20px rgba(16,27,50,.12)}
-.svc-card svg.svc-ic{width:1.9rem;height:1.9rem;color:var(--blue-2);margin-bottom:.55rem}
-.svc-card h3{font-size:1.25rem;margin:0 0 .3rem}
-.svc-card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
-.svc-grid .svc-cta-card{background:var(--navy);border-color:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:.75rem}
-.svc-grid .svc-cta-card h3{color:#fff}
-.svc-grid .svc-cta-card p{color:#d6deee}
-.svc-grid .svc-cta-card .btn{align-self:flex-start}
-.center{text-align:center}
-.center-note{color:var(--muted);font-size:.98rem;max-width:58ch;margin:1.25rem auto 0}
-.svc-detail-list{display:grid;gap:1rem}
-.svc-detail{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem 1.25rem 1.1rem;scroll-margin-top:130px}
-.svc-detail-top{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:.55rem}
-.svc-detail-ic{width:3rem;height:3rem;min-width:3rem;border-radius:12px;background:#eaf2ff;color:var(--blue-2);display:grid;place-items:center}
-.svc-detail-ic svg.svc-ic{width:1.65rem;height:1.65rem}
-.svc-detail h3{font-size:1.45rem;margin:0 0 .2rem;text-transform:none;letter-spacing:.01em}
-.svc-detail-lede{margin:0;color:#39404a}
-.svc-detail ul{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.4rem}
-.svc-detail li{display:flex;gap:.5rem;align-items:flex-start;color:#2a2f37}
-.svc-detail svg.check{width:1.1rem;height:1.1rem;min-width:1.1rem;margin-top:.2rem;color:var(--blue-2)}
-.mach-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
-.machine{display:flex;gap:.8rem;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1rem}
-.machine .m-ic{width:2.5rem;height:2.5rem;min-width:2.5rem;border-radius:10px;background:#eaf2ff;color:var(--blue-2);display:grid;place-items:center}
-.machine .m-ic svg{width:1.3rem;height:1.3rem}
-.machine h3{font-size:1.28rem;margin:0 0 .2rem}
-.machine p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.5}
-.band{background:var(--navy);color:#fff;border-radius:18px;padding:1.75rem 1.6rem;overflow:hidden}
-.band h2{color:#fff}
-.band p{color:#d6deee;max-width:62ch}
-.band p:last-child{margin-bottom:0}
-.band .btn{margin-top:.35rem}
-.band-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}
-.band.warn{background:var(--warn);color:#2b2406}
-.band.warn h2{color:#2b2406}
-.band.warn p{color:#5b4c05}
-.band.warn .btn.primary{background:var(--red);border-color:#a30d25}
-.states-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
-.state-card{display:flex;flex-direction:column;gap:.45rem;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.1rem;min-height:7.5rem}
-.state-card:hover{border-color:var(--blue);box-shadow:0 7px 20px rgba(16,27,50,.12)}
-.state-card h3{font-size:1.3rem;margin:0}
-.state-card p{margin:0;color:var(--muted);font-size:.95rem}
-.state-card .cta{margin-top:auto;font-weight:700;color:var(--blue-2)}
-.state-muted{background:var(--slate)}
-.state-tag{display:inline-flex;align-items:center;gap:.35rem;background:#eaf2ff;color:var(--blue-2);border-radius:999px;padding:.2rem .7rem;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.state-card.home{border-color:var(--navy);background:var(--navy);color:#fff}
-.state-card.home h3{color:#fff}
-.state-card.home p{color:#d6deee}
-.state-card.home .cta{color:#fff}
-.state-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
-.state-links a{display:inline-flex;align-items:center;gap:.45rem;border:1px solid var(--line);border-radius:999px;padding:.55rem .95rem;font-weight:600;color:var(--ink);background:var(--paper)}
-.state-links a:hover{border-color:var(--blue-2);color:var(--blue-2)}
-.state-links svg{width:1rem;height:1rem;color:var(--blue-2)}
-.state-hero{background:var(--navy);color:#fff;border-radius:18px;padding:1.75rem 1.6rem}
-.state-hero h2{color:#fff;max-width:24ch}
-.state-hero .lede{color:#d6deee}
-.crumb{font-size:.9rem;margin-bottom:.75rem}
-.crumb a{color:#bcd0f2}
-.crumb a:hover{color:#fff}
-.state-hero-pin{display:inline-grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(255,255,255,.12);color:#ffb9c2;margin-bottom:.75rem}
-.state-hero-pin svg{width:1.25rem;height:1.25rem}
-.reg-list{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
-.reg{display:flex;gap:.7rem;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.85rem 1rem}
-.reg .ic{width:1.25rem;height:1.25rem;min-width:1.25rem;margin-top:.2rem;color:var(--blue-2)}
-.reg strong{display:block;font-size:1.05rem}
-.reg span{color:var(--muted);font-size:.96rem}
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:.75rem;counter-reset:step}
-.steps li{display:flex;gap:.85rem;align-items:flex-start}
-.steps li>span{width:2.1rem;height:2.1rem;min-width:2.1rem;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700}
-.steps li strong{display:block}
-.steps li div{color:#39404a}
-.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:1.5rem;align-items:start}
-.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.3rem}
-.contact-card h3{font-size:1.35rem}
-.contact-list{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
-.contact-list li{display:flex;gap:.7rem;align-items:flex-start}
-.contact-list svg{width:1.25rem;height:1.25rem;min-width:1.25rem;color:var(--blue-2);margin-top:.15rem}
-.contact-list a{font-weight:700}
-.contact-list .muted{color:var(--muted)}
-.form-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem}
-.field{margin-bottom:1rem}
-.field label{display:block;font-weight:700;margin-bottom:.35rem}
-.field .req{color:var(--red)}
-.field input,.field select,.field textarea{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid #c6c9d1;border-radius:10px;padding:.65rem .75rem}
-.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid #bcd3ff;border-color:var(--blue)}
-.field textarea{min-height:120px;resize:vertical}
-.field-help{font-size:.88rem;color:var(--muted);margin-top:.35rem}
-.form-note{font-size:.9rem;color:var(--muted);margin:.85rem 0 0}
-footer.site{background:var(--topbar);color:#d6deee;margin-top:1rem}
-.foot-in{width:min(1100px,calc(100% - 2.25rem));margin:0 auto;display:grid;grid-template-columns:1.35fr 1fr 1fr 1.15fr;gap:1.5rem;padding:2.25rem 0 1.5rem}
-.foot-brand{font-family:"Bebas Neue","Arial Narrow",Arial,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff}
-.foot-brand em{font-style:normal;color:#ffb9c2}
-.foot-tag{font-size:.95rem;color:#c6d4f2}
-footer.site h3{color:#fff;font-size:1rem;font-family:inherit;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .6rem}
-footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
-footer.site a{color:#d6deee}
-footer.site a:hover{color:#fff}
-footer .ft-ic{width:1rem;height:1rem;vertical-align:-.15em;margin-right:.45rem}
-footer .wip{font-size:.9rem;color:#c6d4f2}
-.fineprint{border-top:1px solid rgba(255,255,255,.14);text-align:center;padding:1rem .75rem;font-size:.85rem;color:#9fb0d6}
-.disclaimer{font-size:.85rem;color:var(--muted)}
-.callbar{position:sticky;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
-.callbar a{display:flex;align-items:center;justify-content:center;gap:.45rem;padding:.85rem .5rem;font-weight:800;text-align:center}
-.callbar .call-now{background:var(--red);color:#fff}
-.callbar .call-now:hover{background:#a30d25}
-.callbar .go-contact{background:#fff;color:var(--navy)}
-.callbar .go-contact:hover{background:#f0f2f5}
-@media (max-width:900px){
-.values{grid-template-columns:1fr}
-.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.mach-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.states-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.contact-grid{grid-template-columns:1fr}
-.foot-in{grid-template-columns:1fr 1fr}
-.svc-detail ul{grid-template-columns:1fr}
+:root{
+--cream:#f6f1e4;
+--cream-2:#efe7d3;
+--paper:#fbf8f0;
+--green:#1d3b2a;
+--green-deep:#142b1e;
+--green-mid:#2a5240;
+--brass:#b98a2f;
+--brass-soft:#d9b25f;
+--ink:#22301f;
+--ink-soft:#4c5a4c;
+--line:#d8cfb4;
+--line-dark:#33523f;
+--danger:#a03428;
+--bg:var(--cream);
+--surface:var(--paper);
+--surface-2:var(--cream-2);
+--text:var(--ink);
+--muted:var(--ink-soft);
+--header-bg:var(--green-deep);
+--header-text:#f3eeda;
+--shadow:0 10px 30px rgba(20,43,30,.14);
+--radius:10px;
 }
-@media (max-width:640px){
-.header-call .header-call-num{display:none}
-.header-call .header-call-sub{display:inline;font-size:.85rem;font-weight:700}
-.menu-btn{display:inline-flex}
-nav.main{display:none;border-top:1px solid rgba(255,255,255,.14)}
-nav.main.open{display:block}
-.nav-in{flex-direction:column;padding:.55rem 0 .75rem}
-nav.main a{padding:.6rem .75rem}
-.wrap{padding:1.75rem 0}
-.hero .wrap{padding-block:2.4rem 2.7rem}
-.svc-detail-top{flex-direction:column;gap:.6rem}
-.foot-in{grid-template-columns:1fr}
-.callbar a{font-size:.95rem}
+@media (prefers-color-scheme: dark){
+:root{
+--bg:#101d15;
+--surface:#182a1f;
+--surface-2:#1e3527;
+--text:#ece5d0;
+--muted:#b3bfa9;
+--line:#33523f;
+--header-bg:#0b1710;
+--shadow:0 10px 30px rgba(0,0,0,.45);
 }
-@media print{
-header.site .menu-btn{display:none}
-.callbar{display:none}
-.callbar a{padding:.35rem}
-body{background:#fff}
 }
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font-family:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+font-size:17px;
+line-height:1.55;
+-webkit-font-smoothing:antialiased;
+padding-bottom:76px;
+}
+@media (min-width:820px){ body{padding-bottom:0;} }
+h1,h2,h3,.bebas{font-family:"Bebas Neue","Barlow",sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.02;margin:0;}
+p{margin:0 0 1em;}
+a{color:var(--green-mid);}
+a:hover{color:var(--green);}
+.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto;}
+section{padding:44px 0 8px;}
+.section-head{margin-bottom:18px;}
+.section-head h2{font-size:44px;margin-bottom:6px;}
+.section-head p{color:var(--muted);max-width:68ch;margin:0;}
+header.site{background:var(--header-bg);color:var(--header-text);position:sticky;top:0;z-index:50;}
+.header-in{width:min(1120px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;gap:12px;padding:11px 0;}
+.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:var(--header-text);}
+.brand .name{font-family:"Bebas Neue","Barlow",sans-serif;font-size:31px;letter-spacing:.04em;color:var(--header-text);}
+.brand .tag{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#c9d4bc;margin-top:3px;}
+.header-call{display:none;align-items:center;gap:8px;background:var(--brass);color:#1d2415;font-weight:700;font-size:16px;text-decoration:none;padding:10px 18px;border-radius:8px;white-space:nowrap;}
+.header-call:hover{background:var(--brass-soft);}
+.header-call svg{width:18px;height:18px;}
+@media (min-width:760px){ .header-call{display:flex;} }
+.menu-btn{display:flex;align-items:center;justify-content:center;width:42px;height:42px;margin-left:auto;background:none;border:1px solid rgba(243,238,218,.35);border-radius:8px;color:var(--header-text);cursor:pointer;}
+.menu-btn svg{width:24px;height:24px;}
+@media (min-width:820px){ .menu-btn{display:none;} }
+nav.main{background:var(--green);}
+.nav-in{width:min(1120px,calc(100% - 40px));margin:0 auto;display:flex;flex-wrap:wrap;gap:2px;padding:6px 0;}
+nav.main a{color:#d8e2c9;text-decoration:none;font-weight:600;font-size:15.5px;padding:8px 12px;border-radius:8px;}
+nav.main a:hover{color:#fff;background:var(--green-mid);}
+nav.main a[aria-current="page"]{background:var(--brass);color:#1d2415;}
+@media (max-width:819px){ nav.main{display:none;} nav.main.open{display:block;} }
+.strip-note{background:var(--surface-2);border-bottom:1px solid var(--line);font-size:15px;}
+.strip-in{width:min(1120px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;gap:8px;padding:9px 0;color:var(--muted);}
+.strip-in svg{width:18px;height:18px;flex:none;color:var(--brass);}
+.strip-in b{color:var(--text);}
+.hero{background:var(--green-deep);color:#f3eeda;position:relative;}
+.hero::after{content:"";display:block;height:5px;background:var(--brass);}
+.hero-in{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:52px 0 56px;}
+.hero .over{font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-soft);margin-bottom:12px;}
+.hero h1{font-size:clamp(56px,8vw,92px);color:#f3eeda;margin-bottom:14px;}
+.hero h1 em{font-style:normal;color:var(--brass-soft);}
+.hero p.lede{font-size:19px;line-height:1.5;color:#d8e2c9;max-width:62ch;margin-bottom:24px;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:8px;font-weight:700;font-size:17px;text-decoration:none;}
+.btn svg{width:19px;height:19px;}
+.btn-call{background:var(--brass);color:#1d2415;}
+.btn-call:hover{background:var(--brass-soft);color:#1d2415;}
+.btn-ghost{background:transparent;color:#f3eeda;border:2px solid rgba(243,238,218,.5);}
+.btn-ghost:hover{border-color:#f3eeda;color:#fff;}
+.hero-facts{display:grid;gap:18px;}
+@media (min-width:760px){ .hero-facts{grid-template-columns:repeat(3,1fr);} }
+.hero-facts .n{font-family:"Bebas Neue",sans-serif;font-size:26px;color:var(--brass-soft);letter-spacing:.04em;}
+.hero-facts .t{font-size:14.5px;color:#d8e2c9;}
+.grid{display:grid;gap:16px;}
+@media (min-width:760px){ .grid.cols3{grid-template-columns:repeat(3,1fr);} .grid.cols2{grid-template-columns:repeat(2,1fr);} }
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;}
+.card .icon{width:44px;height:44px;border-radius:9px;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+.card .icon svg{width:24px;height:24px;}
+.card h3{font-size:26px;margin-bottom:6px;color:var(--green);}
+.card p{color:var(--muted);font-size:15.5px;margin:0;}
+.card.emergency{border-color:var(--danger);}
+.svc-detail{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:18px;scroll-margin-top:110px;}
+.svc-detail.emergency{border-color:var(--danger);}
+.svc-detail h3{font-size:32px;color:var(--green);margin-bottom:4px;}
+.svc-detail .lede{font-size:17.5px;color:var(--muted);margin-bottom:14px;}
+.svc-detail ul{margin:0;padding-left:0;list-style:none;display:grid;gap:8px;}
+@media (min-width:760px){ .svc-detail ul{grid-template-columns:1fr 1fr;} }
+.svc-detail li{display:flex;gap:8px;font-size:15.5px;}
+.svc-detail li svg{width:18px;height:18px;flex:none;color:var(--green-mid);margin-top:2px;}
+.machine-list{display:grid;gap:12px;}
+@media (min-width:760px){ .machine-list{grid-template-columns:repeat(3,1fr);} }
+.machine{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;}
+.machine b{display:block;font-size:16.5px;color:var(--green);}
+.machine span{font-size:14.5px;color:var(--muted);}
+.states{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+@media (min-width:760px){ .states{grid-template-columns:repeat(4,1fr);} }
+.state{display:flex;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;text-decoration:none;color:var(--text);}
+.state .abbr{font-family:"Bebas Neue",sans-serif;font-size:24px;color:var(--green);letter-spacing:.04em;}
+.state .nm{font-size:15.5px;font-weight:600;}
+.state.home{border-color:var(--brass);}
+.state.home .abbr{color:var(--brass);}
+a.state:hover{border-color:var(--brass);}
+@media (prefers-color-scheme: dark){ .state.home .abbr{color:var(--brass-soft);} .state.home{border-color:var(--brass-soft);} }
+.band{display:flex;flex-direction:column;gap:14px;background:var(--green);color:#f3eeda;padding:22px;border-radius:var(--radius);margin-bottom:28px;}
+.band h2{font-size:32px;color:#f3eeda;margin-bottom:4px;}
+.band p{color:#d8e2c9;margin:0;}
+@media (min-width:760px){ .band{flex-direction:row;align-items:center;justify-content:space-between;} }
+.contact-grid{display:grid;gap:18px;}
+@media (min-width:760px){ .contact-grid{grid-template-columns:1fr 1.1fr;} }
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+.contact-card h3{font-size:28px;color:var(--green);margin-bottom:10px;}
+.big-link{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--text);}
+.big-link:last-child{border-bottom:0;}
+.big-link .icon{width:44px;height:44px;border-radius:9px;background:var(--green);color:#f3eeda;display:flex;align-items:center;justify-content:center;flex:none;}
+.big-link .icon svg{width:22px;height:22px;}
+.big-link .lbl{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+.big-link .val{font-size:19px;font-weight:700;color:var(--green);word-break:break-word;}
+.big-link .val small{font-size:15px;font-weight:500;color:var(--muted);}
+form label{display:block;font-weight:700;font-size:15px;margin-bottom:4px;}
+form input,form select,form textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);font:inherit;font-size:16px;margin-bottom:14px;}
+form textarea{min-height:110px;resize:vertical;}
+form button{width:100%;padding:13px;border:0;border-radius:8px;background:var(--green);color:#f3eeda;font:inherit;font-weight:700;font-size:17px;cursor:pointer;}
+form button:hover{background:var(--green-mid);}
+.form-note{font-size:14px;color:var(--muted);margin-top:10px;}
+.state-hero{padding-top:34px;}
+.state-hero h2{font-size:clamp(44px,6vw,68px);margin-bottom:10px;}
+.state-hero .sub{font-size:19px;color:var(--muted);max-width:68ch;}
+.region-grid{display:grid;gap:16px;}
+@media (min-width:760px){ .region-grid{grid-template-columns:repeat(2,1fr);} }
+.region-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
+.region-card h3{font-size:28px;color:var(--green);margin-bottom:6px;}
+.region-card p{color:var(--muted);font-size:15.5px;margin:0 0 12px;}
+.city-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.city-tags span{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:14.5px;}
+.steps{display:grid;gap:16px;}
+@media (min-width:760px){ .steps{grid-template-columns:repeat(3,1fr);} }
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
+.step .num{font-family:"Bebas Neue",sans-serif;font-size:24px;color:var(--brass);letter-spacing:.08em;}
+.step h3{font-size:24px;color:var(--green);margin-bottom:6px;}
+.step p{color:var(--muted);font-size:15.5px;margin:0;}
+.state-link-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:var(--text);}
+.state-link-card:hover{border-color:var(--brass);transform:translateY(-2px);}
+.state-link-card .abbr{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--brass);letter-spacing:.08em;}
+.state-link-card h3{font-size:30px;color:var(--green);}
+@media (prefers-color-scheme: dark){ .state-link-card h3{color:#ece5d0;} }
+.state-link-card p{color:var(--muted);margin:0;font-size:16px;}
+.state-link-card .go{margin-top:auto;padding-top:10px;font-weight:700;color:var(--green-mid);font-size:15.5px;}
+@media (prefers-color-scheme: dark){ .state-link-card .go{color:var(--brass-soft);} }
+footer.site{background:var(--green-deep);color:#c9d4bc;margin-top:44px;}
+.footer-in{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:36px 0 24px;}
+.footer-cols{display:grid;gap:24px;}
+@media (min-width:760px){ .footer-cols{grid-template-columns:1.4fr 1fr 1fr 1fr;} }
+footer.site h3{font-size:22px;color:#f3eeda;margin-bottom:10px;}
+footer.site p{font-size:15px;margin:0 0 10px;}
+footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;}
+footer.site ul a{color:#c9d4bc;text-decoration:none;font-size:15px;}
+footer.site ul a:hover{color:#fff;}
+.wip{display:flex;gap:10px;background:rgba(243,238,218,.08);border:1px solid var(--line-dark);border-radius:var(--radius);padding:14px 16px;font-size:14.5px;margin:26px 0 14px;}
+.wip svg{width:20px;height:20px;flex:none;color:var(--brass-soft);margin-top:2px;}
+.fineprint{border-top:1px solid var(--line-dark);padding-top:14px;font-size:14px;color:#9fb09a;}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;background:var(--green-deep);border-top:1px solid var(--line-dark);}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 10px;color:#f3eeda;text-decoration:none;font-weight:700;font-size:16px;}
+.callbar a svg{width:19px;height:19px;}
+.callbar a.emg{background:var(--danger);color:#fff;}
+@media (min-width:820px){ .callbar{display:none;} }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to main content</a>
 <header class="site">
 <div class="header-in">
 <a class="brand" href="/">
-<span class="name">JL <em>FIELD SERVICE</em></span>
+<span class="name">JL Field Service</span>
 <span class="tag">Mobile Heavy Equipment Repair</span>
 </a>
 <a class="header-call" href="tel:+18016998822">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9Z"/></svg>
-<span class="header-call-num">801-699-8822</span>
-<span class="header-call-sub">24/7 calls welcome</span>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+Call 801-699-8822
 </a>
-<button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
-<span>Menu</span>
+<button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="24" height="24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
 </button>
 </div>
-<nav class="main" id="mainNav" aria-label="Main">
+</header>
+<nav class="main" id="mainNav">
 <div class="nav-in">
 <a href="/">Home</a>
 <a href="/services/">Services</a>
@@ -252,122 +231,137 @@ body{background:#fff}
 <a href="/contact/">Contact</a>
 </div>
 </nav>
-</header>
 <div class="strip-note">
-<div class="strip-in"><span class="strip-main">Mobile Mechanic · Northern Utah · Travels the West</span><span class="strip-note-text">Site under construction — pages still being added. Call if you can't find what you need.</span></div>
+<div class="strip-in">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+<span><b>Site under construction:</b> we're still building this website out. The services and contact info here are current — call anytime.</span>
 </div>
-<main id="main">
-<section class="wrap">
-<div class="state-hero">
-<p class="crumb"><a href="/service-area/">← Service Area</a></p>
-<span class="state-hero-pin"><svg class="ic pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pin"/></svg></span>
-<h2>Mobile heavy equipment repair in Nevada</h2>
-<p class="lede">The mining corridor, the high desert, the big ranches — when a machine is down anywhere in Nevada, we drive to it. Diagnostics, engine, electrical, hydraulic and welding repair, done on site.</p>
-<div class="band-actions">
-<a class="btn primary lg" href="tel:+18016998822">Call 801-699-8822</a>
-<a class="btn" href="/contact/">Request Service</a>
 </div>
+<main>
+<section class="state-hero">
+<div class="wrap">
+<div class="crumb">Nevada · Mobile Field Service</div>
+<h2>Mobile heavy equipment repair in <em>Nevada</em></h2>
+<p class="sub">From Reno warehouses to gold country around Elko and the remote sites in between — Nevada runs on heavy equipment, and most of it works a long way from a shop. JL Field Service travels to your machine in Nevada and repairs it on site.</p>
 </div>
 </section>
-<section class="wrap">
+<section>
+<div class="wrap">
 <div class="section-head">
-<p class="eyebrow">Where We Work</p>
 <h2>Where We Work in Nevada</h2>
+<p>Northern and western Nevada — the Reno area, the northern mining corridor, and central and eastern Nevada, plus the towns and sites in between.</p>
 </div>
-<ul class="reg-list">
-<li class="reg"><svg class="ic pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pin"/></svg><div><strong>I-80 Mining Corridor</strong><span>Elko, Winnemucca, Battle Mountain and the gold mines.</span></div></li>
-<li class="reg"><svg class="ic pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pin"/></svg><div><strong>Reno &amp; Sparks</strong><span>Reno, Sparks and the Truckee Meadows.</span></div></li>
-<li class="reg"><svg class="ic pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pin"/></svg><div><strong>Rural Nevada</strong><span>Ely, Tonopah, Fallon and the far-flung mines and ranches.</span></div></li>
-<li class="reg"><svg class="ic pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pin"/></svg><div><strong>The Rest of the State</strong><span>Las Vegas, Pahrump and the south — if it's in Nevada, we can talk about it.</span></div></li>
-</ul>
+<div class="region-grid">
+<div class="region-card">
+<h3>Reno, Sparks &amp; Western Nevada</h3>
+<p>Warehousing, distribution, and manufacturing support in the Truckee Meadows, plus construction and ag work down the Carson Valley.</p>
+<div class="city-tags"><span>Reno</span><span>Sparks</span><span>Carson City</span><span>Fernley</span><span>Fallon</span><span>Dayton</span><span>Gardnerville</span><span>Yerington</span></div>
+</div>
+<div class="region-card">
+<h3>Northern Nevada — Mining Country</h3>
+<p>The I-80 gold corridor. Support equipment at mines, plants, and contractor yards where downtime is measured in real money.</p>
+<div class="city-tags"><span>Elko</span><span>Spring Creek</span><span>Carlin</span><span>Winnemucca</span><span>Battle Mountain</span><span>Eureka</span><span>Wells</span><span>West Wendover</span></div>
+</div>
+<div class="region-card">
+<h3>Central &amp; Eastern Nevada</h3>
+<p>Ranch, county, and remote site work along US-50 and US-93. Scheduled repairs and fleet PM — call ahead and we'll build the run around your machines.</p>
+<div class="city-tags"><span>Ely</span><span>Tonopah</span><span>Caliente</span><span>Lovelock</span><span>Austin</span></div>
+</div>
+</div>
+<p style="color:var(--muted);margin-top:14px;">Counties: Washoe, Elko, Humboldt, Lyon, Carson City, Lander, Eureka, White Pine, Churchill, and Nye.</p>
+</div>
 </section>
-<section class="wrap">
+<section>
+<div class="wrap">
 <div class="section-head">
-<p class="eyebrow">Services</p>
 <h2>Services in Nevada</h2>
-<p class="section-note">Tap any one of our services to see the full breakdown.</p>
+<p>All seven field services, delivered on site anywhere in Nevada. Tap a service for the full breakdown.</p>
 </div>
-<div class="svc-grid">
-<a class="svc-card" href="/services/#svc-diagnostics">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-diagnostic"/></svg>
+<div class="grid cols3">
+<a class="card" href="/services/#svc-diagnostics" style="text-decoration:none;">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
 <h3>Diagnostics</h3>
-<p>We find the cause before we touch a bolt.</p>
+<p>Warning lights, fault codes, and no-starts chased down with proper scan tools and systematic troubleshooting — not parts swapping.</p>
 </a>
-<a class="svc-card" href="/services/#svc-engine">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-engine"/></svg>
+<a class="card" href="/services/#svc-engine" style="text-decoration:none;">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9h-1.5A1.5 1.5 0 0 1 16 7.5v-1.5A1.5 1.5 0 0 0 14.5 4.5h-2A1.5 1.5 0 0 0 11 6v3.5H4a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 4 20.5h1a1.5 1.5 0 0 0 3 0h6a1.5 1.5 0 0 0 3 0h2a1.5 1.5 0 0 0 1.5-1.5z"/><path d="M7 8h4"/><path d="M11 5V3"/><path d="m2 14 2 1.5"/></svg></span>
 <h3>Engine</h3>
-<p>Overhauls, top-ends, injectors, aftertreatment and the bits that break when you least expect it.</p>
+<p>Diesel engine repair and overhaul support — hard starts, power loss, overheating, leaks, and in-frame work in the field.</p>
 </a>
-<a class="svc-card" href="/services/#svc-electrical">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-electric"/></svg>
+<a class="card" href="/services/#svc-electrical" style="text-decoration:none;">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
 <h3>Electrical</h3>
-<p>Wiring, charging, starting, sensors, CAN and harness repairs.</p>
+<p>Wiring, charging, starting, and control systems. The faults that strand good machines get traced to the wire that's actually broken.</p>
 </a>
-<a class="svc-card" href="/services/#svc-hydraulic">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-hydraulic"/></svg>
+<a class="card" href="/services/#svc-hydraulic" style="text-decoration:none;">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
 <h3>Hydraulic</h3>
-<p>Pumps, valves, motors, cylinders and the test gauges to prove them.</p>
+<p>Pumps, cylinders, valves, and hoses. Weak functions, drift, and leaks diagnosed by pressure and flow — not by feel.</p>
 </a>
-<a class="svc-card" href="/services/#svc-welding">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-weld"/></svg>
+<a class="card" href="/services/#svc-welding" style="text-decoration:none;">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
 <h3>Welding &amp; Fabrication</h3>
-<p>Cracks, buckets, booms, thumb installs and structural fixes.</p>
+<p>Field welding and fab: cracked buckets, broken mounts, worn edges, and the custom bracket that doesn't exist in a catalog.</p>
 </a>
-<a class="svc-card" href="/services/#svc-pm">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pm"/></svg>
+<a class="card" href="/services/#svc-pm" style="text-decoration:none;">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
 <h3>PM Service</h3>
-<p>Oil, filters, fuel and air service, tracks and undercarriage checks — done on schedule.</p>
+<p>Planned maintenance done on your schedule at your site — fluids, filters, inspections, and the small catches that prevent big bills.</p>
 </a>
-<a class="svc-card" href="/services/#svc-emergency">
-<svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-emergency"/></svg>
+<a class="card emergency" href="/services/#svc-emergency" style="text-decoration:none;">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21h14"/><path d="M5 18h14"/><path d="M19 18h2a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-2"/><path d="M3 18H1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h2"/><path d="M10 10v.01"/><path d="M14 10v.01"/></svg></span>
 <h3>Emergency Repair</h3>
-<p>If the job stops, call. We'll get to you as fast as the road and the work allow.</p>
+<p>Machine down mid-job? Unscheduled breakdowns jump the line. Call and we'll get rolling toward you.</p>
 </a>
-<div class="svc-card svc-cta-card">
-<div>
-<h3>No shop. No tow.</h3>
-<p>One field mechanic, one truck, the full job done on site.</p>
 </div>
-<a class="btn primary" href="/contact/">Request Service</a>
-</div>
-</div>
-<p class="center-note">On-site diagnostics, engine, electrical, hydraulic and welding repair for the mines and ranches of Nevada.</p>
 </section>
-<div class="slate">
-<section class="wrap">
+<section>
+<div class="wrap">
 <div class="section-head">
-<p class="eyebrow">How It Works</p>
-<h2>Common work we see in Nevada</h2>
+<h2>The Work We See in Nevada</h2>
+<p>Excavators, dozers, skid steers and track loaders, telehandlers, man lifts, forklifts, wheel loaders, backhoes, compactors, and graders — across all major makes.</p>
 </div>
-<ol class="steps">
-<li><span>1</span><div><strong>Call first.</strong> Tell us your machine, your location, and what's it doing — or not doing.</div></li>
-<li><span>2</span><div><strong>We plan the route.</strong> When a job is scheduled, we'll confirm timing, directions and what we'll bring.</div></li>
-<li><span>3</span><div><strong>We fix it on site.</strong> Diagnostic, repair, test run — then a walk-through so you know what was done.</div></li>
-</ol>
-</section>
+<div class="steps">
+<div class="step">
+<span class="num">01</span>
+<h3>Mining Support</h3>
+<p>Contractor and support fleets around Elko, Carlin, and Winnemucca — loaders, lifts, light plants' running gear, and the earthmovers that keep a site fed. Desert heat and dust are hard on cooling, electrical, and hydraulics; we diagnose for the conditions.</p>
 </div>
-<section class="wrap">
-<div class="band">
-<h2>Also traveling to</h2>
-<p>JL Field Service travels across the western United States for mobile heavy equipment repair — scheduled work and breakdowns, based in Northern Utah.</p>
-<div class="state-links">
-<a href="/service-area/idaho/"><svg class="ic pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pin"/></svg>Idaho</a>
-<a href="/service-area/wyoming/"><svg class="ic pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pin"/></svg>Wyoming</a>
-<a href="/service-area/"><svg class="ic pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-pin"/></svg>Service Area</a>
+<div class="step">
+<span class="num">02</span>
+<h3>Construction</h3>
+<p>Reno builds year-round. Earthmoving and access equipment on commercial and industrial sites, repaired on site so schedules hold.</p>
 </div>
+<div class="step">
+<span class="num">03</span>
+<h3>Logistics &amp; Industrial</h3>
+<p>Forklifts and material-handling fleets in Reno–Sparks distribution centers. PM programs at your yard, plus breakdown response when a dock goes down.</p>
+</div>
+</div>
+<div class="band" style="margin-top:26px;">
+<div>
+<h2>Down in Nevada?</h2>
+<p>Nevada is a big state — we plan for it. Call with the machine, the symptoms, and where it's sitting, and you'll get an honest plan and ETA.</p>
+</div>
+<a class="btn btn-call" href="tel:+18016998822">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+Call 801-699-8822
+</a>
+</div>
+<p style="color:var(--muted);">Also traveling to: <a href="/service-area/idaho/">Idaho</a> · <a href="/service-area/wyoming/">Wyoming</a> · <a href="/service-area/">Full service area</a></p>
 </div>
 </section>
 </main>
 <footer class="site">
-<div class="foot-in">
-<div class="foot-main">
-<div class="foot-brand">JL <em>FIELD SERVICE</em></div>
-<p class="foot-tag">Mobile Heavy Equipment Repair · Northern Utah · Travels the West</p>
-<p class="wip"><strong>Work in progress:</strong> this site is being built out. If something looks half-finished, it probably is — the trucks are finished, the website is catching up.</p>
+<div class="footer-in">
+<div class="footer-cols">
+<div>
+<h3>JL Field Service</h3>
+<p>Mobile heavy equipment repair based in Utah. Owner/operator Jon Lawrey. On-site service across the western United States — and further when the job calls for it.</p>
 </div>
-<nav class="foot-col" aria-label="Services">
-<h3 id="footerServicesHeading">Services</h3>
-<ul aria-labelledby="footerServicesHeading">
+<div>
+<h3>Services</h3>
+<ul>
 <li><a href="/services/#svc-diagnostics">Diagnostics</a></li>
 <li><a href="/services/#svc-engine">Engine</a></li>
 <li><a href="/services/#svc-electrical">Electrical</a></li>
@@ -376,8 +370,8 @@ body{background:#fff}
 <li><a href="/services/#svc-pm">PM Service</a></li>
 <li><a href="/services/#svc-emergency">Emergency Repair</a></li>
 </ul>
-</nav>
-<nav class="foot-col" aria-label="Service area">
+</div>
+<div>
 <h3>Coverage</h3>
 <ul>
 <li><a href="/service-area/idaho/">Idaho</a></li>
@@ -385,82 +379,48 @@ body{background:#fff}
 <li><a href="/service-area/nevada/">Nevada</a></li>
 <li><a href="/service-area/">All 11 Western States</a></li>
 </ul>
-</nav>
-<div class="foot-col">
+</div>
+<div>
 <h3>Reach Us</h3>
 <ul>
-<li><a href="tel:+18016998822"><svg class="ft-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-phone" /></svg>801-699-8822</a></li>
-<li><a href="mailto:jon@jlfieldservice.com"><svg class="ft-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-mail" /></svg>jon@jlfieldservice.com</a></li>
+<li><a href="tel:+18016998822">801-699-8822</a></li>
+<li><a href="mailto:jon@jlfieldservice.com">jon@jlfieldservice.com</a></li>
 <li>Utah — Mobile Service</li>
 </ul>
 </div>
 </div>
-<div class="fineprint">© 2026 JL Field Service LLC · Utah</div>
+<p class="wip">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+<span><b>Work in progress:</b> this website is still under construction — more service pages and coverage details are being added. Everything listed here is accurate, and the phone is answered now.</span>
+</p>
+<p class="fineprint">© 2026 JL Field Service LLC · Utah</p>
+</div>
 </footer>
 <div class="callbar">
-<a class="call-now" href="tel:+18016998822">Call Now · 801-699-8822</a>
-<a class="go-contact" href="/contact/">Machine Down?</a>
+<a class="call" href="tel:+18016998822">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+Call
+</a>
+<a class="emg" href="tel:+18016998822">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+Emergency
+</a>
 </div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<defs>
-<symbol id="ic-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
-<symbol id="ic-flash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></symbol>
-<symbol id="ic-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12.035 8.6c.196.439.58.82.99 1.09l1.759 1.17c.39.26.82.39 1.232.39h1.5a2 2 0 0 1 1.414.586z"/></symbol>
-<symbol id="ic-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
-<symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9Z"/></symbol>
-<symbol id="ic-siren" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21h14"/><path d="M5 18h14"/><path d="m21 21-2-2"/><path d="m3 21 2-2"/><path d="M12 3v5"/><path d="M12 8c-1.1 0-2-.9-2-2"/></symbol>
-<symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></symbol>
-<symbol id="ic-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18h-5"/><path d="M14 9h4l4 4v4a1 1 0 0 1-1 1h-2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
-<symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
-<symbol id="ic-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.1 5.6 9 3 3.5 5.2a.6.6 0 0 0-.4.6v13a.6.6 0 0 0 .8.6L9 17l6 2.6a.6.6 0 0 0 .4-.6V5.9a.6.6 0 0 0-.3-.3Z"/><path d="m9 3 5.1 2.6M15 5.9l5.4-2.3a.6.6 0 0 1 .6.6v13a.6.6 0 0 1-.8.6L15 15"/><path d="M9 3v14M15 5.9V20"/></symbol>
-<symbol id="ic-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
-<symbol id="ic-call" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9Z"/></symbol>
-<symbol id="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
-<symbol id="ic-diagnostic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
-<symbol id="ic-engine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18a2 2 0 0 1-2-2V8l3.5-3.5A2 2 0 0 1 8.5 4h7a2 2 0 0 1 1.4.6l3 3.2A2 2 0 0 1 20 9.2V12"/><path d="M3 12h12"/><path d="M14 4v4"/><path d="M5 16v4h4"/><path d="M15 18h4"/></symbol>
-<symbol id="ic-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></symbol>
-<symbol id="ic-hydraulic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14"/><path d="M5 8V5a3 3 0 0 1 6 0v3"/><path d="M8 8v6a3 3 0 0 1-3 3H5"/><path d="M13 8v12"/><path d="M19 8v4a3 3 0 0 1-3 3h-3"/></symbol>
-<symbol id="ic-weld" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12.035 8.6c.196.439.58.82.99 1.09l1.759 1.17c.39.26.82.39 1.232.39h1.5a2 2 0 0 1 1.414.586z"/></symbol>
-<symbol id="ic-pm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
-<symbol id="ic-emergency" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 21h14"/><path d="M5 18h14"/><path d="m21 21-2-2"/><path d="m3 21 2-2"/><path d="M12 3v5"/><path d="M12 8c-1.1 0-2-.9-2-2"/></symbol>
-<symbol id="ic-case" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
-<symbol id="ic-check2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></symbol>
-<symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
-<symbol id="ic-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
-</defs>
-</svg>
 <script>
-(function(){
-"use strict";
-var nav=document.getElementById("mainNav");
-var menuBtn=document.getElementById("menuBtn");
-if(menuBtn&&nav){
-menuBtn.addEventListener("click",function(){
-var open=nav.classList.toggle("open");
-menuBtn.setAttribute("aria-expanded",open?"true":"false");
-menuBtn.setAttribute("aria-label",open?"Close menu":"Open menu");
-});
-}
-var form=document.getElementById("serviceForm");
-if(form){
-form.addEventListener("submit",function(e){
-e.preventDefault();
-var f=e.target;
-var lines=[
-"Name: "+f.name.value,
-"Phone: "+f.phone.value,
-"Machine: "+(f.machine.value||"—"),
-"Location: "+(f.where.value||"—"),
-"Service needed: "+f.service.value,
-"",
-"What's it doing:",
-f.notes.value||"—"
-];
-var subject="Service request — "+f.service.value+(f.machine.value?" ("+f.machine.value+")":"");
+var btn=document.getElementById("menuBtn"), nav=document.getElementById("mainNav");
+if(btn&&nav){btn.addEventListener("click",function(){nav.classList.toggle("open");});}
+var f=document.getElementById("serviceForm");
+if(f){f.addEventListener("submit",function(e){e.preventDefault();
+var name=document.getElementById("fName").value.trim(),
+phone=document.getElementById("fPhone").value.trim(),
+machine=document.getElementById("fMachine").value.trim(),
+loc=document.getElementById("fLocation").value.trim(),
+svc=document.getElementById("fService").value,
+notes=document.getElementById("fNotes").value.trim();
+var subject="Service request — "+svc+" ("+machine+")";
+var lines=["Name: "+name,"Phone: "+phone,"Machine: "+machine,"Location: "+loc,"Service needed: "+svc,"","What's it doing: "+notes];
 window.location.href="mailto:jon@jlfieldservice.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lines.join("\n"));
-});
-}
-})();
+});}
 </script>
 </body>
 </html>
